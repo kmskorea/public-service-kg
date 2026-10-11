@@ -1,0 +1,2303 @@
+﻿서비스ID,항목,바뀌기 전,바뀐 후,규칙
+105100000001,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+119200000007,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+119200000016,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+119200000174,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+125000000014,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+127000000026,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+132000000009,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+134200000046,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+134200005001,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+134200005041,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+135200000095,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+135200005002,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+135200005011,deadlineKind,UNKNOWN,FROM,UNKNOWN→LLM
+135200005058,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+140000000165,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+140000000177,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+140000000194,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+142000000062,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+142100000024,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+143000000001,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+143000000007,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+145000000065,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+149200000008,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+149200000016,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+149200005012,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+149200005014,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+154300000005,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+154300000011,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+154300000079,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+154300000145,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+154300000301,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+154300000304,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+154300000373,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+161300000079,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+161300000099,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+171000000009,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+183000000006,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+300000000117,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+300000000123,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+300000000127,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+300000000160,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+300000000161,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+300000000164,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+301000000105,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+301000000108,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+301000000112,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+303000000102,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+303000000309,deadlineKind,UNKNOWN,FROM,UNKNOWN→LLM
+303000000335,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+303000000341,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+304000000117,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+304000000145,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+304000000162,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+304000000192,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+304000000236,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+304000000237,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+305000000130,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+305000000157,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+305000000174,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+306000000106,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+306000000222,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+306000000223,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+306000000226,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+306000000229,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+307000000142,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+307000000163,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+310000000102,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+310000000105,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+310000000109,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+310000000116,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+311000000139,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+311000000230,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+314000000117,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+314000000121,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+315000000108,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+316000000133,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+316000000135,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+316000000151,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+316000000154,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+317000000101,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+317000000116,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+318000000104,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+318000000415,deadlineKind,UNKNOWN,ALWAYS,UNKNOWN→LLM
+319000000106,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+319000000123,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+321000000105,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+323000000109,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+324000000101,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+408000000419,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+569000000228,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+611000000114,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+611000019603,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+611000019617,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+611000019622,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+611000019628,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+701000000208,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+701000000209,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+999000000009,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+999000000012,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+999000000013,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+999000000019,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+999000000040,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+999000000042,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+999000000059,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+999000000077,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+B27000100052,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+B49000700206,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B50000100001,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B50000100002,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B50000400013,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+B55100100001,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+B55101500004,deadlineKind,UNKNOWN,EVENT,UNKNOWN→LLM
+B55211100001,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+B55246800002,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+B55252500002,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B55252900213,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B55252900214,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B55252900218,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B55252900221,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B55258300006,deadlineKind,UNKNOWN,RANGE,UNKNOWN→LLM
+B55284200005,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B55284200006,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+B55370100044,deadlineKind,UNKNOWN,FROM,UNKNOWN→LLM
+B55374800004,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+B55374800010,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+B55400900012,deadlineKind,UNKNOWN,FROM,UNKNOWN→LLM
+B55400900020,deadlineKind,UNKNOWN,FROM,UNKNOWN→LLM
+B55400900024,deadlineKind,UNKNOWN,FROM,UNKNOWN→LLM
+B55400900031,deadlineKind,UNKNOWN,FROM,UNKNOWN→LLM
+B55400900040,deadlineKind,UNKNOWN,FROM,UNKNOWN→LLM
+O00022200004,deadlineKind,UNKNOWN,NO_APPLICATION,UNKNOWN→LLM
+O00023300002,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+SCY000000040,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+SCY000000050,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+SCY000000060,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+SCY000000190,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+SD0000002244,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+SD0000003567,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+SD0000010879,deadlineKind,UNKNOWN,ANNUAL,UNKNOWN→LLM
+SD0000011848,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+SD0000015573,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+SD0000015789,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+SD0000016200,deadlineKind,UNKNOWN,VARIES,UNKNOWN→LLM
+WII000000350,deadlineKind,UNKNOWN,UNKNOWN,UNKNOWN→LLM
+105100000001,자격(requires/anyOf),-,근로자/직장인,추가
+116010000001,자격(requires/anyOf),무주택세대,부부합산 연소득 5천만원 이하 & (근로장려금 수급자 | 사회초년생 | 자녀장려금 수급자 | 주거급여 수급자 | 취업준비생 | 희망키움통장 가입자),교체
+119200000007,자격(requires/anyOf),-,고등학교 졸업자 이하 & 고령자 & 기초생활수급자 & 미성년자 & 해양사고관련자 & (국가보훈대상자 | 국가유공자유족 | 국가유공자의 유족 또는 가족) & (심신장애인 | 언어장애 | 청각장애),추가
+119200000007,age_max,-,70,추가
+119200000007,income_max_pct,-,60,추가
+119200000008,자격(requires/anyOf),농림어업(법인) & 중소기업,원양선사,교체
+119200000010,자격(requires/anyOf),기타업종(법인) & 중소기업,어업인,교체
+119200000012,자격(requires/anyOf),어업인,귀어인,교체
+119200000016,자격(requires/anyOf),농림어업(법인) & 어업인 & (기관/단체 | 중소기업),어업인 & (원양어업 허가자 | 해외 원양어업 신고 법인),교체
+119200000022,자격(requires/anyOf),농림어업(법인) & 중소기업,어업인,교체
+119200000027,자격(requires/anyOf),기타업종(법인) & 중소기업,(도매시장 법인 | 산지 위판장 | 중도매인),교체
+119200000044,자격(requires/anyOf),기관/단체 & 어업인,어업인,교체
+119200000045,자격(requires/anyOf),기관/단체 & 어업인,어업 법인 & 어업인,교체
+119200000055,자격(requires/anyOf),기타업종(법인) & 중소기업,(내항 여객 운송사업자 | 내항 화물 운송사업자 | 선박 대여업자),교체
+119200000059,자격(requires/anyOf),어업인,어업인 & (4대 중증질환자 | 법정감염병 자가격리자 | 여성 어업인 교육 참여자 | 임산부 | 출산 후 3개월 이내 어업인),교체
+119200000070,자격(requires/anyOf),어업인,귀어 5년 이내인 자 & 귀어 창업 지원 대상자 & 어업인,교체
+119200000073,자격(requires/anyOf),어업인,(수산업경영인 | 어업인),교체
+119200000074,자격(requires/anyOf),농림어업(법인) & 어업인 & (기관/단체 | 중소기업),천일염 생산자 & (공기업 | 농(어)업회사법인 | 농업협동조합 | 대한염업조합 | 수산업협동조합 | 지방자치단체 | 천일염 관련 협동조합 | 천일염 영농(어)조합법인),교체
+119200000076,자격(requires/anyOf),어업인,어촌지도자,교체
+119200000077,자격(requires/anyOf),농림어업(법인) & 어업인 & (기관/단체 | 중소기업),(공기업 | 농(어)업회사법인 | 농업협동조합 | 수산업협동조합 | 지방자치단체 | 천일염 관련 협동조합 | 천일염 생산자 | 천일염 영농(어)조합법인),교체
+119200000078,자격(requires/anyOf),기관/단체 & 어업인,(개인 및 법인(천일염 생산자) | 공기업 | 농(어)업회사법인 | 농업협동조합 | 수산업협동조합 | 지방자치단체 | 천일염 관련 협동조합 | 천일염 영농(어)조합법인),교체
+119200000082,자격(requires/anyOf),기관/단체,(생산자단체 | 어업인),교체
+119200000085,자격(requires/anyOf),기관/단체,한국항로표지기술원,교체
+119200000097,자격(requires/anyOf),기관/단체,어선 어업 생산자 단체,교체
+119200000111,자격(requires/anyOf),기관/단체 & 어업인,(생산자단체 | 수산종자 생산자 | 양식업자),교체
+119200000113,자격(requires/anyOf),기관/단체 & 어업인,(방역수행기관 | 병성감정 실시 기관 | 수산생물 관련 단체 | 양식업 종사자 | 양식업자),교체
+119200000115,자격(requires/anyOf),기관/단체 & 어업인,(방역수행기관 | 병성감정 실시 기관 | 수산생물 관련 단체 | 양식어업인),교체
+119200000116,자격(requires/anyOf),기관/단체 & 어업인,생산자단체 & 어업인,교체
+119200000117,자격(requires/anyOf),어업인,어업인 & (방역수행기관 | 병성감정 실시 기관 | 수산생물 관련 단체),교체
+119200000118,자격(requires/anyOf),어업인,(낚시어선업자 | 낚시어선에 승선하는 선원 | 낚시터업자),교체
+119200000120,자격(requires/anyOf),기관/단체,자율관리어업공동체,교체
+119200000126,자격(requires/anyOf),어업인,양식어업 면허/허가자 & 어업인 & (면허/허가 예정 생산자단체 | 면허/허가 예정 어업인) & (수산관련 생산자단체 | 어업 법인),교체
+119200000128,자격(requires/anyOf),기관/단체,(수산물 수출 관련 개인 | 수산물 수출 관련 단체),교체
+119200000129,자격(requires/anyOf),기관/단체,(수산물 수출 관련 개인 | 수산물 수출 관련 단체),교체
+119200000130,자격(requires/anyOf),기관/단체,(기관/단체 | 어업인),교체
+119200000133,자격(requires/anyOf),기관/단체,(수산물 수출 관련 개인 | 수산물 수출 관련 단체),교체
+119200000135,자격(requires/anyOf),기관/단체,(수산물 수출 관련 개인 | 수산물 수출 관련 단체),교체
+119200000136,자격(requires/anyOf),기관/단체,(수산물 수출 관련 개인 | 수산물 수출 관련 단체),교체
+119200000137,자격(requires/anyOf),기관/단체,(기관/단체 | 어업인),교체
+119200000138,자격(requires/anyOf),기관/단체,(수산물 수출 관련 개인 | 수산식품 수출 지정기관),교체
+119200000139,자격(requires/anyOf),기관/단체,(수산생물 관련 단체 | 어업인),교체
+119200000143,자격(requires/anyOf),기관/단체,(수산식품 가공생산 개인 | 수산식품 가공생산 단체),교체
+119200000153,자격(requires/anyOf),농림어업(법인) & 중소기업,어업인,교체
+119200000154,자격(requires/anyOf),기관/단체,오징어채낚기 어선,교체
+119200000157,자격(requires/anyOf),어업인,어업인 & (수협 | 영어조합법인),교체
+119200000162,자격(requires/anyOf),-,선원 & 직계가족,추가
+119200000164,자격(requires/anyOf),기관/단체,(수산물 수출 관련 개인 | 수산물 수출 관련 단체),교체
+119200000165,자격(requires/anyOf),기관/단체,(수산물 수출 관련 개인 | 수산물 수출 관련 단체),교체
+119200000168,자격(requires/anyOf),기관/단체,해외수산협력센터 국제협상전문관,교체
+119200000173,자격(requires/anyOf),기관/단체,해외수산협력센터,교체
+119200000174,age_max,39,40,교체
+119200000176,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),(고등학생 | 대학생/대학원생 | 일반인 | 중학생 | 초등학생),교체
+119200000192,자격(requires/anyOf),어업인,수산업경영인,교체
+119200000193,자격(requires/anyOf),어업인,(비어선 | 어선),교체
+119200000194,자격(requires/anyOf),농림어업(법인) & 어업인 & 중소기업,상법상 회사 & 어업인,교체
+119200000195,자격(requires/anyOf),어업인,(수협 | 어촌계 | 영어조합법인 | 협업) & (생산자단체 | 어업 법인) & (배합사료 공급업체 | 양식업 면허자 | 어업인) & (유한회사 | 주식회사),교체
+122000000003,자격(requires/anyOf),영업중 & 중소기업 & (기타업종 | 제조업) & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(소상공인 | 중소기업),교체
+125000000004,income_max_pct,-,90,추가
+127000000002,자격(requires/anyOf),-,(기초생활수급자 | 범죄피해자 | 장애인),추가
+127000000025,자격(requires/anyOf),장애인,범죄피해자 & 장애인,교체
+127000000025,age_max,-,18,추가
+127000000026,자격(requires/anyOf),-,(성폭력 피해자 | 스토킹 피해자 | 아동·청소년 성범죄 피해자 | 아동학대 피해아동 | 인신매매 피해자 | 장애인학대 피해장애인 | 특정강력범죄 피해자),추가
+128000000001,자격(requires/anyOf),-,범죄피해자 & (배우자 | 직계친족 | 형제자매),추가
+128000000002,자격(requires/anyOf),-,범죄피해자 & (중대범죄 신고자 | 친족),추가
+128000000003,자격(requires/anyOf),-,(범죄피해자 | 범죄피해자 4촌 이내 친족 | 범죄피해자 배우자 | 범죄피해자 직계친족),추가
+129000000007,자격(requires/anyOf),국가보훈대상자,군인 유족,교체
+129000000008,자격(requires/anyOf),(국가보훈대상자 | 장애인),특수임무 수행자 & 특수임무 수행자 유족,교체
+129000000009,자격(requires/anyOf),-,(군무원 | 군인 | 일반 국민),추가
+129000000013,자격(requires/anyOf),-,전역예정장병,추가
+129000000014,자격(requires/anyOf),-,(극동공군사령부 첩보부대 | 미국 중앙정보국 첩보부대),추가
+129000000015,자격(requires/anyOf),-,전역예정장병,추가
+129000000032,자격(requires/anyOf),구직자/실업자,(기초생활수급자 | 다자녀가구 | 장애인 | 차상위계층 | 한부모가족),교체
+129000000081,자격(requires/anyOf),-,상근예비역,추가
+129000000082,자격(requires/anyOf),-,(6·25전사자 유가족 | 6·25전사자 유해 매장지역 제보자),추가
+131200000002,자격(requires/anyOf),-,(기초생활수급자 | 다자녀 부모 | 장애인 | 차상위계층 | 한부모가족),추가
+131200000005,자격(requires/anyOf),사회복지시설,노인복지시설,교체
+131200000010,자격(requires/anyOf),사회복지시설,(어린이집 | 유치원 | 직장 어린이집),교체
+131200000011,자격(requires/anyOf),기관/단체,국가유공자 단체,교체
+131200000012,자격(requires/anyOf),사회복지시설,(사회복지 단체 | 사회복지법인 | 한국한센복지협회),교체
+131200000013,자격(requires/anyOf),기관/단체,사회적기업,교체
+131200000014,자격(requires/anyOf),국가보훈대상자,5·18민주화운동부상자 & 고엽제후유의증 환자 & 국가보훈대상자,교체
+132000000001,자격(requires/anyOf),다문화가족,외국인,교체
+132000000002,자격(requires/anyOf),다문화가족,국내체류 외국인 & 다문화가족,교체
+132000000003,자격(requires/anyOf),다문화가족,외국인,교체
+132000000006,자격(requires/anyOf),-,1종 보통 운전면허 적성검사 대상,추가
+132000000008,자격(requires/anyOf),-,강력범죄 피해자,추가
+134200000003,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),기초생활수급자 & (고등학생 | 중학생 | 초등학생),교체
+134200000007,자격(requires/anyOf),대학생/대학원생,대학원,교체
+134200000008,자격(requires/anyOf),대학생/대학원생,대학생 & 전문대학생,교체
+134200000008,income_max_pct,50,100,교체
+134200000010,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 장애인,교체
+134200000011,자격(requires/anyOf),대학생/대학원생,대학생,교체
+134200000014,자격(requires/anyOf),고등학생,(경제적 취약계층 | 국가보훈대상자 | 기초생활수급자),교체
+134200000045,자격(requires/anyOf),-,(기초생활수급자 | 지역특화 대상자 | 차상위계층 | 한부모가족),추가
+134200005001,자격(requires/anyOf),근로자/직장인,고등학교 졸업자,교체
+134200005002,자격(requires/anyOf),대학생/대학원생,대학생,교체
+134200005041,자격(requires/anyOf),대학생/대학원생,법학전문대학원 취약계층 학생,교체
+135200000005,자격(requires/anyOf),(임산부 | 출산/입양),영아 & 임산부,교체
+135200000005,income_max_pct,100,80,교체
+135200000010,자격(requires/anyOf),기관/단체,(공동생활가정 | 시설장 | 종사자),교체
+135200000017,자격(requires/anyOf),장애인,(국가보훈대상자 | 노인 | 장애인),교체
+135200000019,자격(requires/anyOf),질병/질환자,입원한센인,교체
+135200000085,자격(requires/anyOf),장애인,기초생활수급자 & 등록장애인,교체
+135200000086,자격(requires/anyOf),사회복지시설,아동복지시설,교체
+135200000088,자격(requires/anyOf),기타업종(법인) & 중소기업,(관리책임자 | 제공기관장 | 제공인력),교체
+135200000089,자격(requires/anyOf),-,마약류 중독자,추가
+135200000090,자격(requires/anyOf),장애인,장애인 & 치과영역 중증장애인,교체
+135200000091,자격(requires/anyOf),질병/질환자,(결핵 환자 | 남아메리카출혈열 환자 | 니파바이러스감염증 환자 | 동물인플루엔자 인체감염증 환자 | 두창 환자 | 디프테리아 환자 | 라싸열 환자 | 마버그열 환자 | 수막구균 감염증 환자 | 신종감염병증후군 환자 | 신종인플루엔자 환자 | 에볼라바이러스병 환자 | 중동호흡기증후군 환자 | 중증급성호흡기증후군 환자 | 콜레라 환자 | 크리미안콩고출혈열 환자 | 페스트 환자 | 폴리오 환자 | 홍역 환자),교체
+135200000094,자격(requires/anyOf),장애인,발달장애인,교체
+135200000096,자격(requires/anyOf),구직자/실업자,(간호대학 졸업예정자 | 유휴·이직 간호사 | 의료기관 신규 및 재직간호사),교체
+135200000099,자격(requires/anyOf),-,군인,추가
+135200000101,자격(requires/anyOf),-,(의료급여 수급자 | 저소득층),추가
+135200000101,income_max_pct,50,20,교체
+135200000102,자격(requires/anyOf),질병/질환자,한센병사업대상자,교체
+135200000102,income_max_pct,50,60,교체
+135200000103,자격(requires/anyOf),장애인,등록장애인,교체
+135200000103,income_max_pct,200,125,교체
+135200000112,자격(requires/anyOf),-,(금연취약 사업장 흡연자 | 임대주택 거주자 | 장애인),추가
+135200000114,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+135200000124,자격(requires/anyOf),질병/질환자,(가족 | 전 국민 | 치매 환자),교체
+135200000130,age_max,64,65,교체
+135200005002,자격(requires/anyOf),출산/입양,긴급복지 주지원 수급자,교체
+135200005004,자격(requires/anyOf),-,긴급복지 주지원 수급자,추가
+135200005010,자격(requires/anyOf),-,기초생활수급자 & 의료급여 수급자,추가
+135200005010,income_max_pct,50,40,교체
+135200005011,자격(requires/anyOf),출산/입양,입양가정,교체
+135200005012,자격(requires/anyOf),근로자/직장인,(주거·교육급여 수급 가구 | 차상위계층),교체
+135200005013,income_max_pct,100,50,교체
+135200005015,자격(requires/anyOf),(임산부 | 출산/입양),출산/입양,교체
+135200005015,age_max,44,2,교체
+135200005017,자격(requires/anyOf),(근로자/직장인 | 농업인 | 어업인 | 임업인 | 축산업인),근로자/직장인,교체
+135200005017,income_max_pct,-,120,추가
+135200005024,자격(requires/anyOf),-,흡연자 & (급만성질환을 가진 흡연자 | 중증고도흡연자),추가
+135200005026,age_min,-,19,추가
+135200005027,자격(requires/anyOf),-,(가족돌봄청년 | 청·중장년),추가
+135200005027,age_min,9,13,교체
+135200005027,age_max,64,39,교체
+135200005029,자격(requires/anyOf),-,기초생활수급자 & 차상위계층,추가
+135200005031,자격(requires/anyOf),-,(건강보험 본인부담 경감자 | 보험료 순위 25%이하인 자 | 의료급여 수급권자),추가
+135200005031,income_max_pct,-,50,추가
+135200005037,자격(requires/anyOf),장애인,발달장애인,교체
+135200005039,자격(requires/anyOf),-,자립준비청년,추가
+135200005045,자격(requires/anyOf),-,(Wee센터/Wee클래스 주민 | 국가건강검진 우울자 | 대학 상담센터 주민 | 보호연장 아동 | 자립준비청년 | 정신건강복지센터 주민 | 정신의료기관 주민 | 청소년 상담복지센터 주민),추가
+135200005048,자격(requires/anyOf),(임산부 | 출산/입양),임산부 & (보호 출산 산모 | 보호 출산 아동 | 아동의 생부 | 위기 임산부),교체
+135200005053,자격(requires/anyOf),(장애인 | 질병/질환자),인지저하 & 치매환자,교체
+135200005059,자격(requires/anyOf),영업중 & 중소기업,근로자 & 노무제공자 & 예술인,교체
+135200005060,자격(requires/anyOf),-,노숙인,추가
+137100000004,자격(requires/anyOf),기타업종 & 기타업종(법인) & 영업중 & 중소기업,(법인/시설/단체 | 소상공인),교체
+137100000032,자격(requires/anyOf),-,(경도인지장애 및 치매 위험자 | 고립·운둔 청년 | 문화 치유지원 수요자 | 심리·정서적 위기 청소년 | 정신건강 상담수요자 | 학폭 피·가해자),추가
+137100000034,자격(requires/anyOf),장애인,기초생활수급자 & 장애인,교체
+137100000173,자격(requires/anyOf),-,(가족 | 도박문제 당사자),추가
+137100000217,자격(requires/anyOf),대학생/대학원생,(근로자/직장인 | 대학생 | 취업준비생),교체
+137100000235,자격(requires/anyOf),장애인,장애인 & (장애인 국가대표 선수 | 지도자),교체
+137100000236,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+138300000008,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생,교체
+138300000009,자격(requires/anyOf),다문화가족,결혼이민예정자,교체
+138300000011,자격(requires/anyOf),기관/단체,(만 9~24세 청소년 | 지도자 | 청소년 상담 자격증 소지자 | 청소년 상담 자격증 예정자),교체
+138300000011,age_min,-,9,추가
+138300000011,age_max,-,24,추가
+138300000016,자격(requires/anyOf),무주택세대,가정폭력 피해자 & 무주택세대,교체
+138300000017,자격(requires/anyOf),(무주택세대 | 한부모/조손),무주택세대 & 한부모가족,교체
+138300000020,자격(requires/anyOf),다문화가족,이주여성 & (가정폭력 피해자 | 성매매피해자 | 성폭력 피해자),교체
+138300000021,자격(requires/anyOf),다문화가족,다문화가족 & (예비부모 | 중도입국자녀를 둔 다문화가족),교체
+138300000021,age_max,-,18,추가
+138300000023,자격(requires/anyOf),-,(노인 | 농산어촌 거주자 | 도서지역 거주자 | 벽지 거주자 | 이주민 | 장애인 | 접적지역 거주자 | 학부모),추가
+138300000030,자격(requires/anyOf),-,청소년,추가
+138300000040,자격(requires/anyOf),한부모/조손,(미혼부 | 한부모가족),교체
+138300000040,income_max_pct,75,125,교체
+138300000043,자격(requires/anyOf),-,디지털 성범죄 피해자,추가
+138300000051,자격(requires/anyOf),출산/입양,청소년부모,교체
+138300000051,income_max_pct,75,65,교체
+138300000052,자격(requires/anyOf),출산/입양 & 한부모/조손,미혼 한부모,교체
+138300000052,income_max_pct,-,50,추가
+138300000053,자격(requires/anyOf),-,가정폭력 피해자,추가
+138300000055,자격(requires/anyOf),구직자/실업자,경력보유여성 & 구직자/실업자,교체
+138300000059,자격(requires/anyOf),다문화가족 & (고등학생 | 중학생 | 초등학생),다문화가족 & (난민가족 자녀 | 다문화가족 자녀 | 외국인가족 자녀),교체
+138300000060,자격(requires/anyOf),다문화가족,(결혼이민자 | 중도입국자녀),교체
+138300000067,자격(requires/anyOf),-,청소년,추가
+138300000067,age_min,18,15,교체
+140000000002,자격(requires/anyOf),-,(국군의 날에 입장하는 군인 | 국군포로 또는 억류지 출신 포로 가족 | 다자녀가구 | 다자녀카드 소지자 | 민주유공자 | 병역명문가 | 어린이날에 입장하는 아동 | 특수임무 수행자) & (국가보훈대상자 | 기초생활수급자 | 노인 | 독립유공자 | 장애인 | 참전군인),추가
+140000000161,자격(requires/anyOf),(국가보훈대상자 | 농업인 | 장애인),국가보훈대상자 & 의료급여 수급권자 & 장애인 & (특수임무유공자 | 특수임무유공자 가족 | 특수임무유공자 유족) & (독립유공자 | 독립유공자 유족) & (고엽제후유의증 환자 | 고엽제후유증 2세 환자) & (5.18민주유공자 | 5.18민주유공자 가족 | 5.18민주유공자 유족),교체
+140000000161,income_max_pct,50,40,교체
+140000000163,자격(requires/anyOf),(국가보훈대상자 | 농업인 | 장애인),(5.18민주유공자 | 고엽제후유의증 환자 | 국가보훈대상자 | 독립유공자 | 의료급여 수급권자 | 장애인 | 특수임무유공자),교체
+140000000163,income_max_pct,50,40,교체
+140000000164,자격(requires/anyOf),-,유휴토지 소유자,추가
+140000000165,자격(requires/anyOf),-,특수산림사업자,추가
+140000000166,자격(requires/anyOf),-,산림소유자,추가
+140000000167,자격(requires/anyOf),기관/단체,목재산업 전문인력 양성기관,교체
+140000000170,자격(requires/anyOf),임업인,산림조합 & 임업인,교체
+140000000173,자격(requires/anyOf),기타업종(법인) & 중소기업,사립 치유의 숲 조성계획 허가자,교체
+140000000174,자격(requires/anyOf),기관/단체,산림탄소상쇄사업에 등록된 사업자,교체
+140000000175,자격(requires/anyOf),기타업종(법인) & 중소기업,(산림교육전문가 양성기관 | 수목원 | 수목장림 | 숲속야영장 | 자연휴양림 | 정원 | 치유의 숲),교체
+140000000176,자격(requires/anyOf),-,(기초생활수급자 | 장애아동수당 수급자 | 장애인수당 수급자 | 장애인연금 수급자 | 차상위계층 | 한부모가족),추가
+140000000177,자격(requires/anyOf),사회복지시설,(가정폭력 피해자 | 갱생보호대상자 | 결혼이민자 | 경력단절 여성 | 구직자/실업자 | 노숙인 | 노인 | 범죄구조피해자 | 북한이탈주민 | 성매매피해자 | 약물중독자 | 장애인 | 저소득가정 | 저신용자 | 조손가정 | 청년 | 한부모가족) & (사회복지기관 | 청소년 단체 | 취약계층 단체) & (사회적으로 관심과 배려가 필요한 유아 | 스트레스 관리개선 필요자 | 환경/생활습관질환자),교체
+140000000179,자격(requires/anyOf),임업인,(산림 관련 교육 이수자 | 산림보호 관련 활동한 실적이 있는 자 | 산림이나 환경 관련 단체의 회원 | 산림청장이 설립허가한 법인의 회원 | 임업인),교체
+140000000185,자격(requires/anyOf),임업인,(개인사업자 | 일반인 | 임업인 | 퇴직예정자),교체
+140000000189,자격(requires/anyOf),-,산림소유자,추가
+140000000191,자격(requires/anyOf),-,산림소유자,추가
+140000000192,자격(requires/anyOf),-,산림소유자,추가
+140000000194,자격(requires/anyOf),-,자원봉사자,추가
+140000000201,자격(requires/anyOf),기관/단체,지방자치단체,교체
+140000000202,자격(requires/anyOf),기타업종(법인) & 중소기업,임산물 생산자 & 임산물 수출업체,교체
+140000000205,자격(requires/anyOf),기관/단체,단기소득임산물 산림청 등록자,교체
+140000000213,자격(requires/anyOf),기관/단체,(사회적경제 진입 희망 기업 | 사회적경제기업 운영 기업 | 산림분야 사회적경제기업),교체
+140000000214,자격(requires/anyOf),-,(군인/보훈대상자 | 다문화 | 일반인 | 장애인 | 학생),추가
+140000000217,자격(requires/anyOf),사회복지시설,목재펠릿 보일러·난로 설치자,교체
+140000000222,자격(requires/anyOf),기타업종(법인) & (기관/단체 | 사회복지시설),어린이집 & (가정어린이집 | 단체 | 민간어린이집 | 직장 어린이집 | 협동어린이집),교체
+142000000001,자격(requires/anyOf),중소기업,예비창업자,교체
+142000000032,자격(requires/anyOf),기관/단체,직업계고·전문대,교체
+142000000034,자격(requires/anyOf),기타업종(법인) & 중소기업,중소기업,교체
+142000000038,자격(requires/anyOf),-,예비창업자,추가
+142000000045,자격(requires/anyOf),기관/단체 & 영업중 & (기타업종 | 음식점업),법인/시설/단체 & 소상공인,교체
+142000000062,자격(requires/anyOf),기타업종(법인) & 중소기업,중소기업,교체
+142000000072,자격(requires/anyOf),예비창업자,제조업,교체
+142000000073,자격(requires/anyOf),예비창업자 & 중소기업,(예비)재창업자,교체
+142000000078,자격(requires/anyOf),중소기업,여성 기업 & 여성 대표자 & 여성 예비창업자,교체
+142000000085,자격(requires/anyOf),-,(대학생 | 특성화고생 | 학부모),추가
+142000000088,자격(requires/anyOf),생계곤란/폐업예정,소상공인 & 자영업자 고용보험에 가입한 소상공인 & (경영위기 소상공인 | 폐업(예정) 소상공인),교체
+142000000089,자격(requires/anyOf),영업중 & (기타업종 | 음식점업),소상공인 & (골목형상점가 상인 | 백년소상공인 | 상권활성화구역 상인 | 상인조직 | 상점가 상인 | 자율상권구역 상인 | 전통시장 상인),교체
+142000000090,자격(requires/anyOf),(영업중 | 예비창업자),(장애인 예비창업자 | 장애인기업),교체
+142000000098,자격(requires/anyOf),중소기업,중소기업 & (기술 수출 실적 보유 중소기업 | 수출 관련 지정제도 선정기업 | 수출실적 10만불 미만 중소기업 | 전자상거래활용사업 참여기업 | 정부 및 지자체 수출지원사업 참여기업) & (기술 수출 실적 보유 중소기업 | 수출실적 10만불 이상 중소기업 | 혁신성장분야 중소기업),교체
+142000000099,자격(requires/anyOf),제조업 & 제조업(법인) & 중소기업 & (영업중 | 예비창업자),예비창업자 & 중소기업,교체
+142000000115,자격(requires/anyOf),중소기업,중소·벤처기업,교체
+142000000121,자격(requires/anyOf),기관/단체,중소기업 & (조합 | 중소기업 지원 유관기관 | 협회),교체
+142100000003,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),(경영혁신형 중소기업 | 공공연구기관 소속 연구인력 | 기술혁신형 중소기업 | 벤처기업),교체
+142100000004,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),중소기업,교체
+142100000007,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),중소기업,교체
+142100000011,자격(requires/anyOf),기타업종(법인) & 중소기업,중소기업,교체
+142100000014,자격(requires/anyOf),중소기업,장애인기업,교체
+142100000015,자격(requires/anyOf),(영업중 | 예비창업자),예비창업자 & 장애인 & (업종전환 희망 | 장애인기업),교체
+142100000016,자격(requires/anyOf),장애인,(발달장애인 | 보호자 | 후견인),교체
+142100000017,자격(requires/anyOf),중소기업,장애인기업,교체
+142100000018,자격(requires/anyOf),중소기업,장애인기업,교체
+142100000019,자격(requires/anyOf),중소기업,장애인기업,교체
+142100000020,자격(requires/anyOf),중소기업,1인 사업주 & 중증장애인,교체
+142100000022,자격(requires/anyOf),중소기업,(벤처기업 | 소상공인 | 예비창업자 | 중소기업) & (소기업 | 예비창업자),교체
+142100000026,자격(requires/anyOf),중소기업,수출 중소기업,교체
+142100000031,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+142100000034,자격(requires/anyOf),기관/단체 & 기타업종(법인),(골목형상점가 | 상권활성화구역 | 상점가 | 전통시장),교체
+142100000035,자격(requires/anyOf),영업중,골목형상점가 & 상권활성화구역 & 상점가 & 소상공인 & 전통시장,교체
+142100000037,자격(requires/anyOf),영업중,소상공인,교체
+142100000041,자격(requires/anyOf),영업중,소상공인,교체
+142100000044,자격(requires/anyOf),생계곤란/폐업예정 & 중소기업,(법인/시설/단체 | 소상공인),교체
+142100000045,자격(requires/anyOf),중소기업,중견기업 & 중소기업,교체
+142100000049,자격(requires/anyOf),중소기업,예비창업자,교체
+142100000050,자격(requires/anyOf),영업중,소상공인,교체
+142100000051,자격(requires/anyOf),영업중,소상공인,교체
+142100000052,자격(requires/anyOf),영업중,로컬크리에이터 & 소상공인,교체
+142100000054,자격(requires/anyOf),중소기업,중소기업 & (사업화 기업 | 실증기업 | 투자연계기업),교체
+142100000056,자격(requires/anyOf),중소기업,예비창업자,교체
+142100000058,자격(requires/anyOf),예비창업자 & 중소기업,예비창업자,교체
+142100000063,자격(requires/anyOf),영업중 & 중소기업 & (기타업종 | 제조업) & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),중소기업,교체
+142100000066,자격(requires/anyOf),기타업종 & 기타업종(법인) & 영업중 & 중소기업,법인/시설/단체 & 소상공인,교체
+142100000068,자격(requires/anyOf),영업중 & 제조업,소상공인 & 일반 소공인 & (백년소공인 | 스마트공방 소공인 | 집적지구 소공인 | 판로개척 소공인),교체
+142100000069,자격(requires/anyOf),영업중 & 중소기업,소상공인,교체
+142100000070,자격(requires/anyOf),영업중,기업가형 소상공인 & 예비 기업가형 소상공인 & 중소기업,교체
+142100000071,자격(requires/anyOf),영업중 & 중소기업,소상공인 & 중소기업 & (ESG경영 실천 기업 | 녹색확인기업),교체
+142100000072,자격(requires/anyOf),중소기업,영업중 & 중소기업 & (수출실적 보유 | 신용평점 710 이상 개인),교체
+142100000073,자격(requires/anyOf),영업중 & 중소기업,(법인/시설/단체 | 소상공인),교체
+142100000074,자격(requires/anyOf),영업중 & 중소기업,소기업 & 소상공인,교체
+142100000075,자격(requires/anyOf),기관/단체 & 영업중,소기업 & 소상공인,교체
+142100000076,자격(requires/anyOf),영업중 & 중소기업,자영업자 & (농림어업인 | 무등록 소상공인),교체
+143000000001,자격(requires/anyOf),중소기업,중소기업 & 초기 중견기업,교체
+143000000006,자격(requires/anyOf),-,여성,추가
+143000000008,자격(requires/anyOf),기관/단체,(공공기관 | 비영리 단체 | 비영리 법인 | 중소기업),교체
+143000000009,자격(requires/anyOf),중소기업,(거절결정불복심판 청구자 | 경찰 또는 검찰 수사 사건 당사자 | 지식재산권 침해 소송 당사자),교체
+143000000011,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),중소기업,교체
+143000000018,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),기업,교체
+145000000004,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층 | 취약계층),추가
+145000000041,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),국내복귀기업,교체
+145000000047,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),외국인 투자기업,교체
+145000000048,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),중소기업,교체
+145000000051,자격(requires/anyOf),기타업종(법인) & 중소기업,광업권자 & 조광권자,교체
+145000000053,자격(requires/anyOf),기타업종(법인) & 중소기업,광산,교체
+145000000057,자격(requires/anyOf),기타업종(법인) & 중소기업,(가행광산 | 신규광산) & (광업권자 | 조광권자 | 채굴권자),교체
+145000000058,자격(requires/anyOf),기타업종(법인) & 중소기업,광산,교체
+145000000061,자격(requires/anyOf),제조업(법인) & 중소기업,비영리법인 & (단체 | 대학 | 연구기관 | 협회),교체
+145000000065,자격(requires/anyOf),근로자/직장인,근로자 & 석탄광업자,교체
+145000000069,자격(requires/anyOf),기타업종(법인) & 중소기업,대한민국 국민,교체
+145000000073,자격(requires/anyOf),제조업(법인) & 중소기업,비영리법인,교체
+145000000083,자격(requires/anyOf),중소기업,중소중견기업,교체
+145000000087,자격(requires/anyOf),중소기업,중견기업 & 중소기업,교체
+145000000090,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),(고용창출 | 부품 소재 | 신성장산업 | 연구개발센터 | 지역 헤드쿼터),교체
+145000000098,자격(requires/anyOf),제조업(법인) & 중소기업,플랜트 관련 기업,교체
+145000000099,자격(requires/anyOf),제조업(법인) & 중소기업,중소기업 & (플랜트 수주활동 EPC사 | 플랜트 수주활동 설비 제조사 | 플랜트 수주활동 엔지니어링사),교체
+145000000100,자격(requires/anyOf),제조업(법인) & 중소기업,플랜트기자재 제조업체,교체
+145000000103,자격(requires/anyOf),중소기업,기관/단체,교체
+145000000104,자격(requires/anyOf),중소기업,기관,교체
+145000000107,자격(requires/anyOf),-,(기초생활수급자 | 복지 사각지대 저소득 가구 | 차상위계층),추가
+145000000110,자격(requires/anyOf),-,기름보일러 사용자 & (소년소녀가정 | 한부모가족),추가
+145000000111,자격(requires/anyOf),-,연탄보일러 사용 가구 & (기초생활수급자 | 차상위계층 | 취약계층),추가
+145000000111,income_max_pct,75,60,교체
+147100000002,자격(requires/anyOf),(장애인 | 질병/질환자),장애인 & 질병/질환자,교체
+148000000001,자격(requires/anyOf),질병/질환자,질병/질환자 & (미만성 흉막비후 | 석면폐증 | 원발성 악성중피종 | 원발성 폐암),교체
+148000000003,자격(requires/anyOf),제조업(법인) & 중소기업,녹색산업분야 (예비)청년창업기업 & 중소환경기업 & (환경분야 예비창업자 | 환경분야 창업기업),교체
+148000000003,age_max,-,39,추가
+148000000006,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),악취배출시설 사업장 & 중소기업,교체
+148000000007,자격(requires/anyOf),-,특정경유자동차 소유자,추가
+148000000009,자격(requires/anyOf),-,환경오염피해 피해자,추가
+148000000014,자격(requires/anyOf),-,가정,추가
+148000000033,자격(requires/anyOf),-,건축물 소유자 & 농림수산업 종사자 & 상속 또는 증여받은 배우자 & 상속 또는 증여받은 직계존비속 & 상수원관리지역 주민 & 토지 소유자,추가
+148000000036,자격(requires/anyOf),기관/단체,상수원관리지역 관할 시군구,교체
+148000000041,자격(requires/anyOf),기관/단체,법인/시설/단체,교체
+148000000042,자격(requires/anyOf),농업인,농림업종사자 & 상수원보호구역 주민,교체
+148000000045,자격(requires/anyOf),기관/단체,광역지방자치단체,교체
+148000000050,자격(requires/anyOf),-,중소기업 & (공동주택 | 비영리 법인 및 단체 | 업무용·상업용 건축물) & (4종 사업장 | 5종 사업장) & (비산배출시설 운영자 | 악취배출시설 운영자 | 조합),추가
+149200000006,자격(requires/anyOf),제조업(법인) & 중소기업,사업주 & 산업재해 근로자,교체
+149200000008,자격(requires/anyOf),중소기업,(근로자 | 사업주),교체
+149200000009,income_max_pct,75,50,교체
+149200000010,자격(requires/anyOf),근로자/직장인,(산재근로자 생활안정자금 대상자 | 생활안정자금 대상자 | 직업훈련 생계비 대출 대상자 | 체불근로자 생계비 대출 대상자),교체
+149200000012,자격(requires/anyOf),근로자/직장인,(10인 이상 사업 | 월평균보수 270만원 미만의 예술인) & (노무제공자 | 사업주 | 예술인),교체
+149200000014,자격(requires/anyOf),기타업종(법인) & 중소기업,50인 미만 사업장 & 건설 현장 & (사업주 단체 | 산업단지 관리주체 | 산업단지 입주 사업장),교체
+149200000016,자격(requires/anyOf),구직자/실업자,산재 장해 1~12급 근로자,교체
+149200000017,자격(requires/anyOf),질병/질환자,광업 근로자,교체
+149200000018,자격(requires/anyOf),근로자/직장인,(산업재해 근로자 | 산재 장해 1~9급 근로자 | 산재사망 근로자 유족 | 상병보상연금 수급자 | 이황화탄소 질병 판정자),교체
+149200000019,자격(requires/anyOf),질병/질환자,산업재해 근로자,교체
+149200000020,자격(requires/anyOf),근로자/직장인,(사회복지사 추천자 | 사회심리 재활 필요자 | 잡코디네이터 추천자) & (산재 장해 노동자 | 장기 통원 요양 산재노동자) & (입원 산재 근로자 | 통원 산재 근로자) & (간병급여 수급권자 | 산업재해 근로자 | 상병보상연금 수급자 배우자 | 상병보상연금 수급자 자녀 | 유족연금 수급자격자) & (산재 장해인 | 통원 요양 산재노동자),교체
+149200000021,자격(requires/anyOf),중소기업,사업주,교체
+149200000026,age_max,75,74,교체
+149200000027,자격(requires/anyOf),근로자/직장인,근로자,교체
+149200000028,자격(requires/anyOf),(고등학생 | 중학생),진폐 근로자,교체
+149200000029,자격(requires/anyOf),-,광업 근로자,추가
+149200000030,자격(requires/anyOf),근로자/직장인 & 중소기업,근로자/직장인 & 사업주 & 퇴직근로자,교체
+149200000031,자격(requires/anyOf),장애인 & 중소기업,장애인 & (사업주 | 장애인 공무원 | 장애인 근로자),교체
+149200000032,자격(requires/anyOf),구직자/실업자,구직자/실업자 & 장애인,교체
+149200000034,자격(requires/anyOf),중소기업,우선지원대상기업 & 중견기업,교체
+149200000037,자격(requires/anyOf),구직자/실업자,(무급 휴직자 | 비정규직 근로자 | 자영업자 | 전직실업자),교체
+149200000037,income_max_pct,50,80,교체
+149200000040,자격(requires/anyOf),중소기업 & (농림어업(법인) | 제조업(법인)),법인/시설/단체 & (건설업 | 광업 | 농축산업 | 서비스업 | 어업 | 임업 | 제조업),교체
+149200000043,자격(requires/anyOf),근로자/직장인,근로자,교체
+149200000044,자격(requires/anyOf),중소기업,법인/시설/단체,교체
+149200000047,자격(requires/anyOf),영업중 & 중소기업,(비정규직 고용 사업주 | 비정규직 근로자 | 인사노무 관리자),교체
+149200000049,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(위생 및 유사서비스업 | 임업 | 제조업),교체
+149200000050,자격(requires/anyOf),기관/단체,국가기술자격 검정시설 사용기관,교체
+149200000052,자격(requires/anyOf),중소기업,(상생협약 기금 | 중소기업 공동기금 | 지자체 지원 기금 | 협력업체 근로자 복지 사업) & (공동근로복지기금 | 대기업 | 사내기금 법인 | 원청 | 중소기업) & (공동근로복지기금 | 사내 근로복지기금),교체
+149200000053,자격(requires/anyOf),중소기업,사업주,교체
+149200000054,자격(requires/anyOf),중소기업,사업주,교체
+149200000055,자격(requires/anyOf),중소기업,사업주,교체
+149200000056,자격(requires/anyOf),장애인,(장애인 공무원 | 중증장애인),교체
+149200000059,자격(requires/anyOf),중소기업,기업,교체
+149200000060,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),근로자,교체
+149200000065,자격(requires/anyOf),(기관/단체 | 중소기업),사업주 단체 & 중소기업,교체
+149200000066,자격(requires/anyOf),중소기업,법인/시설/단체,교체
+149200000069,자격(requires/anyOf),중소기업,산재보험 가입 사업장,교체
+149200000070,자격(requires/anyOf),-,국가기술자격 소지자 & 군사분계선 이북 자격 취득자 & 다른 법령 자격 취득자 & 동등 수준 인정자 & 민간 자격 취득자 & 외국 자격 취득자,추가
+149200000079,자격(requires/anyOf),중소기업,사업주,교체
+149200000081,자격(requires/anyOf),중소기업,경증장애인 & 장애인 & 중증장애인 & (근육병증 | 뇌병변 | 뇌전증 | 발달 | 시각 | 신장 | 언어 | 정신 | 척수손상 | 호흡기),교체
+149200000081,age_min,-,15,추가
+149200000085,자격(requires/anyOf),제조업(법인) & 중소기업,제조업(법인),교체
+149200000087,자격(requires/anyOf),중소기업,상시근로자 100인 미만 사업장 & 상시근로자 30인 미만 사업장,교체
+149200000090,자격(requires/anyOf),중소기업,20인 이상 사업장,교체
+149200000092,자격(requires/anyOf),구직자/실업자,구직자,교체
+149200000093,자격(requires/anyOf),중소기업,소규모 사업주,교체
+149200000125,자격(requires/anyOf),-,(기능경기대회 출전자 및 수상자 | 대한민국명장 | 숙련기술 장려 사업체 | 숙련기술 전수자 | 우수 숙련기술자 | 이달의 기능한국인),추가
+149200000135,자격(requires/anyOf),구직자/실업자,미취업자,교체
+149200000139,자격(requires/anyOf),중소기업,(단체 | 시설),교체
+149200000146,자격(requires/anyOf),근로자/직장인,(국민취업지원제도 참여자 | 실업급여 수급자 | 장기실직자),교체
+149200000147,자격(requires/anyOf),구직자/실업자,구직자,교체
+149200000149,자격(requires/anyOf),중소기업,상시근로자 수 50인 미만 사업주,교체
+149200000153,자격(requires/anyOf),출산/입양,임산부 & (고용보험 적용 제외 근로자 | 고용보험 적용 제외자 | 자영업자 | 특수형태 근로종사자 | 프리랜서),교체
+149200005007,자격(requires/anyOf),구직자/실업자,구직자,교체
+149200005007,age_max,70,69,교체
+149200005007,income_max_pct,200,120,교체
+149200005008,자격(requires/anyOf),생계곤란/폐업예정,자영업자,교체
+149200005011,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),100인 이상 기업,교체
+149200005012,자격(requires/anyOf),중소기업,(사회적기업 | 우선지원대상기업 | 중견기업),교체
+149200005013,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),저탄소 디지털 전환 사업주,교체
+149200005014,자격(requires/anyOf),-,노동전환 고용안정 컨설팅 참여기업 & 법인/시설/단체 & 사업재편 승인기업 & 사업전환 승인기업 & 산업전환 공동훈련센터 협약기업 & 저탄소 디지털 전환 사업주,추가
+149200005016,자격(requires/anyOf),중소기업,우선지원대상기업 사업주 & 취업애로 청년,교체
+149200005017,자격(requires/anyOf),출산/입양,노무제공자 & 예술인,교체
+149200005019,자격(requires/anyOf),장애인,중증장애인 & (기초생활수급자 | 차상위계층 | 최저임금 적용 제외 근로자),교체
+149200005023,자격(requires/anyOf),-,청년,추가
+149200005025,자격(requires/anyOf),(장애인 | 질병/질환자),근로자 & 뇌혈관질환 & (견관절질환 | 고관절질환 | 슬관절질환 | 완관절·수부질환 | 족관절·족부질환 | 주관절질환 | 척추질환),교체
+149200005026,자격(requires/anyOf),예비부모/난임,근로자 & 난임,교체
+149200005027,자격(requires/anyOf),-,(1인 자영업자 | 근로자/직장인 | 중소기업 사업주 | 특수형태 근로종사자),추가
+149200005027,income_max_pct,-,100,추가
+149200005031,자격(requires/anyOf),중소기업,사업주 & 중견기업,교체
+149200005032,자격(requires/anyOf),-,국민내일배움카드 소지자,추가
+149200005033,자격(requires/anyOf),-,청년 & (가습기살균제 피해 청년 | 구직단념 청년 | 북한이탈청년 | 자립준비청년 | 지역특화 청년 | 청소년복지시설 입·퇴소 청년),추가
+149200005038,자격(requires/anyOf),근로자/직장인,근로자,교체
+154300000001,자격(requires/anyOf),기타업종(법인) & 농업인 & 중소기업,중도매인 & 화훼농가,교체
+154300000002,자격(requires/anyOf),농림어업(법인) & (기관/단체 | 중소기업),(농업법인 | 농업인 | 식품사업자),교체
+154300000004,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),농림어업(법인) & 제조업(법인) & (기타업종(법인) | 정보통신업(법인)),교체
+154300000005,자격(requires/anyOf),농림어업(법인) & 중소기업,농업법인 & 중소기업,교체
+154300000008,자격(requires/anyOf),기타업종(법인) & 중소기업,쌀 가공 업체 & 정부 관리 양곡 도정 및 보관업체,교체
+154300000009,자격(requires/anyOf),기관/단체,지방자치단체,교체
+154300000011,자격(requires/anyOf),농업인,(귀농인 | 귀농희망자 | 재촌비 농업인),교체
+154300000017,자격(requires/anyOf),기관/단체,농업법인 & 생산자단체,교체
+154300000020,자격(requires/anyOf),농림어업(법인) & 농업인 & (기관/단체 | 중소기업),(농업법인 | 농업인 | 생산자단체),교체
+154300000022,자격(requires/anyOf),농림어업(법인) & 농업인 & (기관/단체 | 중소기업),농업법인 & 농업인,교체
+154300000027,자격(requires/anyOf),기관/단체 & 축산업인,제조업(법인) & 축산업인,교체
+154300000028,자격(requires/anyOf),농림어업(법인) & 중소기업,(농업법인 | 농업인 | 생산자단체),교체
+154300000033,자격(requires/anyOf),기관/단체,제조업(법인) & (벌꿀 식품 생산 업체 | 생산자단체),교체
+154300000038,자격(requires/anyOf),기관/단체 & 농업인,관광 농원 & 농어촌민박 사업자 & 농업인,교체
+154300000039,자격(requires/anyOf),축산업인,농업인,교체
+154300000041,자격(requires/anyOf),축산업인,축산농가 & (소 번식 농가 | 영세 농가),교체
+154300000043,자격(requires/anyOf),축산업인,축산농가,교체
+154300000046,자격(requires/anyOf),축산업인,가금거래 전통시장 & 밀집사육지역 주변 & 소규모 농가 & 해외여행 중점관리 축산관계자 농장,교체
+154300000051,자격(requires/anyOf),기타업종(법인) & (기관/단체 | 중소기업),(공공급식 공급업체 | 공공급식지원센터 | 로컬푸드 직매장 | 먹거리 통합지원센터),교체
+154300000052,자격(requires/anyOf),기관/단체,봉사 단체,교체
+154300000055,자격(requires/anyOf),기관/단체,국공립 어린이집 & 분원 & 사회복지법인 어린이집,교체
+154300000056,자격(requires/anyOf),사회복지시설,법인/시설/단체 & (사회복지법인 | 어린이집 | 여성농업인센터 | 지역농협 | 지역아동센터),교체
+154300000059,자격(requires/anyOf),농업인,후계농,교체
+154300000061,자격(requires/anyOf),농업인 & 제조업(법인) & (기관/단체 | 중소기업),(농업법인 | 농업인 | 식품기업 | 지방자치단체),교체
+154300000066,자격(requires/anyOf),기관/단체,(생산자단체 | 지방자치단체),교체
+154300000067,자격(requires/anyOf),농림어업(법인) & 중소기업,과실브랜드 경영체,교체
+154300000068,자격(requires/anyOf),기관/단체,법인/시설/단체,교체
+154300000072,자격(requires/anyOf),기관/단체,농협조직 & 양곡가공업 신고자,교체
+154300000073,자격(requires/anyOf),기관/단체,정부지원 RPC(통합RPC 포함),교체
+154300000074,자격(requires/anyOf),-,도매시장 관계자,추가
+154300000075,자격(requires/anyOf),축산업인,(가축거래상인 등록자 | 축산업 허가‧등록자 | 축산차량 소유자 및 운전자),교체
+154300000076,자격(requires/anyOf),(기관/단체 | 중소기업) & (농림어업(법인) | 제조업(법인)),(가공업체 | 농업법인),교체
+154300000077,자격(requires/anyOf),기관/단체,공영도매시장 산지유통인 & 농업법인 & (조합공동사업법인 | 지역조합 | 품목조합),교체
+154300000078,자격(requires/anyOf),기관/단체,농산물자조금 단체,교체
+154300000079,자격(requires/anyOf),기관/단체,(농업법인 | 농협조직 | 협동조합),교체
+154300000080,자격(requires/anyOf),기관/단체,농림어업(법인) & 생산유통통합조직,교체
+154300000081,자격(requires/anyOf),기관/단체,생산유통통합조직,교체
+154300000082,자격(requires/anyOf),기관/단체,청과 공판장,교체
+154300000087,자격(requires/anyOf),기타업종(법인) & 중소기업,종자업 등록자,교체
+154300000092,자격(requires/anyOf),농업인,(GAP 인증 농업인 | 소비자 | 유통업자),교체
+154300000093,자격(requires/anyOf),(농업인 | 축산업인),인증 기관 & 친환경농축산물 인증 농가,교체
+154300000103,자격(requires/anyOf),기관/단체,전문 인력 양성 기관,교체
+154300000110,자격(requires/anyOf),기관/단체,(농업법인 | 농협조직 | 협동조합),교체
+154300000113,자격(requires/anyOf),기관/단체,생산자단체 & 식품기업,교체
+154300000115,자격(requires/anyOf),제조업(법인) & 중소기업,제조업(법인) & (동물용 의료기기 제조·수출 업체 | 동물용 의약품 위탁제조·판매 업체 | 동물용 의약품 제조·수출 업체),교체
+154300000118,자격(requires/anyOf),제조업(법인) & 중소기업,농업인 & 중소기업,교체
+154300000119,자격(requires/anyOf),기관/단체 & 축산업인,축산업인 & (우량암소 수정란 이식 지원 기관 | 희소한우 개량 지원 기관) & (가축개량 기관 | 가축개량 기관 소속 직원 | 개업 인공수정사 | 암소 검정 컨설턴트 | 유우군 능력 검정원 | 종돈업 허가 업체 | 축산 관련 연구 기관 | 한우 농가),교체
+154300000123,자격(requires/anyOf),기관/단체,소비자 단체 & (비영리민간단체 | 비영리법인),교체
+154300000125,자격(requires/anyOf),축산업인,농업인,교체
+154300000127,자격(requires/anyOf),기타업종 & (영업중 | 예비창업자),예비창업자,교체
+154300000129,자격(requires/anyOf),기관/단체 & 농업인,농업인 & (농업관련 생산자단체 | 농업법인 | 협동조합),교체
+154300000132,자격(requires/anyOf),기관/단체,지방자치단체,교체
+154300000133,자격(requires/anyOf),기관/단체,(개인사업자 | 생산자단체 | 생협 | 유기·무농약 원료 가공 식품 업체 | 전문 유통 업체 | 전자상거래사업자),교체
+154300000136,자격(requires/anyOf),제조업(법인) & 중소기업,농식품 수출업체,교체
+154300000138,자격(requires/anyOf),농업인,예비창업자,교체
+154300000139,자격(requires/anyOf),기관/단체,지방자치단체,교체
+154300000141,자격(requires/anyOf),기관/단체,(민간단체 | 생산자단체 | 소비자 단체 | 지방자치단체),교체
+154300000142,자격(requires/anyOf),농업인,(경매사 | 공무원 | 농업인 | 유통 종사자),교체
+154300000145,자격(requires/anyOf),농업인,지방자치단체,교체
+154300000156,자격(requires/anyOf),축산업인,농업인,교체
+154300000159,자격(requires/anyOf),축산업인,농가,교체
+154300000160,자격(requires/anyOf),기관/단체,(1차 산업 | 2차 산업 | 3차 산업),교체
+154300000161,자격(requires/anyOf),기관/단체 & 농업인,농업인,교체
+154300000164,자격(requires/anyOf),농업인,농업인 & (60세 이상 농업인 | 농지연금 가입자),교체
+154300000172,자격(requires/anyOf),기관/단체 & 축산업인,축산농가,교체
+154300000173,자격(requires/anyOf),기타업종(법인) & 중소기업,외식 프랜차이즈 본부 & 직영사업자,교체
+154300000253,자격(requires/anyOf),축산업인,농업인 & 양봉업 종사자,교체
+154300000301,자격(requires/anyOf),기관/단체,(농업법인 | 농협조직 | 협동조합),교체
+154300000304,자격(requires/anyOf),제조업(법인) & (기관/단체 | 중소기업),(농업법인 | 민간(개인)업체 | 생산자단체),교체
+154300000306,자격(requires/anyOf),농업인,농업법인 & 농업인,교체
+154300000307,자격(requires/anyOf),농업인 & 다문화가족,결혼이민자 & (기초정착 초기 단계 결혼이민여성 | 심화기초교육 수료 결혼이민자 | 현장과정 결혼이민자),교체
+154300000308,자격(requires/anyOf),기관/단체,(김치가공업체 | 농업법인 | 농업협동조합 | 조합공동사업법인),교체
+154300000311,자격(requires/anyOf),기관/단체 & 농업인,화훼농가 & 화훼생산자 단체,교체
+154300000312,자격(requires/anyOf),농림어업(법인) & 농업인 & (기관/단체 | 중소기업),농업인 & (농가 | 농업법인 | 작목반),교체
+154300000321,자격(requires/anyOf),농업인,(예비) 귀농·귀촌인,교체
+154300000323,자격(requires/anyOf),기관/단체,"(농업법인 | 농협(품목, 지역) | 조합공동사업법인 | 지방자치단체)",교체
+154300000325,자격(requires/anyOf),농업인,농업경영체,교체
+154300000326,자격(requires/anyOf),기관/단체,농업법인,교체
+154300000330,자격(requires/anyOf),-,(노인 | 영유아 | 지역주민 | 청년 | 청소년 | 취약계층),추가
+154300000330,age_min,-,3,추가
+154300000330,age_max,-,30,추가
+154300000331,자격(requires/anyOf),기타업종(법인) & 중소기업,유기농업자재 생산자 & 유기농업자재 수입자,교체
+154300000337,자격(requires/anyOf),기관/단체 & 축산업인,말 등록자(3마리 이상) & 사슴 등록자 & (곤충생산 신고자 | 양봉 등록자 | 축산업 허가자),교체
+154300000338,자격(requires/anyOf),기관/단체,외식업체,교체
+154300000361,자격(requires/anyOf),기관/단체 & 농업인,농업법인 & 농업인,교체
+154300000367,자격(requires/anyOf),제조업(법인) & 중소기업,농식품 수출업체,교체
+154300000369,자격(requires/anyOf),기타업종 & 기타업종(법인) & 농업인 & 영업중 & (기관/단체 | 중소기업),(농식품 수출업체 | 대한민국 국민),교체
+154300000372,자격(requires/anyOf),제조업(법인) & 중소기업,농식품 수출업체,교체
+154300000373,자격(requires/anyOf),기관/단체,생산유통 통합조직 & (산지조직 | 원예산업종합계획 참여 지자체) & (농업법인 | 농협조직 | 지방자치단체 | 협동조합),교체
+154300000377,자격(requires/anyOf),기타업종(법인) & 중소기업,농축산 미생물제품 제조기업,교체
+154300000381,자격(requires/anyOf),농업인,(농업법인 | 농업인 | 비영리법인 | 생산자단체),교체
+154300000391,자격(requires/anyOf),대학생/대학원생,한농대 졸업생,교체
+154300000394,자격(requires/anyOf),제조업(법인) & 중소기업,농기자재 수출업체,교체
+154300000396,age_max,39,40,교체
+154300000397,자격(requires/anyOf),농업인,청년 농업인,교체
+154300000407,자격(requires/anyOf),기타업종(법인) & 중소기업,단체급식사업자 & 독립음식점 운영자 & 프랜차이즈 본부,교체
+154300000409,자격(requires/anyOf),기관/단체 & 농업인,농업인 & (농가 | 농업법인),교체
+154300005002,자격(requires/anyOf),농림어업(법인) & 농업인 & 중소기업,농기계 및 농업기자재 제조사 & 농기계 부품 판매 업소 & 농기계 사후관리 업소 & 농업경영체 & 미곡 종합처리장 운영자 & 중고 농기계 판매 업소,교체
+154300005005,자격(requires/anyOf),-,기관/단체,추가
+154300005006,자격(requires/anyOf),축산업인,(곤충 농가 | 곤충 생산자 단체 | 농축협 | 지방자치단체),교체
+154300005007,자격(requires/anyOf),기관/단체 & 축산업인,축산농가 & (농업법인 | 지역 농‧축협 | 축산단지),교체
+154300005009,자격(requires/anyOf),기관/단체 & 농업인,(채소 수출 농업인 | 화훼 수출 농업인) & (버섯류 재배 농업인 | 채소 재배 농업인 | 화훼 재배 농업인) & (농업법인 | 농업인 | 생산자단체),교체
+154300005010,자격(requires/anyOf),기관/단체 & 농업인,(농업법인 | 농업인 | 생산자단체),교체
+154300005020,자격(requires/anyOf),기관/단체 & 영업중 & 음식점업,(예비창업자 | 한식 전문 교육기관 | 한식 종사자 | 한식을 전공하는 학생),교체
+154300005022,자격(requires/anyOf),기관/단체 & 기타업종 & 기타업종(법인) & 영업중,벤처기업 & 창업 7년 이내 기업,교체
+154300005024,자격(requires/anyOf),축산업인,한우 암소,교체
+154300005024,age_max,-,14,추가
+154300005025,자격(requires/anyOf),축산업인,오리 사육 농가 & 오리 초생추 공급자,교체
+154300005028,자격(requires/anyOf),근로자/직장인 & 기타업종(법인) & (기관/단체 | 중소기업),그린바이오산업 신고 기업,교체
+154300005029,자격(requires/anyOf),기관/단체 & 기타업종(법인),(반려동물 관련 기업 | 연구기관),교체
+154300005033,자격(requires/anyOf),기타업종(법인) & (기관/단체 | 중소기업),중소벤처기업 & (동물용첨단의약품 개발 | 식물기반 단백질의약품 개발),교체
+154300005034,자격(requires/anyOf),농림어업(법인) & 중소기업,해외농업자원개발사업자,교체
+154300005035,자격(requires/anyOf),농업인,(귀농인 | 청년창업형후계농업경영인 | 후계 농업인),교체
+154300005037,자격(requires/anyOf),-,농촌 거주자 & (기초생활수급자 | 다문화가족 | 독거노인 | 소년소녀가장 | 장애인 | 조손가구 | 차상위계층 | 한부모가정),추가
+154300005041,자격(requires/anyOf),농림어업(법인) & 농업인 & 중소기업,농업인,교체
+154300005041,income_max_pct,-,100,추가
+154300005043,자격(requires/anyOf),기관/단체,(근로자 | 사업주 | 프리랜서),교체
+154300005044,자격(requires/anyOf),-,농업인 & (스마트팜 교육 수요자 | 스마트팜 농가),추가
+154300005045,자격(requires/anyOf),대학생/대학원생,대학생,교체
+154300005046,자격(requires/anyOf),기관/단체 & 농업인,농업법인 & 농업인 & 비영리법인 & 생산자단체,교체
+154300005048,자격(requires/anyOf),농업인,양봉농가,교체
+155000000015,자격(requires/anyOf),-,(공무 수행자 | 교육 활동 교원) & (상이군경 | 정양 중) & (국가보훈대상자 | 독립유공자 | 배우자 | 보조인 | 상이1~3급자 | 선순위 유족 | 애국지사) & (고령자 | 만24세 이하) & (국빈 | 외교사절단) & (동행 보호자 | 등록장애인 | 중증장애인 | 한복 착용자),추가
+155000000017,자격(requires/anyOf),-,다자녀가구 & (국가보훈대상자 | 장애인) & (고령자 | 만24세 이하),추가
+155000000018,자격(requires/anyOf),-,개인사업자 & 공장 소유자 & 근린생활시설 소유자 & 농어업시설 소유자 & 단독주택 소유자 & 소규모 공장 소유자 & 운동시설 소유자 & 창고시설 소유자,추가
+155000000023,자격(requires/anyOf),-,시군구 주민 & (국가보훈대상자 | 장애인),추가
+161300000076,자격(requires/anyOf),무주택세대,무주택세대 & 세대주,교체
+161300000077,자격(requires/anyOf),기타업종(법인) & 중소기업,사업자등록증 소지자 & 임대사업자 & 주택건설사업자,교체
+161300000078,자격(requires/anyOf),기관/단체,한국철도공사,교체
+161300000079,자격(requires/anyOf),기타업종(법인) & 중소기업,(개인운송사업자 | 물류 관련 단체 | 물류기업 | 화주기업),교체
+161300000091,자격(requires/anyOf),(기관/단체 | 중소기업) & (기타업종(법인) | 제조업(법인)),혁신도시 클러스터내 입주기업 & (기업 | 대학 | 연구소),교체
+161300000099,income_max_pct,75,60,교체
+161300000101,자격(requires/anyOf),(다자녀가구 | 무주택세대 | 북한이탈주민 | 한부모/조손),(고령자 | 신혼부부 | 일반인 | 청년 | 한부모가족) & (국가보훈대상자 | 기초생활수급자 | 다자녀가구 | 북한이탈주민 | 비주택 거주자 | 장기복무 제대군인 | 장애인 | 철거민),교체
+161300000101,income_max_pct,200,150,교체
+161300000103,자격(requires/anyOf),무주택세대,무주택세대 & 신혼부부 & 청년 & 청년 외,교체
+161300000104,자격(requires/anyOf),-,(저소득층 | 청년),추가
+161300000104,age_max,-,34,추가
+161300000106,자격(requires/anyOf),-,무주택세대 & (고시원 거주자 | 쪽방주민 | 최저주거기준 미달 가구 | 침수우려 반지하 거주자),추가
+161300000106,income_max_pct,75,70,교체
+169000000002,자격(requires/anyOf),제조업(법인) & 중소기업,방산업체 & 일반업체,교체
+169000000003,자격(requires/anyOf),제조업(법인) & 중소기업,국방 중소기업,교체
+169000000004,자격(requires/anyOf),기타업종(법인) & 중소기업,벤처기업 & 중소기업,교체
+169000000006,자격(requires/anyOf),기타업종(법인) & 중소기업,(무기체계 개발 기업 | 무기체계 부품 개발 기업),교체
+169000000009,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업 & (대기업 | 중견기업),교체
+169000000011,자격(requires/anyOf),중소기업,중소기업 & (R&D 투자비율 2% 이상 기업 | 경영혁신형 인증기업 | 기술혁신형 인증기업 | 수출 유망 중소기업 인증기업),교체
+171000000002,자격(requires/anyOf),-,우체국 금융 고객,추가
+171000000005,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+171000000009,자격(requires/anyOf),-,의료급여 수급권자,추가
+172100000002,자격(requires/anyOf),-,나눔 장비 이전자,추가
+172100000012,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 기초연금 수급자 | 장애인 | 차상위계층),추가
+172100000012,income_max_pct,75,52,교체
+172100000015,자격(requires/anyOf),-,외국인 & 한국 국적 취득자,추가
+174000000013,자격(requires/anyOf),-,(상속인 | 상속재산 관리인 | 성년후견인 | 한정후견인),추가
+174000000029,자격(requires/anyOf),(임산부 | 출산/입양),출산자,교체
+174000000055,자격(requires/anyOf),기관/단체,지역주민 5인 이상 출자하는 법인,교체
+174100000017,자격(requires/anyOf),농업인,농업인 & (GAP 인증 농업인 | 고령 농업인 | 농업경영체 등록 농업인 | 여성 농업인),교체
+174100000020,자격(requires/anyOf),-,가구,추가
+174100000034,자격(requires/anyOf),-,공동주택 & 부대복리시설,추가
+174100000071,자격(requires/anyOf),(생계곤란/폐업예정 | 영업중),주택소유자,교체
+174100000087,자격(requires/anyOf),-,청년,추가
+179038700004,자격(requires/anyOf),-,남성 & 청소년 & (여성 | 저소득층),추가
+179038700004,age_min,12,13,교체
+179038700004,age_max,26,18,교체
+179038700004,income_max_pct,-,50,추가
+179038700010,자격(requires/anyOf),질병/질환자,희귀질환자,교체
+179038700014,자격(requires/anyOf),-,역학조사 수검자,추가
+179038700015,자격(requires/anyOf),-,역학조사 수검자,추가
+183000000002,자격(requires/anyOf),-,국가유공상이자,추가
+183000000003,자격(requires/anyOf),-,중장기복무제대군인,추가
+183000000003,income_max_pct,200,125,교체
+183000000005,자격(requires/anyOf),국가보훈대상자,장애인 & (국가보훈대상자 | 전몰·순직·사망·행불자 배우자),교체
+183000000005,age_max,-,25,추가
+183000000006,자격(requires/anyOf),국가보훈대상자,6.25전몰군경 손자녀 & 국가보훈대상자 & 특수교육대상자,교체
+183000000006,age_max,-,35,추가
+183000000008,자격(requires/anyOf),국가보훈대상자,(5·18민주화운동부상자 | 국가보훈대상자 | 국가유공상이자 | 애국지사),교체
+183000000009,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & 등록 결정 이전 신청자,교체
+183000000010,자격(requires/anyOf),국가보훈대상자,4·19혁명 참가자,교체
+183000000012,자격(requires/anyOf),국가보훈대상자,DMZ 근무자 & 월남참전자,교체
+183000000013,자격(requires/anyOf),국가보훈대상자,고엽제후유증 2세 환자,교체
+183000000014,자격(requires/anyOf),국가보훈대상자,중상,교체
+183000000015,자격(requires/anyOf),국가보훈대상자,(며느리 | 배우자 | 본인 | 손자녀 | 자녀),교체
+183000000016,자격(requires/anyOf),국가보훈대상자,(국가보훈대상자 | 유족),교체
+183000000018,자격(requires/anyOf),국가보훈대상자,생존애국지사,교체
+183000000020,자격(requires/anyOf),국가보훈대상자,독립유공자 유족 & 세대주,교체
+183000000022,자격(requires/anyOf),국가보훈대상자,(교정시설 경비교도 | 의무경찰 | 의무소방원),교체
+300000000101,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+300000000102,자격(requires/anyOf),-,(고령자 세대 | 장애인 | 최저보험료 이하 세대 | 한부모가족),추가
+300000000102,income_max_pct,75,60,교체
+300000000103,자격(requires/anyOf),장애인,장애인 & 장애인 거주시설 이용자 & 재가장애인,교체
+300000000103,age_min,18,19,교체
+300000000106,자격(requires/anyOf),-,종로구 주민 & (국가보훈대상자 | 기초생활수급자 | 사회복지시설 거주자 | 중증장애인),추가
+300000000108,자격(requires/anyOf),출산/입양,다자녀 영유아,교체
+300000000110,자격(requires/anyOf),장애인,24시간 돌봄 대상 장애인 & 성인발달장애인 & 시설 퇴소 장애인 & 장애인 & 최중증 장애인,교체
+300000000111,자격(requires/anyOf),출산/입양,가정위탁아동 & 입양가정,교체
+300000000117,자격(requires/anyOf),사회복지시설,지역아동센터,교체
+300000000118,자격(requires/anyOf),-,(기초생활수급자 | 일반 저소득가구 | 차상위계층),추가
+300000000123,자격(requires/anyOf),-,(기초교육급여 수급자 | 기초주거급여 수급자 | 차상위계층 | 한부모),추가
+300000000129,자격(requires/anyOf),장애인,등록장애인 & (기초생활수급자 | 차상위계층),교체
+300000000131,자격(requires/anyOf),(국가보훈대상자 | 장애인),5.18민주유공자 & 고엽제후유의증 환자 & 국가보훈대상자 & 기초생활수급자 & 독립유공자 & 장애인 & 특수임무유공자,교체
+300000000133,자격(requires/anyOf),-,(시청각 장애인 | 일반인),추가
+300000000137,자격(requires/anyOf),-,소상공인,추가
+300000000139,자격(requires/anyOf),출산/입양,출산가정 & (결혼이민 산모 | 미혼모 산모 | 북한이탈주민 산모 | 셋째 이상 출산 가정 | 쌍둥이 이상 출산 가정 | 장애인 | 희귀난치질환 산모),교체
+300000000139,income_max_pct,-,100,추가
+300000000141,자격(requires/anyOf),-,(저소득 취약 가족 | 종로구 고령 주민 | 종로구 주민),추가
+300000000141,age_min,-,60,추가
+300000000142,자격(requires/anyOf),-,보훈 단체,추가
+300000000143,자격(requires/anyOf),-,5.18민주유공자 & 6세 이하 어린이 & 고엽제후유의증 환자 & 국가보훈대상자 & 기초생활수급자 & 노인 & 다둥이 행복카드 소지자 & 독립유공자 & 명예 구민 & 의사상자 & 종로구 주민 & 특수임무유공자 & 한복 착용자 & (국군포로 | 포로 가족) & (공무 수행자 | 학술연구 목적자) & (국빈 | 수행자 | 외교사절단) & (장애인 | 장애인 보호자),추가
+300000000151,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),대학생/대학원생 & 청소년,교체
+300000000153,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+300000000154,자격(requires/anyOf),-,복지 사각지대 위기 의심가구,추가
+300000000156,자격(requires/anyOf),-,(고령자 | 기초생활수급자 | 농업인 | 장애인 | 저소득층 | 주부),추가
+300000000156,age_min,-,55,추가
+300000000160,자격(requires/anyOf),-,쪽방주민,추가
+300000000161,자격(requires/anyOf),다자녀가구 & (국가보훈대상자 | 임산부 | 장애인 | 출산/입양),고령자 & 기초생활수급자 & 다자녀가구 & 두 자녀 가정 & 등록장애인 & 병역 명문가 & (소년소녀가장 | 한부모가족) & (의상자 | 의상자 가족) & (독립유공자 | 독립유공자 유족) & (국가보훈대상자 | 국가유공자의 유족 또는 가족),교체
+300000000162,자격(requires/anyOf),-,청소년 단체,추가
+300000000163,자격(requires/anyOf),-,(관광 휴게 시설 | 근린생활시설 | 노유자 시설 | 단독주택),추가
+300000000164,자격(requires/anyOf),구직자/실업자,(노숙인 | 쪽방주민) & (구직자/실업자 | 일용근로자),교체
+300000000166,자격(requires/anyOf),-,가구 & 아동학대 신고 가구 구성원,추가
+300000000171,자격(requires/anyOf),-,고령자 & 노인성 질병 & (노인장기요양보험 가입자 | 의료급여 수급권자),추가
+300000000171,age_min,-,65,추가
+300000000172,자격(requires/anyOf),-,남녀 모두,추가
+301000000105,자격(requires/anyOf),-,(생계 | 의료급여수급가구),추가
+301000000108,자격(requires/anyOf),-,(건강보험 가입자 하위 50% | 의료급여 수급권자),추가
+301000000112,income_max_pct,75,63,교체
+301000000116,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층 | 한부모가족),추가
+301000000123,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+301000000124,자격(requires/anyOf),출산/입양,장애인 & 출산,교체
+301000000127,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+301000000128,자격(requires/anyOf),장애인,중증장애인,교체
+301000000129,자격(requires/anyOf),대학생/대학원생,대학생 & (기초생활수급자 | 법정한부모가족 | 차상위계층),교체
+301000000131,자격(requires/anyOf),장애인,노인,교체
+301000000131,age_max,-,65,추가
+301000000132,자격(requires/anyOf),-,고령자 & 기초생활수급자 & 심한 장애세대 & 의료급여 수급자 & 한부모가족세대,추가
+301000000132,age_max,-,70,추가
+301000000134,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (기초생활수급자 | 차상위계층),교체
+301000000140,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층 | 한부모가족),추가
+301000000142,자격(requires/anyOf),예비부모/난임,난임,교체
+302000000105,자격(requires/anyOf),장애인,장애인 & (성인 발달장애인 | 최중증 독거 장애인),교체
+302000000107,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & 유족,교체
+302000000110,자격(requires/anyOf),장애인,장애인 & (기초생활수급자 | 차상위계층),교체
+302000000112,자격(requires/anyOf),출산/입양,용산구 거주자 & 장애인,교체
+302000000115,자격(requires/anyOf),-,기초생활수급자 & 의료급여 수급자,추가
+302000000121,자격(requires/anyOf),-,(건축주 용산구청 직원 | 용산구 거주자 | 용산구 소재 사업자(근로자)),추가
+302000000125,자격(requires/anyOf),(임산부 | 출산/입양),출산/입양,교체
+302000000126,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+303000000102,자격(requires/anyOf),질병/질환자,지역주민,교체
+303000000103,자격(requires/anyOf),장애인,장애인 & (맞벌이 가구 | 한부모),교체
+303000000106,자격(requires/anyOf),-,차상위계층 & (노인 | 장애인),추가
+303000000107,자격(requires/anyOf),장애인,(장애인 일자리 참여자 | 차상위계층),교체
+303000000108,자격(requires/anyOf),장애인,재가장애인 & 중증장애인,교체
+303000000110,자격(requires/anyOf),한부모/조손,한부모가구,교체
+303000000110,income_max_pct,75,65,교체
+303000000111,자격(requires/anyOf),출산/입양,임산부,교체
+303000000112,자격(requires/anyOf),-,기초생활수급자,추가
+303000000114,자격(requires/anyOf),출산/입양,출산가정,교체
+303000000307,자격(requires/anyOf),한부모/조손,한부모가족 & (미혼모 | 미혼부),교체
+303000000309,자격(requires/anyOf),-,(기초생활수급자 | 저소득 보훈대상자),추가
+303000000311,자격(requires/anyOf),예비부모/난임,난임,교체
+303000000320,자격(requires/anyOf),-,(관내 기업체 종사자 | 성동구 거주자 | 소속 공무원),추가
+303000000321,자격(requires/anyOf),-,범죄피해자,추가
+303000000323,자격(requires/anyOf),-,성동구 거주자,추가
+303000000326,자격(requires/anyOf),영업중,소상공인,교체
+303000000333,자격(requires/anyOf),장애인,발달장애인,교체
+303000000335,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 장애인),추가
+303000000340,자격(requires/anyOf),-,노숙인,추가
+303000000341,자격(requires/anyOf),-,성동구 거주자,추가
+303000000343,자격(requires/anyOf),-,(근로자/직장인 | 성동구 거주자 | 소상공인),추가
+303000000347,자격(requires/anyOf),-,임산부,추가
+304000000101,자격(requires/anyOf),-,범죄피해자,추가
+304000000102,자격(requires/anyOf),출산/입양,광진구 거주자 & 장애인,교체
+304000000103,자격(requires/anyOf),장애인,장애인 & (독거·취약가구 | 최중증),교체
+304000000106,income_max_pct,75,63,교체
+304000000108,자격(requires/anyOf),출산/입양,임산부,교체
+304000000117,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),생계 & 의료급여 수급자,교체
+304000000117,income_max_pct,50,40,교체
+304000000118,자격(requires/anyOf),장애인,고령자 & 등록장애인 & 한부모가족,교체
+304000000124,자격(requires/anyOf),-,기초생활수급자,추가
+304000000125,자격(requires/anyOf),기관/단체,(단체 | 소규모 시설),교체
+304000000127,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+304000000130,자격(requires/anyOf),-,가구 & 기초생활수급자 & 중위소득 120% 이하,추가
+304000000130,income_max_pct,200,120,교체
+304000000131,income_max_pct,100,120,교체
+304000000133,자격(requires/anyOf),1인가구,1인가구 & 노인 & 장애인 돌봄 가구,교체
+304000000134,자격(requires/anyOf),-,저소득층,추가
+304000000135,자격(requires/anyOf),장애인,장애인 & 휠체어 및 전동스쿠터 소유자,교체
+304000000141,자격(requires/anyOf),임산부,출생아 & (다문화가족 | 다자녀가구 | 법정 저소득층),교체
+304000000145,자격(requires/anyOf),-,(결혼이민자 | 국가보훈대상자 | 기초생활수급자 | 보호대상아동 | 장애인 | 차상위계층),추가
+304000000146,자격(requires/anyOf),-,1인가구 & 다자녀가구 & 대학생 & (65세 이상 홀몸어르신 | 기초생활수급자 | 의료급여 수급자 | 저소득 국가유공자 | 저소득 북한이탈주민 | 저소득 장애인),추가
+304000000153,자격(requires/anyOf),-,광진구 거주자,추가
+304000000160,자격(requires/anyOf),-,(노인 | 임산부 | 장애인),추가
+304000000161,자격(requires/anyOf),구직자/실업자,광진구 거주자,교체
+304000000161,age_min,19,18,교체
+304000000162,자격(requires/anyOf),-,청년 & (국가유공자 및 자녀 | 기초생활수급자 | 등록장애인 | 북한이탈주민 | 저소득 한부모 가족 | 차상위계층),추가
+304000000165,자격(requires/anyOf),영업중,소상공인,교체
+304000000176,자격(requires/anyOf),-,광진구 거주자,추가
+304000000176,age_max,-,65,추가
+304000000178,자격(requires/anyOf),-,광진구 거주자 & (다문화가족 | 의료급여 수급자 | 지역아동센터 이용자 | 차상위 건강보험전환자),추가
+304000000183,자격(requires/anyOf),-,(광진구 거주자 | 근로자/직장인),추가
+304000000184,자격(requires/anyOf),-,영세납세자,추가
+304000000186,자격(requires/anyOf),영업중,소상공인,교체
+304000000187,자격(requires/anyOf),-,(기초생활수급자 | 독거노인 | 장애인),추가
+304000000189,자격(requires/anyOf),영업중 & 제조업,소상공인 & (기계금속 | 수제화 | 의류봉제 | 인쇄 | 주얼리),교체
+304000000192,자격(requires/anyOf),-,광진구 무인민원발급기 사용자,추가
+304000000197,자격(requires/anyOf),-,광진구 거주자,추가
+304000000198,자격(requires/anyOf),-,기초생활수급자,추가
+304000000232,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),학생,교체
+304000000233,자격(requires/anyOf),국가보훈대상자,사망 참전유공자의 배우자,교체
+304000000235,자격(requires/anyOf),(고등학생 | 임산부 | 장애인 | 중학생 | 질병/질환자 | 초등학생),(고령자 | 임산부 | 장애인),교체
+304000000236,자격(requires/anyOf),-,(1인가구 | 근로자/직장인),추가
+304000000237,자격(requires/anyOf),-,주택소유자,추가
+304000000244,자격(requires/anyOf),-,(75세 이상 어르신 | 거동불편 장애인 | 영유아),추가
+305000000103,자격(requires/anyOf),다자녀가구 & (고등학생 | 중학생 | 초등학생),다자녀가구,교체
+305000000105,자격(requires/anyOf),출산/입양,장애인,교체
+305000000109,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+305000000116,자격(requires/anyOf),-,(1급 장애인 | 2급 장애인 | 3급 장애인 | 의료급여 수급권자),추가
+305000000117,자격(requires/anyOf),장애인,장애인 & 장애인 시설 이용자,교체
+305000000119,자격(requires/anyOf),구직자/실업자,미취업자,교체
+305000000120,자격(requires/anyOf),-,동대문구 거주자,추가
+305000000129,자격(requires/anyOf),다문화가족 & (고등학생 | 중학생 | 초등학생),다문화가족,교체
+305000000130,자격(requires/anyOf),-,개/고양이 소유자 & (기초생활수급자 | 차상위계층 | 한부모가족),추가
+305000000132,자격(requires/anyOf),-,고양이 & 동물등록 완료 입양자,추가
+305000000136,자격(requires/anyOf),-,다문화가족 & 미혼모 & 북한이탈주민 & 장애인 & 질병/질환자 & 출산/입양,추가
+305000000136,income_max_pct,200,120,교체
+305000000139,자격(requires/anyOf),-,무연고 사망자,추가
+305000000140,income_max_pct,50,47,교체
+305000000146,자격(requires/anyOf),영업중,소상공인 & 중소기업,교체
+305000000148,자격(requires/anyOf),-,개 소유자 & 고양이 소유자,추가
+305000000148,age_min,19,3,교체
+305000000149,자격(requires/anyOf),농업인,양봉농가,교체
+305000000155,자격(requires/anyOf),-,동대문구 거주자,추가
+305000000156,자격(requires/anyOf),기관/단체 & 기타업종(법인),아파트 단지,교체
+305000000158,자격(requires/anyOf),사회복지시설,(1~7급 국가유공자 | 결혼이민자 | 기초생활수급자 | 보호필요 아동 | 사회복지서비스 수혜자 | 장애인),교체
+305000000160,자격(requires/anyOf),-,노숙인,추가
+305000000161,자격(requires/anyOf),장애인,(예비장애인 | 장애인),교체
+305000000167,자격(requires/anyOf),-,동대문구 거주자,추가
+305000000168,자격(requires/anyOf),-,예비창업자 & (중장년 | 청년),추가
+305000000170,자격(requires/anyOf),-,(기초생활수급자 | 독거노인 | 소년소녀가장 | 한부모가정),추가
+305000000171,자격(requires/anyOf),다문화가족,다문화가족 & 학부모 & (고등학생 | 중학생),교체
+305000000174,자격(requires/anyOf),-,동대문구 거주자,추가
+305000000275,자격(requires/anyOf),무주택세대,전세사기 피해자 & 전세피해확인서 발급자,교체
+305000000276,자격(requires/anyOf),무주택세대,전세사기 피해자 & 전세피해확인서 발급자,교체
+305000000284,자격(requires/anyOf),-,기초생활수급자,추가
+305000000286,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+305000000292,자격(requires/anyOf),-,(국가보훈대상자 | 노인 | 의료급여 수급자 | 장애인),추가
+305000000292,age_min,-,65,추가
+305000000294,자격(requires/anyOf),-,결핵 유소견자 & 결핵검진 희망자 & 결핵환자 가족 & 동거가족 & 호흡기 증상자,추가
+305000000297,자격(requires/anyOf),질병/질환자,암환자,교체
+305000000301,자격(requires/anyOf),장애인,중증장애인,교체
+306000000101,자격(requires/anyOf),국가보훈대상자,(국가보훈대상자 | 우선순위 유족),교체
+306000000105,자격(requires/anyOf),출산/입양,신생아를 출산한 & 장애인,교체
+306000000106,자격(requires/anyOf),장애인,(국가유공자 세대 | 노인 | 장애인 세대 | 한부모가족),교체
+306000000107,자격(requires/anyOf),-,(소상공인 | 지역주민),추가
+306000000222,자격(requires/anyOf),-,(중랑구 거주자 | 중랑구 사업자 | 중랑구 재직자),추가
+306000000223,자격(requires/anyOf),-,부모님 & 초등학생,추가
+306000000224,자격(requires/anyOf),구직자/실업자,미취업 청년,교체
+306000000226,자격(requires/anyOf),-,중랑구 거주자 & 학생,추가
+306000000228,자격(requires/anyOf),-,(기초생활수급자 | 다자녀가구 | 한부모가족) & (고령자 | 국가보훈대상자 | 다자녀가구 | 병역명문가 | 장애인),추가
+306000000229,자격(requires/anyOf),-,20세 이상 중랑구민 & 중랑구 학생,추가
+306000000233,자격(requires/anyOf),-,중랑구 청년,추가
+306000000234,자격(requires/anyOf),-,(근로자/직장인 | 학생),추가
+306000000239,자격(requires/anyOf),(다문화가족 | 다자녀가구 | 무주택세대 | 북한이탈주민 | 신규전입 | 한부모/조손 | 확대가족),출산/입양,교체
+307000000101,자격(requires/anyOf),-,저소득층,추가
+307000000102,자격(requires/anyOf),한부모/조손 & (임산부 | 출산/입양),미혼모,교체
+307000000102,age_max,44,5,교체
+307000000104,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생,교체
+307000000108,자격(requires/anyOf),장애인,등록장애인,교체
+307000000109,자격(requires/anyOf),출산/입양,성북구 거주자 & 장애인,교체
+307000000113,자격(requires/anyOf),기관/단체,기초생활수급자 & (자활기업 근로 수급자 | 차상위계층) & (성북구 자활근로사업단 | 성북구 자활기업),교체
+307000000115,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 중증장애인),추가
+307000000115,age_min,-,50,추가
+307000000117,자격(requires/anyOf),-,기초생활수급자,추가
+307000000118,자격(requires/anyOf),장애인,장애인 & (기초생활수급자 | 차상위계층),교체
+307000000121,자격(requires/anyOf),-,(비영업용 승용차 | 승합차),추가
+307000000130,자격(requires/anyOf),-,성북구 주민,추가
+307000000133,자격(requires/anyOf),중소기업,사회적경제 조직,교체
+307000000134,자격(requires/anyOf),사회복지시설,(국가보훈대상자 | 기초생활수급자 | 다문화가족 | 장애인) & (기관/단체 | 사회복지시설),교체
+307000000142,자격(requires/anyOf),-,(관내 직장인 | 성북구 거주자 | 학생),추가
+307000000149,자격(requires/anyOf),-,성북구 거주자,추가
+307000000150,자격(requires/anyOf),-,(결식아동 | 독거노인 | 재가 장애인 | 저소득 복지소외계층),추가
+307000000155,자격(requires/anyOf),-,성북구 거주자,추가
+307000000175,자격(requires/anyOf),예비부모/난임,난임,교체
+307000000178,자격(requires/anyOf),(국가보훈대상자 | 장애인),(고령자 | 국가보훈대상자 | 지체 및 뇌병변 등록 장애인),교체
+307000000178,age_min,-,60,추가
+307000000178,income_max_pct,200,140,교체
+307000000181,income_max_pct,200,140,교체
+307000000189,자격(requires/anyOf),-,구내 주민,추가
+307000000190,자격(requires/anyOf),(기관/단체 | 중소기업),법인/시설/단체,교체
+307000000194,자격(requires/anyOf),-,기초생활수급자,추가
+307000000195,자격(requires/anyOf),한부모/조손,한부모가족,교체
+307000000198,자격(requires/anyOf),다자녀가구 & 출산/입양,다자녀가구,교체
+307000000199,자격(requires/anyOf),-,병역명문가,추가
+307000000203,자격(requires/anyOf),-,기초생활수급자 & 성북구 주민,추가
+307000000207,자격(requires/anyOf),다자녀가구 & 출산/입양,다자녀가구,교체
+307000000214,자격(requires/anyOf),-,기초생활수급자,추가
+308000000106,자격(requires/anyOf),(고등학생 | 대학생/대학원생),(고등학생 | 대학생),교체
+308000000106,income_max_pct,-,120,추가
+308000000109,자격(requires/anyOf),장애인,장애인 & (성인 최중증장애인 | 성인발달장애인),교체
+308000000113,자격(requires/anyOf),-,기초생활수급자,추가
+308000000114,자격(requires/anyOf),-,독거노인 & 저소득층 & (기초생활수급자 | 차상위),추가
+308000000114,age_min,-,65,추가
+308000000119,자격(requires/anyOf),출산/입양,입양아동의 부 또는 모,교체
+308000000121,자격(requires/anyOf),국가보훈대상자,(4.19혁명사망자/부상자/공로자 | 6·25참전 재일학도의용군인 | 국가보훈대상자 | 무공/보국수훈자 | 순국선열 | 애국지사 | 전몰/전상/순직/공상군경),교체
+308000000122,자격(requires/anyOf),장애인,지체 및 뇌병변 장애,교체
+308000000127,자격(requires/anyOf),-,강북구 거주자 & 소상공인,추가
+309000000124,자격(requires/anyOf),임산부,(영유아 | 임산부),교체
+309000000132,자격(requires/anyOf),출산/입양,출산한 여성장애인,교체
+309000000135,자격(requires/anyOf),-,(기초생계급여수급자 가구 | 기초의료급여수급자 가구),추가
+309000000136,자격(requires/anyOf),장애인,(독거노인 | 장애인 | 치매어르신),교체
+309000000137,자격(requires/anyOf),고등학생,(고등학생 | 대학생),교체
+309000000138,자격(requires/anyOf),출산/입양,임산부,교체
+309000000140,자격(requires/anyOf),국가보훈대상자,(국가보훈대상자 | 무공수훈자 | 순직 공무원 | 순직군경유족 | 애국지사 | 전몰군경유족 | 전상군경),교체
+309000000141,자격(requires/anyOf),-,상품권 구매자,추가
+310000000101,자격(requires/anyOf),-,보호종료청소년,추가
+310000000105,자격(requires/anyOf),-,노원구 거주자,추가
+310000000107,자격(requires/anyOf),구직자/실업자,(1인가구 청년 | 고립은둔 청년 | 미취업 청년 | 취업취약청년),교체
+310000000110,자격(requires/anyOf),-,가구,추가
+310000000114,자격(requires/anyOf),-,(기초생활수급자 | 일반 저소득가구 | 차상위계층),추가
+310000000116,자격(requires/anyOf),장애인,장애인 & (성인 발달장애인 | 중증 고령 독거장애인 | 최중증 고령 독거장애인),교체
+310000000118,자격(requires/anyOf),출산/입양,다자녀가구,교체
+310000000119,자격(requires/anyOf),한부모/조손,법정 미혼 한부모가족 & 한부모가족,교체
+310000000120,자격(requires/anyOf),국가보훈대상자,사망한 참전유공자의 배우자 & (국가보훈대상자 | 수권유족),교체
+310000000124,자격(requires/anyOf),-,노원구 거주자,추가
+310000000129,자격(requires/anyOf),-,(가정위탁아동 | 공무원 | 교사 | 대학생 | 사회복지사 | 시설 보호대상아동 | 의사 | 자립준비청년 | 전문직),추가
+311000000104,자격(requires/anyOf),장애인,중증장애인 & (발달장애인 독거가구 | 사지마비 | 시설퇴소자 | 와상),교체
+311000000106,자격(requires/anyOf),출산/입양,은평구 거주자 & 장애인 & (남성장애인의 배우자 | 등록 여성장애인),교체
+311000000107,자격(requires/anyOf),기관/단체,장애인,교체
+311000000108,자격(requires/anyOf),-,건강보험 지역가입자 & (국가보훈대상자 | 기초생활수급자 | 노인가구 | 저소득 장애 | 차상위계층),추가
+311000000109,자격(requires/anyOf),1인가구 & (장애인 | 질병/질환자),1인가구 & (중증장애인 | 중증질환자),교체
+311000000109,age_min,34,40,교체
+311000000111,자격(requires/anyOf),국가보훈대상자,(4·19혁명공로자 | 4·19혁명부상자 | 4·19혁명사망자 | 5·18민주화운동부상자 | 5·18민주화운동사망·행방불명자 | 5·18민주화운동희생자 | 6·18자유상이자 | 6·25참전 재일학도의용군인 | 고엽제후유(의)증 | 고엽제후유증 2세 환자 | 공상공무원 | 공상군경 | 국가보훈대상자 | 국가사회발전 특별공로상이자 | 국가사회발전 특별공로순직자 | 국가사회발전 특별공로자 | 무공수훈자 | 보국수훈자 | 순국선열 | 순직 공무원 | 순직군경 | 애국지사 | 재해부상 공무원 | 재해부상 군경 | 재해사망공무원 | 재해사망군경 | 전몰군경 | 전상군경 | 전투종사군무원 | 지원공상공무원 | 지원순직군경 | 특수임무 공로자 | 특수임무부상자 | 특수임무사망·행방불명자),교체
+311000000114,자격(requires/anyOf),-,(기초생활수급자 | 의료급여 수급자),추가
+311000000118,자격(requires/anyOf),장애인,중증장애인 & (독거 | 저소득 중증장애인 | 취약가구),교체
+311000000125,자격(requires/anyOf),-,(과다채무자 | 금융 취약계층 | 채무 및 재무상담이 필요한 은평구민 | 채무 연체자 | 채무로 인한 생계 위기자),추가
+311000000131,자격(requires/anyOf),-,청년,추가
+311000000131,income_max_pct,75,70,교체
+311000000136,자격(requires/anyOf),-,은평구 거주자 & (여성 | 청소년),추가
+311000000137,자격(requires/anyOf),(임산부 | 출산/입양),영유아가정 & 임산부,교체
+311000000138,자격(requires/anyOf),-,미성년 자녀 부모 & 부모 & 임산부,추가
+311000000138,income_max_pct,200,140,교체
+311000000139,자격(requires/anyOf),출산/입양,다자녀가구,교체
+311000000142,자격(requires/anyOf),-,자립준비청년,추가
+311000000144,자격(requires/anyOf),출산/입양,입양 부모,교체
+311000000145,자격(requires/anyOf),-,(결혼이민자 | 기초생활수급자 | 독거노인 | 범죄피해자 | 장애인 | 저소득층),추가
+311000000149,자격(requires/anyOf),구직자/실업자,여성 & (경력보유여성 | 취업희망 여성),교체
+311000000152,자격(requires/anyOf),-,청소년 & (자퇴 청소년 | 제적·퇴학 청소년) & (입학 후 3개월 이상 결석한 청소년 | 취학유예 청소년) & (잠재적 학교 밖 청소년 | 학업중단 숙려대상자),추가
+311000000154,자격(requires/anyOf),-,(청소년 | 청소년지도자 | 학부모),추가
+311000000225,자격(requires/anyOf),1인가구,1인가구 & (중장년 | 청년),교체
+311000000225,age_max,64,60,교체
+311000000230,자격(requires/anyOf),장애인,중증장애인,교체
+311000000231,자격(requires/anyOf),중소기업,이해관계인 & 토지 소유자,교체
+312000000104,자격(requires/anyOf),장애인,기초생활수급자 & 장애인,교체
+312000000104,age_max,-,64,추가
+312000000112,자격(requires/anyOf),-,독거노인 & (노인가구 | 장애인가구 | 한부모가구),추가
+312000000112,age_min,19,65,교체
+312000000114,자격(requires/anyOf),장애인,발달장애인 & 장애인 & (기초생활수급자 | 차상위계층),교체
+312000000115,자격(requires/anyOf),-,(독거노인 | 미취업 장애인),추가
+312000000117,자격(requires/anyOf),장애인,장애인 & (기초생활수급자 | 차상위계층),교체
+312000000117,income_max_pct,200,180,교체
+312000000121,자격(requires/anyOf),장애인,정신장애인,교체
+312000000122,자격(requires/anyOf),-,(기초생활수급자 | 중증장애인 | 차상위계층),추가
+312000000123,자격(requires/anyOf),출산/입양,장애인,교체
+312000000123,age_max,44,7,교체
+312000000124,자격(requires/anyOf),장애인,비수급계층 & 장애인 & (기초생활수급자 | 차상위계층),교체
+312000000315,자격(requires/anyOf),근로자/직장인,육아휴직급여 남성,교체
+312000000318,자격(requires/anyOf),예비부모/난임,난임,교체
+313000000103,자격(requires/anyOf),한부모/조손,미혼모 & 한부모가족,교체
+313000000103,age_max,-,5,추가
+313000000104,income_max_pct,75,70,교체
+313000000106,자격(requires/anyOf),한부모/조손,한부모가족,교체
+313000000108,자격(requires/anyOf),출산/입양,부 또는 모 & 장애인,교체
+313000000110,자격(requires/anyOf),-,(국가보훈대상자 | 생계·의료급여 수급자 | 장애인),추가
+313000000111,자격(requires/anyOf),-,맞춤형 생계급여 수급자 & 의료급여 수급자,추가
+313000000114,자격(requires/anyOf),무주택세대,공공임대주택 입주대기자 & 저소득 주거취약가구 & (기초생활수급자 | 비주택 거주 가구 | 차상위계층),교체
+313000000114,income_max_pct,50,70,교체
+313000000117,자격(requires/anyOf),국가보훈대상자,독립유공자,교체
+313000000121,자격(requires/anyOf),장애인,장애인 & (발달장애인 독거가구 | 사지마비 중증장애인 | 시설퇴소자 | 와상),교체
+313000000122,자격(requires/anyOf),장애인,장애인 & (성인 발달장애인 | 최중증 독거·취약가구 장애인),교체
+313000000127,자격(requires/anyOf),구직자/실업자,미취업자,교체
+313000000127,age_max,34,39,교체
+313000000131,자격(requires/anyOf),예비부모/난임,난임,교체
+313000000140,자격(requires/anyOf),-,(근로자/직장인 | 상공인 | 서울특별시 시민),추가
+313000000149,age_max,-,24,추가
+313000000149,income_max_pct,75,63,교체
+313000000161,자격(requires/anyOf),출산/입양,입양 부모,교체
+313000000163,자격(requires/anyOf),국가보훈대상자,독립유공자 유족,교체
+313000000166,자격(requires/anyOf),-,(근로자/직장인 | 상공인 | 서울특별시 시민),추가
+314000000104,자격(requires/anyOf),장애인,장애인 & (독거 지적·자폐성 장애인 | 시설퇴소자 | 와상·사지마비 성인),교체
+314000000105,자격(requires/anyOf),장애인,독거 & 발달장애인 & 장애인 & (기초생활수급자 | 차상위계층),교체
+314000000105,age_min,-,6,추가
+314000000105,age_max,-,19,추가
+314000000107,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),(성적 우수 장학생 | 일반장학생 | 특기 장학생) & (고등학생 | 대학생/대학원생 | 중학생 | 초등학생),교체
+314000000111,자격(requires/anyOf),출산/입양,장애인 & 출산,교체
+314000000113,자격(requires/anyOf),장애인,기초생활수급자 & 중증장애인,교체
+314000000114,자격(requires/anyOf),장애인,중증장애인,교체
+314000000119,자격(requires/anyOf),-,공동주택 입주자 대표 & 단독주택 소유자,추가
+314000000121,자격(requires/anyOf),-,(서울형 기초생활 보장 가구 | 차상위계층) & (기초생활수급자 | 의료급여 수급자),추가
+314000000254,자격(requires/anyOf),구직자/실업자,미취업,교체
+314000000255,자격(requires/anyOf),-,기초생활수급자,추가
+314000000258,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+314000000259,자격(requires/anyOf),-,양천구 거주자,추가
+314000000261,자격(requires/anyOf),-,양천구 공항소음 피해지역 거주자,추가
+314000000263,자격(requires/anyOf),-,양천구 거주자,추가
+314000000264,자격(requires/anyOf),-,요양 보호사,추가
+314000000265,자격(requires/anyOf),-,양천구 거주자,추가
+314000000266,자격(requires/anyOf),-,양천구 공항소음 피해지역 거주자,추가
+314000000266,age_min,-,2,추가
+314000000266,age_max,-,12,추가
+314000000267,자격(requires/anyOf),구직자/실업자,미취업,교체
+314000000270,income_max_pct,200,120,교체
+314000000271,자격(requires/anyOf),-,1인가구 & (기초생활수급자 | 차상위계층),추가
+314000000273,자격(requires/anyOf),출산/입양,미숙아,교체
+314000000274,자격(requires/anyOf),-,양천구 주민등록 구민,추가
+314000000275,자격(requires/anyOf),-,양천구 거주자 & (국가보훈대상자 | 기초생활수급자 | 다자녀가구 | 북한이탈주민 | 장애인 | 차상위계층 | 한부모가족),추가
+315000000104,자격(requires/anyOf),한부모/조손,한부모,교체
+315000000104,income_max_pct,75,65,교체
+315000000106,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (4·19혁명부상자 | 6·25참전 재일학도의용군인 | 공상군경 | 무공수훈자 | 순국선열 | 애국지사 | 전몰순직군경 | 특수임무사망·부상·공로자(행방불명자)) & (6·25 및 월남참전유공자 | 고엽제후유의증 환자),교체
+315000000108,자격(requires/anyOf),-,기초생활수급자 & 의료급여 수급자,추가
+315000000109,자격(requires/anyOf),장애인,고령자 & 등록장애인 & 저소득층,교체
+315000000112,자격(requires/anyOf),출산/입양,입양한 가정,교체
+315000000112,age_max,44,18,교체
+315000000114,자격(requires/anyOf),한부모/조손,한부모가족,교체
+315000000114,age_min,18,19,교체
+315000000114,age_max,60,5,교체
+315000000114,income_max_pct,75,65,교체
+315000000262,자격(requires/anyOf),-,국가보훈대상자 & 기초생활수급자 & 한부모가족,추가
+315000000263,자격(requires/anyOf),-,(65세 이상 독거노인 | 기초생활수급자 | 조손가정 | 중증장애인 | 차상위계층 | 한부모가족) & (1인가구 | 고령자 | 동장 추천 세대 | 등록장애인),추가
+315000000264,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 장애인),추가
+315000000266,자격(requires/anyOf),-,가구 & 사회복지시설 & (국가보훈대상자 | 기초생활수급자 | 다문화가족 | 보호연장아동 | 북한이탈주민 | 자립준비청년 | 장애인 | 차상위계층 | 한부모가족),추가
+315000000267,자격(requires/anyOf),-,강서구 거주자,추가
+315000000268,자격(requires/anyOf),무주택세대,무주택세대 & (전세사기 피해자 | 전세피해확인서 발급자),교체
+315000000269,자격(requires/anyOf),무주택세대,무주택세대 & (전세사기 피해자 | 전세피해자),교체
+315000000269,age_min,18,19,교체
+315000000269,age_max,-,39,추가
+315000000270,자격(requires/anyOf),무주택세대,무주택세대 & (전세사기 피해자 | 전세피해자),교체
+315000000271,자격(requires/anyOf),무주택세대,무주택세대 & (전세사기 피해자 | 전세피해자),교체
+315000000277,자격(requires/anyOf),-,강서구 거주자,추가
+315000000280,자격(requires/anyOf),-,단독주택,추가
+315000000282,자격(requires/anyOf),-,관내 주민,추가
+315000000283,자격(requires/anyOf),-,관내 주민,추가
+315000000284,자격(requires/anyOf),-,기관,추가
+315000000285,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+315000000288,자격(requires/anyOf),예비부모/난임,난임,교체
+315000000291,자격(requires/anyOf),-,1인가구 & (스토킹 피해자 | 주거안전취약가구),추가
+315000000293,자격(requires/anyOf),-,강서구 거주자,추가
+315000000295,자격(requires/anyOf),영업중,(강서구 거주자 | 강서구 소상공인),교체
+315000000296,자격(requires/anyOf),-,강서구 거주자,추가
+315000000297,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 소상공인 간편결제시스템 결제자 | 자원봉사증 소지자 | 중증장애인),추가
+316000000103,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 의료급여 수급자 | 타법 의료급여 수급자),추가
+316000000104,자격(requires/anyOf),-,(기초생활수급자 | 독립유공자 | 의료급여 수급자),추가
+316000000121,자격(requires/anyOf),-,지역가입자 & (고령자 | 등록장애인 | 만성질환자 | 한부모가정),추가
+316000000121,age_min,-,65,추가
+316000000124,자격(requires/anyOf),예비부모/난임,난임,교체
+316000000136,income_max_pct,100,80,교체
+316000000140,자격(requires/anyOf),장애인,입양 부모,교체
+316000000142,자격(requires/anyOf),-,자립준비청년,추가
+316000000144,자격(requires/anyOf),무주택세대,무주택자,교체
+316000000148,자격(requires/anyOf),-,경로우대자 & 국가보훈대상자 & 기초생활수급자 & 다자녀가구 & 보호조치 아동 & 장애인 & 한부모가족,추가
+316000000151,자격(requires/anyOf),-,개/고양이 소유자 & (기초생활수급자 | 차상위계층 | 한부모가족),추가
+316000000154,자격(requires/anyOf),-,구로구 거주자,추가
+316000000156,자격(requires/anyOf),-,학교 밖 청소년,추가
+316000000158,자격(requires/anyOf),기관/단체,소규모 공동주택 거주자,교체
+316000000160,자격(requires/anyOf),출산/입양,다문화가족 & 출산/입양,교체
+317000000101,자격(requires/anyOf),장애인,(발달장애인 | 정신장애인),교체
+317000000104,자격(requires/anyOf),-,노인 & 한부모,추가
+317000000106,자격(requires/anyOf),출산/입양,다자녀가구,교체
+317000000108,자격(requires/anyOf),국가보훈대상자,독립유공자 & 유족,교체
+317000000110,자격(requires/anyOf),한부모/조손,한부모가족,교체
+317000000110,income_max_pct,75,65,교체
+317000000111,자격(requires/anyOf),출산/입양,입양가정,교체
+317000000115,자격(requires/anyOf),국가보훈대상자,(국가보훈대상자 | 국가유공자 유족증 소지자 | 금천구 거주자),교체
+317000000116,자격(requires/anyOf),1인가구 & 장애인,장애인,교체
+317000000118,자격(requires/anyOf),국가보훈대상자,국가유공자 유족,교체
+317000000123,자격(requires/anyOf),-,성인 학습자,추가
+317000000368,자격(requires/anyOf),-,무주택자 & (HUG 전세피해확인서 발급자 | 전세사기 피해자),추가
+317000000369,자격(requires/anyOf),-,무주택자 & (HUG 전세피해확인서 발급자 | 전세사기 피해자),추가
+318000000101,자격(requires/anyOf),출산/입양,신생아 & 장애인,교체
+318000000107,자격(requires/anyOf),-,의료급여 수급권자,추가
+318000000107,age_max,-,64,추가
+318000000110,자격(requires/anyOf),(국가보훈대상자 | 장애인),영등포구 거주자 & (국가유공자 및 그 배우자 | 보훈보상대상자(재해) | 생계·의료급여 수급권자 | 중증장애인 | 희귀질환 의료비 지원대상자),교체
+318000000112,자격(requires/anyOf),-,기초생활수급자,추가
+318000000117,자격(requires/anyOf),장애인,저소득가정 & (노인 | 장애인 | 한부모),교체
+318000000121,자격(requires/anyOf),-,지역주민,추가
+318000000122,자격(requires/anyOf),장애인,중증장애인,교체
+318000000131,자격(requires/anyOf),-,(결혼이민자등 | 고령자 | 국가보훈대상자 | 기초생활수급자 | 농어업인등 | 북한이탈주민 | 장애인 | 특수교육대상자),추가
+318000000132,자격(requires/anyOf),-,영등포구 주민등록자,추가
+318000000401,age_max,-,7,추가
+318000000404,자격(requires/anyOf),-,영등포구 거주자,추가
+318000000406,자격(requires/anyOf),-,(기초생활수급자 | 독거노인 | 장애인 | 차상위계층),추가
+318000000413,자격(requires/anyOf),구직자/실업자,미취업자,교체
+318000000414,자격(requires/anyOf),-,(노숙인 | 노인 | 장애인 | 중장년 | 청년 | 취약계층),추가
+318000000414,income_max_pct,100,85,교체
+318000000415,자격(requires/anyOf),-,영등포구 거주자,추가
+318000000417,자격(requires/anyOf),-,개 또는 고양이를 기르는 & 관내 주민등록 소지자 & (기초생활수급자 | 차상위계층 | 한부모가족),추가
+318000000426,자격(requires/anyOf),1인가구,고립위험가구,교체
+318000000427,자격(requires/anyOf),1인가구,고립위험가구,교체
+318000000429,자격(requires/anyOf),-,복지 사각지대 위기 의심가구,추가
+318000000430,자격(requires/anyOf),영업중 & 음식점업,소상공인 & (일반 음식점 | 제과점 | 휴게 음식점),교체
+318000000431,자격(requires/anyOf),무주택세대,청년 가구,교체
+319000000106,자격(requires/anyOf),장애인,저소득층 & (노인 | 등록 장애인 | 만성질환자 | 한부모),교체
+319000000107,자격(requires/anyOf),-,취약계층,추가
+319000000110,자격(requires/anyOf),-,동작구 거주자,추가
+319000000111,자격(requires/anyOf),한부모/조손,미혼모 & 미혼부,교체
+319000000111,age_max,-,5,추가
+319000000113,자격(requires/anyOf),출산/입양,입양가정,교체
+319000000119,자격(requires/anyOf),장애인,중증 와상·사지마비 장애인,교체
+319000000122,자격(requires/anyOf),-,사회복지시설 종사자 & 환경공무관 & (산후조리도우미 | 산후조리원 종사자) & (국가보훈대상자 | 기초생활수급자 | 장애인),추가
+319000000123,자격(requires/anyOf),-,기초생활수급자,추가
+319000000124,자격(requires/anyOf),출산/입양,동작구 거주자,교체
+319000000128,자격(requires/anyOf),근로자/직장인,청년,교체
+319000000129,자격(requires/anyOf),출산/입양,미혼모부 & 한부모가족,교체
+319000000132,자격(requires/anyOf),근로자/직장인,(근로자/직장인 | 동작구 거주자 | 상공인),교체
+319000000134,자격(requires/anyOf),기타업종(법인) & 중소기업,부설주차장 운영자,교체
+319000000140,자격(requires/anyOf),-,동작구 거주자,추가
+319000000141,자격(requires/anyOf),국가보훈대상자,사망한 참전유공자의 배우자,교체
+319000000142,자격(requires/anyOf),다자녀가구 & 출산/입양,신생아,교체
+319000000144,자격(requires/anyOf),-,(노인 | 영유아 | 임산부 | 장애인),추가
+319000000145,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+319000000149,자격(requires/anyOf),영업중,소상공인,교체
+319000000151,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),(3년 이내 창업자 | 7년 이내 창업기업 | 예비창업자) & (건축·엔지니어링 | 기술서비스업 | 정보처리 | 제조업 | 컴퓨터 운영 관련 업종) & (개별 사무실 | 코워킹스페이스),교체
+319000000153,자격(requires/anyOf),영업중,소상공인,교체
+319000000156,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+319000000161,자격(requires/anyOf),출산/입양,4개월 이하 영아 가정,교체
+319000000162,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+319000000164,자격(requires/anyOf),출산/입양,신생아 부모,교체
+319000000165,자격(requires/anyOf),-,동작구 거주자,추가
+319000000175,자격(requires/anyOf),기타업종 & 영업중,이미용업소,교체
+319000000190,자격(requires/anyOf),예비부모/난임,동작구 여성 & 임신 건강관리 지원 신청자,교체
+319000000191,자격(requires/anyOf),예비부모/난임,HPV 검사비 지원 승인자 & 여성,교체
+320000000101,자격(requires/anyOf),-,(12~17세 여성 청소년 | 12세 남성 청소년 | 12세 이하 어린이 | 18~26세 저소득층 여성 | HBeAg 양성 산모의 영유아 | HBsAg 양성 산모의 영유아 | 간염 항체 미형성자 | 군인 | 노인 | 농부 | 보균자 접촉자 | 유행지역 여행자 | 임산부),추가
+320000000103,자격(requires/anyOf),장애인,장애인 & 장애인가족,교체
+320000000104,자격(requires/anyOf),(고등학생 | 구직자/실업자 | 국가보훈대상자 | 근로자/직장인 | 농업인 | 대학생/대학원생 | 어업인 | 예비부모/난임 | 임산부 | 임업인 | 장애인 | 질병/질환자 | 축산업인 | 출산/입양),(고등학생 | 지역주민),교체
+320000000106,자격(requires/anyOf),장애인,13세 이하 자녀 양육 부모장애인 & 시설퇴소자,교체
+320000000110,자격(requires/anyOf),질병/질환자,아동/정신시설 입소자 & 의료급여 수급자,교체
+320000000110,age_min,14,48,교체
+320000000110,age_max,64,61,교체
+320000000111,자격(requires/anyOf),-,(55세 이상 단독세대 | 고령자 | 국가보훈대상자 | 등록장애인 | 만성질환자 | 한부모가족) & (기초생활수급자 | 주거급여 수급자 | 차상위계층),추가
+320000000112,자격(requires/anyOf),-,기초생활수급자,추가
+320000000115,자격(requires/anyOf),-,관악구 주민,추가
+320000000119,자격(requires/anyOf),국가보훈대상자,(공상공무원 | 공상군경 | 국가보훈대상자 | 독립유공자 손자녀 | 독립유공자 자녀 | 민주유공자 | 사망한 참전유공자의 배우자 | 선순위 유족 | 저소득 국가유공자 | 전상군경 | 특수임무유공자),교체
+320000000119,age_min,-,65,추가
+320000000119,income_max_pct,-,100,추가
+320000000121,자격(requires/anyOf),국가보훈대상자,보훈대상자 유족,교체
+320000000122,자격(requires/anyOf),장애인,장애인 & (가족 | 단체 | 모임),교체
+320000000126,자격(requires/anyOf),-,(전동보장구 구매 예정자 | 전동보장구 사용자),추가
+320000000295,자격(requires/anyOf),예비부모/난임,난임,교체
+320000000298,자격(requires/anyOf),구직자/실업자,미취업 청년,교체
+320000000310,age_min,14,10,교체
+320000000310,age_max,64,60,교체
+320000000313,자격(requires/anyOf),-,유기동물 입양자,추가
+320000000318,자격(requires/anyOf),출산/입양 & (다문화가족 | 다자녀가구 | 무주택세대 | 북한이탈주민 | 신규전입 | 한부모/조손 | 확대가족),보호대상아동 입양 가정,교체
+321000000102,자격(requires/anyOf),-,서초구 거주자 & (1~23개월 손주 가정 | 3~12개월 자녀 가정 | 3~23개월 자녀 가정),추가
+321000000105,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 중증장애인 | 희귀질환자),추가
+321000000107,자격(requires/anyOf),근로자/직장인,남성 육아휴직자,교체
+321000000108,자격(requires/anyOf),출산/입양,입양아동,교체
+321000000108,age_max,19,18,교체
+321000000109,자격(requires/anyOf),농업인,화훼 농업인,교체
+321000000110,자격(requires/anyOf),-,기초생활수급자,추가
+321000000114,자격(requires/anyOf),-,보호종료아동 & 자립준비청년,추가
+321000000114,income_max_pct,-,60,추가
+321000000115,자격(requires/anyOf),-,서초구 거주자 & 자립준비청년,추가
+321000000117,자격(requires/anyOf),근로자/직장인,(서울구 관내 대학생 | 서초구 주민 | 서초구 직장인),교체
+321000000120,자격(requires/anyOf),질병/질환자,정신건강 고위험군 & 중증정신질환자,교체
+321000000120,income_max_pct,100,120,교체
+321000000121,자격(requires/anyOf),-,자립준비청년,추가
+321000000123,자격(requires/anyOf),-,자립준비청년,추가
+321000000126,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+321000000143,자격(requires/anyOf),-,(근로자/직장인 | 서초구 주민),추가
+322000000102,자격(requires/anyOf),장애인,기초생활수급자 & 장애인,교체
+322000000108,자격(requires/anyOf),예비부모/난임,강남구 주민 & 난임,교체
+322000000118,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+322000000119,자격(requires/anyOf),장애인,장애인 & 휠체어 이용자,교체
+322000000120,자격(requires/anyOf),출산/입양,장애인 & 출산,교체
+322000000125,자격(requires/anyOf),근로자/직장인,육아휴직자,교체
+323000000108,자격(requires/anyOf),장애인,장애인 & (기초생활수급자 | 차상위계층),교체
+323000000109,자격(requires/anyOf),장애인,발달장애인,교체
+323000000113,자격(requires/anyOf),출산/입양,입양 부모,교체
+323000000114,자격(requires/anyOf),기관/단체,공동주택,교체
+323000000117,자격(requires/anyOf),출산/입양,임산부,교체
+323000000122,자격(requires/anyOf),국가보훈대상자,6.25전쟁 참전유공자,교체
+323000000135,자격(requires/anyOf),무주택세대,전세사기 피해자,교체
+324000000101,자격(requires/anyOf),-,14세 이상 & 스마트폰 소지자,추가
+324000000106,자격(requires/anyOf),다자녀가구 & (고등학생 | 중학생 | 초등학생),다자녀가구,교체
+324000000121,자격(requires/anyOf),-,강동구 거주자,추가
+336000000096,income_max_pct,50,48,교체
+337000000013,자격(requires/anyOf),-,1종 수급권자,추가
+348000000233,자격(requires/anyOf),기관/단체 & 농업인,자치구 & (버섯류 재배 농업법인 | 버섯류 재배 농업인 | 버섯류 재배 생산자단체 | 채소류 재배 농업법인 | 채소류 재배 농업인 | 채소류 재배 생산자단체 | 화훼류 재배 농업법인 | 화훼류 재배 농업인 | 화훼류 재배 생산자단체) & (지열·폐열·공기열 시설 설치 농업법인 | 지열·폐열·공기열 시설 설치 농업인) & (닭 사육 농업법인 | 닭 사육 농업인 | 닭 사육 생산자단체 | 돼지 사육 농업법인 | 돼지 사육 농업인 | 돼지 사육 생산자단체 | 오리 사육 농업법인 | 오리 사육 농업인 | 오리 사육 생산자단체),교체
+408000000419,자격(requires/anyOf),-,의료급여 수급권자,추가
+408000000419,age_min,19,20,교체
+418000000089,자격(requires/anyOf),-,의료급여 1종 수급권자 & (20세 미만 재학자 | 가정간호 대상자 | 임산부) & (18세 미만 | 등록 결핵환자 | 등록 중증난치질환자 | 등록 중증질환자 | 등록 희귀질환자 | 선택의료급여 기관 이용자 | 행려환자),추가
+424000000006,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+425000000524,자격(requires/anyOf),기관/단체 & 농업인,(농업법인 | 농업인 | 생산자단체),교체
+429000000646,자격(requires/anyOf),질병/질환자,희귀질환자 산정특례 등록자,교체
+429000000646,income_max_pct,200,140,교체
+475000000091,자격(requires/anyOf),기관/단체 & 임업인,(생산자단체 | 임업인 | 지리적표시등록 단체),교체
+495000000308,자격(requires/anyOf),구직자/실업자,농산촌 취업 취약계층,교체
+502000000101,자격(requires/anyOf),출산/입양,출산/입양 & 한부모,교체
+507000000642,자격(requires/anyOf),(농업인 | 임업인 | 축산업인),농업인,교체
+508000000565,자격(requires/anyOf),(고등학생 | 예비부모/난임),보호종료아동,교체
+569000000228,자격(requires/anyOf),-,(노인 및 어린이 시설 소유자 | 주택소유자 | 창고 소유자 | 축사 소유자),추가
+611000000111,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),(고등학생 | 중학생 | 초등학생) & (기초생활수급자 | 다문화가족 | 다자녀가구 | 북한이탈주민가정 | 장애인가구 | 중증질환자 가정 | 차상위계층 | 한부모가족),교체
+611000000114,자격(requires/anyOf),국가보훈대상자,독립유공자 (손)자녀 & (기초생활수급자 | 기초연금 수급자 | 중위소득 70% 이하자),교체
+611000000114,income_max_pct,75,70,교체
+611000000115,자격(requires/anyOf),-,고령자 & (기초생활수급자 | 다문화가족 | 독거노인 | 북한이탈주민 | 장애인 | 조손가정 | 차상위계층 | 한부모가구),추가
+611000000115,age_min,-,65,추가
+611000000116,자격(requires/anyOf),한부모/조손 & (고등학생 | 중학생),한부모가족,교체
+611000000116,income_max_pct,50,60,교체
+611000000120,자격(requires/anyOf),장애인,장애인 & (기초생활수급자 | 차상위계층),교체
+611000000121,자격(requires/anyOf),기관/단체,영구임대주택 거주자,교체
+611000000123,자격(requires/anyOf),예비부모/난임,난임,교체
+611000000124,자격(requires/anyOf),출산/입양,임산부,교체
+611000000126,자격(requires/anyOf),구직자/실업자,대학생/대학원생,교체
+611000000126,income_max_pct,200,150,교체
+611000000127,자격(requires/anyOf),(1인가구 | 무주택세대),1인가구 & 무주택세대,교체
+611000000127,income_max_pct,-,150,추가
+611000000128,income_max_pct,50,48,교체
+611000000129,자격(requires/anyOf),-,(국민건강보험 지역가입자 | 근로소득자 | 사업소득자 | 서울특별시 시민),추가
+611000000131,자격(requires/anyOf),장애인,기준중위소득 50~65% 이하자 & 장애인 & (기초생활수급자 | 차상위계층),교체
+611000000131,income_max_pct,-,65,추가
+611000000134,자격(requires/anyOf),영업중,소상공인,교체
+611000000135,자격(requires/anyOf),출산/입양,장애인 & 출산 남성 배우자,교체
+611000000137,자격(requires/anyOf),-,기초생활수급자,추가
+611000000139,자격(requires/anyOf),출산/입양,미혼모 & 출산/입양 & (기초생활수급자 | 차상위계층),교체
+611000000144,자격(requires/anyOf),구직자/실업자,청년,교체
+611000000149,자격(requires/anyOf),-,서울특별시 시민,추가
+611000000153,자격(requires/anyOf),(임산부 | 출산/입양),장애인 & 장애인가구 & (만 9세 미만 자녀 양육 | 임신 | 출산 예정자),교체
+611000000153,income_max_pct,-,120,추가
+611000000155,자격(requires/anyOf),다문화가족 & 출산/입양,다문화가족 & (배우자 | 시부모 | 외국인주민 | 임신출산한 결혼이주여성),교체
+611000000158,자격(requires/anyOf),국가보훈대상자,민주화운동 관련자 & 민주화운동 관련자 유족,교체
+611000000158,age_min,-,65,추가
+611000000158,income_max_pct,-,100,추가
+611000000159,자격(requires/anyOf),예비부모/난임 & (다문화가족 | 다자녀가구 | 무주택세대 | 북한이탈주민 | 신규전입 | 확대가족),예비부모/난임,교체
+611000000161,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (기초생활수급자 | 차상위계층),교체
+611000000162,자격(requires/anyOf),장애인,정신질환자,교체
+611000000164,자격(requires/anyOf),영업중,소상공인,교체
+611000000170,income_max_pct,100,150,교체
+611000000171,자격(requires/anyOf),-,(아동복지시설 이용자 | 장애인 복지시설 이용자 | 저소득층 아동 | 취약 아동 | 특수교육대상자),추가
+611000000171,age_max,-,17,추가
+611000000173,자격(requires/anyOf),기관/단체,(박물관·미술관 협의회 | 사립 미술관 | 사립 박물관),교체
+611000000174,자격(requires/anyOf),-,수돗물 사용 가구,추가
+611000000181,income_max_pct,200,100,교체
+611000000182,income_max_pct,200,140,교체
+611000019598,자격(requires/anyOf),-,기초생활수급자 & 노인 & 다문화가족 & 소방차 통행 곤란 지역 거주자 & 장애인 & 지하층 거주자 & (소년소녀가장 | 한부모가족),추가
+611000019600,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+611000019603,자격(requires/anyOf),-,가구 & (기초생활수급자 | 차상위계층 | 차차상위계층),추가
+611000019603,income_max_pct,75,60,교체
+611000019608,자격(requires/anyOf),-,(기초생활수급자 | 중증장애인),추가
+611000019611,자격(requires/anyOf),출산/입양,다문화가족 & (3촌 이내 친족 | 조부모),교체
+611000019613,자격(requires/anyOf),(임산부 | 출산/입양),만 2세 미만 영유아 가정 & 임산부,교체
+611000019619,자격(requires/anyOf),근로자/직장인,청년,교체
+611000019619,age_max,36,34,교체
+611000019620,자격(requires/anyOf),-,(14세 이하 자녀 | 18세 이상 부모 | 동일 가구원),추가
+611000019620,age_max,-,14,추가
+611000019620,income_max_pct,-,80,추가
+611000019621,자격(requires/anyOf),다자녀가구 & 출산/입양,쌍둥이,교체
+611000019622,자격(requires/anyOf),구직자/실업자,미취업 청년,교체
+611000019622,age_max,42,39,교체
+611000019624,자격(requires/anyOf),무주택세대,무주택세대 & (입양 | 출산),교체
+611000019624,income_max_pct,200,180,교체
+611000019625,age_max,27,24,교체
+611000019625,income_max_pct,200,150,교체
+611000019626,자격(requires/anyOf),-,청소년 & (가족돌봄청년 | 가족쉼터 보호아동 | 건강장애 학생 | 국가보훈대상자 | 다문화가족 | 북한이탈주민 | 북한이탈주민 자녀 | 아동보호시설 보호아동 | 학교 밖 청소년),추가
+611000019626,income_max_pct,200,72,교체
+611000019627,자격(requires/anyOf),기관/단체,대학생 & 타 대학 연합 동아리 & (단과대·학과 동아리 | 중앙동아리),교체
+611000019628,income_max_pct,100,85,교체
+611000019635,자격(requires/anyOf),구직자/실업자,미취업·미창업 여성,교체
+611000019635,income_max_pct,200,150,교체
+611000019636,자격(requires/anyOf),-,다자녀가구 & 맞벌이 & 임산부,추가
+611000019636,income_max_pct,-,180,추가
+611000019637,자격(requires/anyOf),-,(임차인 | 주택소유자),추가
+611000019639,자격(requires/anyOf),-,일반인,추가
+611000019644,자격(requires/anyOf),-,양육공백,추가
+611000019644,age_min,18,2,교체
+611000019644,age_max,55,3,교체
+611000019644,income_max_pct,200,150,교체
+611000019648,자격(requires/anyOf),1인가구,(1인가구 | 스토킹 피해자 | 주거안전 취약계층),교체
+611000019649,자격(requires/anyOf),출산/입양,1인 자영업자 & 배우자 & 임산부 & 프리랜서,교체
+642000000035,자격(requires/anyOf),고등학생 & 한부모/조손,고등학생 & 한부모가족,교체
+642000000386,age_min,18,19,교체
+701000000027,자격(requires/anyOf),-,학교 밖 청소년,추가
+701000000203,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),(기초생활수급자 | 차상위계층 | 한부모가족) & (고등학생 | 중학생 | 초등학생) & (난민 인정자 | 난민인정자 자녀 | 특별기여자 | 특별기여자 자녀),교체
+701000000203,income_max_pct,50,60,교체
+701000000204,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),학생 & (난민 또는 특별기여자 자녀 | 난민 인정자 | 특별기여자) & (기초생활수급자 | 법정차상위계층 | 한부모가족),교체
+701000000204,income_max_pct,50,60,교체
+701000000207,자격(requires/anyOf),-,특수교육대상자,추가
+701000000208,자격(requires/anyOf),(고등학생 | 중학생),특수교육대상자,교체
+701000000209,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),특수교육대상자,교체
+701000000210,자격(requires/anyOf),-,학교 밖 청소년,추가
+999000000001,자격(requires/anyOf),-,아동청소년 분야 경력자,추가
+999000000002,자격(requires/anyOf),구직자/실업자,기초생활수급자,교체
+999000000005,자격(requires/anyOf),구직자/실업자,구직자/실업자 & 질병/질환자,교체
+999000000008,자격(requires/anyOf),근로자/직장인,근로자,교체
+999000000009,자격(requires/anyOf),중소기업,(사회적기업 | 우선지원대상기업 | 중견기업) & (기관/단체 | 사회복지시설 | 중소기업),교체
+999000000010,자격(requires/anyOf),(구직자/실업자 | 장애인),장애인,교체
+999000000010,income_max_pct,-,60,추가
+999000000013,자격(requires/anyOf),근로자/직장인,고등학생,교체
+999000000014,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생 & (기초생활수급자 | 차상위계층 | 한부모가족),교체
+999000000015,자격(requires/anyOf),대학생/대학원생,고등학교 졸업자 & 대학 신입생,교체
+999000000015,income_max_pct,200,9,교체
+999000000017,자격(requires/anyOf),국가보훈대상자 & 무주택세대,국가보훈대상자 & 무주택세대 & (5.18민주유공자 | 5·18민주유공자 수권유족) & (특수임무유공자 | 특수임무유공자 수권유족) & (군경 · 공무원 | 군경 및 공무원 수권유족) & (독립유공자 | 독립유공자 수권유족 | 영주귀국 독립유공자 유족 세대주) & (독립유공자 유족 | 생활지원금 수급자),교체
+999000000018,자격(requires/anyOf),국가보훈대상자,군 복무 중 발병자,교체
+999000000019,자격(requires/anyOf),국가보훈대상자 & 무주택세대,무주택세대 & 제대군인,교체
+999000000020,자격(requires/anyOf),국가보훈대상자,제대군인,교체
+999000000021,자격(requires/anyOf),무주택세대,"무주택 청년 & 무주택세대 & 월평균소득 100% 이하 & (다인가구 | 다자녀가구 | 월평균소득 70% 이하) & (노인 | 보호대상 한부모가족 | 생계·의료급여 수급자 | 수급권자 | 장애인 | 차상위계층) & (임신 중 | 입양 | 출산) & (6세 이하 자녀 한부모가족 | 6세 이하 자녀 혼인가구 | 신혼부부 | 예비신혼부부) & (월평균소득 50% 이하 | 장애인) & (생계,주거,의료급여 수급자 | 한부모가족)",교체
+999000000021,age_max,-,39,추가
+999000000021,income_max_pct,-,120,추가
+999000000022,자격(requires/anyOf),무주택세대,무주택세대 & (5.18민주유공자 | 국가보훈대상자 | 군경 등 | 특수임무유공자) & (고월세 부담자 | 기금대출 거절자 | 부도공임 퇴거자 | 최저주거기준 미달) & (고시원 거주자 | 노숙인 | 범죄피해자 | 쪽방주민) & (고령자 | 보호대상 한부모가족 | 생계·의료급여 수급자 | 장애인 | 차상위계층) & (6세 이하 자녀 한부모가족 | 신생아가구 | 신혼부부 | 예비부부) & (대학생 | 자립준비청년 | 청소년복지시설퇴소청소년 | 취업준비생) & (교통사고 유자녀 가정 | 소년소녀가정 | 위탁가정 | 자립준비청년 | 재난 유자녀 가정 | 청소년복지시설퇴소청소년) & (도시근로자 소득 50% 이하 | 저소득 장애인) & (공공임대주택 매도자 | 긴급지원대상자 | 이재민),교체
+999000000022,income_max_pct,200,100,교체
+999000000023,자격(requires/anyOf),무주택세대,무주택세대 & (기초생활수급자 | 북한이탈주민 | 의료급여 수급자 | 일본군 위안부 피해자 | 장애인 | 지원대상 한부모가족),교체
+999000000023,age_max,-,65,추가
+999000000023,income_max_pct,200,100,교체
+999000000025,자격(requires/anyOf),무주택세대,무주택세대 & 세대주 & (국가보훈대상자 | 기초생활수급자 | 다문화가족 | 북한이탈주민 | 장애인 | 조손 | 차상위계층 | 한부모),교체
+999000000026,자격(requires/anyOf),대학생/대학원생 & 무주택세대,고령자 & 대학생 & 무주택세대 & 산업단지 근로자 & 신혼부부 & 예비신혼부부 & 주거급여 수급자 & 청년 & 한부모가족,교체
+999000000027,자격(requires/anyOf),(농업인 | 어업인 | 임업인 | 축산업인),농업인 & 어업인,교체
+999000000027,income_max_pct,-,40,추가
+999000000034,자격(requires/anyOf),대학생/대학원생,대학생,교체
+999000000035,자격(requires/anyOf),구직자/실업자,문화관광해설사,교체
+999000000036,자격(requires/anyOf),장애인,장애인 & (기초생활수급자 | 법정 한부모가족 | 비 저소득층 | 차상위계층),교체
+999000000038,자격(requires/anyOf),-,예술인,추가
+999000000038,income_max_pct,100,120,교체
+999000000039,자격(requires/anyOf),기관/단체,고위험 산모,교체
+999000000040,자격(requires/anyOf),-,긴급복지 주지원 수급자,추가
+999000000042,자격(requires/anyOf),질병/질환자,의료급여 수급권자,교체
+999000000043,자격(requires/anyOf),-,기초생활수급자 & 의료급여 수급자 & 타법 수급권자,추가
+999000000044,자격(requires/anyOf),-,중장년 & 청년 & 초등학생,추가
+999000000044,age_min,6,13,교체
+999000000050,자격(requires/anyOf),-,여성청소년 & (기초생활수급자 | 차상위계층 | 한부모가족),추가
+999000000056,자격(requires/anyOf),(고등학생 | 중학생),대학생 & (고등학생 | 중학생) & (공무원 | 과학자),교체
+999000000059,자격(requires/anyOf),구직자/실업자,국립공원지킴이 & 자연환경해설사,교체
+999000000060,자격(requires/anyOf),-,산림기술자,추가
+999000000061,자격(requires/anyOf),국가보훈대상자,기초연금 수급자 & 독립유공자 (손)자녀 & 생활조정수당 수급자 & (교육급여 수급자 | 기초생활수급자 | 의료급여 수급자 | 주거급여 수급자 | 차상위계층),교체
+999000000061,income_max_pct,75,70,교체
+999000000069,자격(requires/anyOf),근로자/직장인 & 북한이탈주민,북한이탈주민,교체
+999000000070,자격(requires/anyOf),(영업중 | 예비창업자),예비창업자 & 장애인 & 장애인기업,교체
+999000000071,자격(requires/anyOf),(영업중 | 예비창업자),예비창업자 & 장애인 & (업종전환 희망 | 장애인기업),교체
+999000000072,자격(requires/anyOf),중소기업,장애인기업,교체
+999000000073,자격(requires/anyOf),중소기업,장애인기업,교체
+999000000074,자격(requires/anyOf),중소기업,예비창업자,교체
+999000000077,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),기업,교체
+999000000085,자격(requires/anyOf),중소기업,예비창업자,교체
+999000000086,자격(requires/anyOf),-,(예비창업자 | 창업 7년 이내 기업),추가
+999000000088,자격(requires/anyOf),기관/단체,광역자치단체,교체
+999000000090,income_max_pct,200,90,교체
+999000000091,자격(requires/anyOf),장애인,발달장애인 & 발달장애인 관련 분야 종사자 & (가족 | 발달장애인의 부모 | 보호자),교체
+999000000092,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+B01000300002,자격(requires/anyOf),-,개인회생절차 변제계획 이행자 & (국민행복기금 채무조정 약정 체결자 | 한국자산관리공사 채무조정 약정 체결자),추가
+B01000300003,자격(requires/anyOf),-,국민행복기금 소액대부 채무자,추가
+B01000300004,자격(requires/anyOf),-,(기초생활수급자 | 미취업 청년 | 수감 | 입영),추가
+B01000300006,자격(requires/anyOf),대학생/대학원생,한국장학재단 학자금 대출 채무자,교체
+B01000300007,자격(requires/anyOf),-,(국민행복기금 채무조정 성실상환자 | 신용회복위원회 채무조정 성실상환자 | 한국자산관리공사 채무조정 성실상환자),추가
+B01000300009,자격(requires/anyOf),-,1주택 소유자,추가
+B01000300010,자격(requires/anyOf),영업중 & 중소기업,(소상공인 | 중소기업),교체
+B01000300011,자격(requires/anyOf),중소기업,동산담보대출 이용 기업,교체
+B01000300013,자격(requires/anyOf),(생계곤란/폐업예정 | 영업중),소상공인,교체
+B09002700001,자격(requires/anyOf),-,미취학자 & 학업중단자,추가
+B09002700003,자격(requires/anyOf),-,검정고시 합격자 & 중학생,추가
+B09002700004,자격(requires/anyOf),-,초등학교 졸업자 & 초등학교 졸업학력 검정고시 합격자,추가
+B11005300001,자격(requires/anyOf),국가보훈대상자,TV수상기 소지자 & (4·19혁명부상자 | 5·18민주화운동 부상자 | 6·18자유상이자 | 공상공무원 | 순국선열 및 애국지사의 선순위 유족 | 애국지사 | 전·공상군경 | 특별공로상이자),교체
+B11005300003,자격(requires/anyOf),-,(기초생활수급자 | 의료급여 수급자),추가
+B11005300004,자격(requires/anyOf),장애인,시청각 장애인,교체
+B11005300005,자격(requires/anyOf),생계곤란/폐업예정 & (기관/단체 | 중소기업),(법인/시설/단체 | 소상공인),교체
+B19000100001,자격(requires/anyOf),(영업중 | 예비창업자),사회적기업 & 예비창업자,교체
+B19001600001,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(단체 | 시설),교체
+B19001600002,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(개인기업 | 법인기업 | 중소기업),교체
+B19001600003,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),예비창업자 & (11대 선도기술 활용 기업 | 신성장동력산업 | 제조업),교체
+B19001600004,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B19001600005,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B19001600006,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(민간선투자사업자 | 민간투자사업 시행자),교체
+B19001600010,자격(requires/anyOf),중소기업 & (영업중 | 예비창업자),혁신스타트업,교체
+B19001600011,자격(requires/anyOf),영업중 & 중소기업 & (기타업종 | 제조업) & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),법인/시설/단체 & 소상공인,교체
+B19001600012,자격(requires/anyOf),영업중 & 중소기업,(법인/시설/단체 | 소상공인),교체
+B19001600013,자격(requires/anyOf),영업중 & 중소기업,법인/시설/단체 & 소상공인,교체
+B19001600014,자격(requires/anyOf),영업중 & 중소기업 & (기타업종 | 제조업) & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),중소기업 & (고용창출기업 | 기술혁신형 중소기업 | 수출 기업 | 신성장 동력산업 영위기업 | 제조업),교체
+B19001600015,자격(requires/anyOf),영업중 & 중소기업,(법인/시설/단체 | 소상공인),교체
+B19001600016,자격(requires/anyOf),영업중 & 중소기업,법인/시설/단체 & 소상공인,교체
+B19001600017,자격(requires/anyOf),영업중 & 중소기업,(법인/시설/단체 | 소상공인),교체
+B19001600018,자격(requires/anyOf),영업중 & 중소기업,(법인/시설/단체 | 소상공인),교체
+B27000100001,자격(requires/anyOf),-,전시납북자가족,추가
+B27000100001,income_max_pct,100,125,교체
+B27000100003,income_max_pct,100,125,교체
+B27000100004,자격(requires/anyOf),-,국내거주외국인,추가
+B27000100004,income_max_pct,100,125,교체
+B27000100006,자격(requires/anyOf),-,경찰·소방공무원,추가
+B27000100006,income_max_pct,100,125,교체
+B27000100007,income_max_pct,100,125,교체
+B27000100008,자격(requires/anyOf),-,법원소송구조사건 피구조자,추가
+B27000100009,자격(requires/anyOf),-,불법사금융 피해자,추가
+B27000100010,자격(requires/anyOf),-,개인회생신청대상자,추가
+B27000100010,income_max_pct,100,125,교체
+B27000100011,자격(requires/anyOf),-,교통사고 피해자,추가
+B27000100011,income_max_pct,100,125,교체
+B27000100012,자격(requires/anyOf),한부모/조손,취약계층 한부모가족 & 한부모가족,교체
+B27000100012,income_max_pct,100,125,교체
+B27000100013,자격(requires/anyOf),-,기초생활수급자,추가
+B27000100014,자격(requires/anyOf),근로자/직장인,플랫폼종사자,교체
+B27000100014,income_max_pct,100,125,교체
+B27000100015,자격(requires/anyOf),-,의료사고 피해자,추가
+B27000100015,income_max_pct,100,125,교체
+B27000100016,income_max_pct,100,125,교체
+B27000100018,자격(requires/anyOf),-,의사자유족 & 의상자와 가족,추가
+B27000100018,income_max_pct,100,125,교체
+B27000100019,자격(requires/anyOf),-,예술인,추가
+B27000100019,income_max_pct,100,125,교체
+B27000100020,income_max_pct,100,125,교체
+B27000100021,자격(requires/anyOf),-,국선대리인 선정사건 청구인,추가
+B27000100022,자격(requires/anyOf),-,가습기살균제 피해자,추가
+B27000100024,자격(requires/anyOf),-,가족관계 미등록자,추가
+B27000100024,income_max_pct,100,125,교체
+B27000100025,자격(requires/anyOf),다문화가족,결혼이민자 & 귀화허가자,교체
+B27000100025,income_max_pct,100,125,교체
+B27000100027,자격(requires/anyOf),-,소액 임차인,추가
+B27000100027,income_max_pct,100,125,교체
+B27000100029,자격(requires/anyOf),대학생/대학원생,대학생 & 미취업 청년,교체
+B27000100029,income_max_pct,50,125,교체
+B27000100030,자격(requires/anyOf),어업인,선원,교체
+B27000100030,income_max_pct,100,125,교체
+B27000100031,income_max_pct,100,125,교체
+B27000100032,income_max_pct,100,125,교체
+B27000100033,자격(requires/anyOf),국가보훈대상자,(5.18민주유공자 | 고엽제후유의증 환자 | 국가보훈대상자 | 중장기복무 제대군인 | 특수임무유공자),교체
+B27000100033,income_max_pct,100,125,교체
+B27000100034,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),학교폭력 피해자,교체
+B27000100034,income_max_pct,100,125,교체
+B27000100035,자격(requires/anyOf),-,(상가건물임대차 분쟁 당사자 | 주택임대차 분쟁 당사자),추가
+B27000100036,자격(requires/anyOf),-,범죄피해자,추가
+B27000100036,income_max_pct,100,125,교체
+B27000100037,자격(requires/anyOf),영업중,소상공인 & (기준중위소득 150% 이하 | 연 매출액 3억 이하),교체
+B27000100037,income_max_pct,-,150,추가
+B27000100038,자격(requires/anyOf),-,영세 담배소매인,추가
+B27000100038,income_max_pct,100,125,교체
+B27000100039,자격(requires/anyOf),어업인,선원 & 임금체불 피해자 & 재해보상 피해자,교체
+B27000100040,자격(requires/anyOf),-,가정폭력 및 성폭력 피해자,추가
+B27000100040,income_max_pct,100,125,교체
+B27000100041,자격(requires/anyOf),-,파산·면책 신청자,추가
+B27000100041,income_max_pct,100,125,교체
+B27000100042,자격(requires/anyOf),(농업인 | 어업인),농업인 & 어업인,교체
+B27000100042,income_max_pct,100,150,교체
+B27000100043,자격(requires/anyOf),한부모/조손,미혼모,교체
+B27000100043,income_max_pct,100,125,교체
+B27000100044,자격(requires/anyOf),-,불법사금융 피해자,추가
+B27000100044,income_max_pct,100,125,교체
+B27000100045,자격(requires/anyOf),-,차상위계층,추가
+B27000100046,income_max_pct,100,125,교체
+B27000100049,자격(requires/anyOf),-,전기통신 금융사기 피해자,추가
+B27000100049,income_max_pct,200,125,교체
+B27000100050,자격(requires/anyOf),근로자/직장인,화물차 운전자,교체
+B27000100050,income_max_pct,200,125,교체
+B27000100051,자격(requires/anyOf),-,중대재해 피해자,추가
+B27000100052,자격(requires/anyOf),-,불법사금융 피해자,추가
+B27000100053,자격(requires/anyOf),-,(미등록 대출업자 | 미등록 대출중개업자 관련자) & (등록 대출중개업자 관련자 | 등록대부업자),추가
+B37003100002,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업,교체
+B37003100003,자격(requires/anyOf),구직자/실업자 & 기타업종(법인) & 중소기업,(스포츠 관련 기업 및 단체 | 스포츠산업 구직자),교체
+B37003100004,자격(requires/anyOf),기타업종(법인) & 중소기업,예비창업자,교체
+B37003100006,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업,교체
+B37003100007,자격(requires/anyOf),제조업(법인) & 중소기업,스포츠용품 제조사,교체
+B37003100008,자격(requires/anyOf),-,여성 & (스포츠 관심 여성 | 스포츠 단체 종사자),추가
+B37003100009,자격(requires/anyOf),-,원로 체육인 & (기초생활수급자 | 차상위계층),추가
+B37003100009,age_min,19,60,교체
+B37003100010,자격(requires/anyOf),제조업(법인) & 중소기업,중소기업,교체
+B37003100011,자격(requires/anyOf),기타업종(법인) & (기관/단체 | 중소기업),(기관/단체 | 사회복지시설 | 중소기업),교체
+B37003100012,자격(requires/anyOf),-,(NOC/NPC 선수경력자 | 개도국 스포츠행정 경력자 | 개도국 스포츠행정 종사자 | 세계선수권 참가 선수 | 올림픽 참가 선수),추가
+B37003100013,자격(requires/anyOf),영업중 & 중소기업 & (기타업종 | 제조업) & (기타업종(법인) | 제조업(법인)),(민간체육시설업체 | 스포츠 서비스 업체 | 체육용구 제조사),교체
+B37003100014,자격(requires/anyOf),대학생/대학원생,(경력자 | 대학 및 대학원 졸업자 | 대학생/대학원생 | 선수경력자 | 체육 단체 종사자),교체
+B37003100015,자격(requires/anyOf),-,국제심판,추가
+B37003100016,자격(requires/anyOf),-,FIFA 마스터 입학 예정자 & (선수경력자 | 스포츠 행정 경력자),추가
+B37003100017,age_max,-,6,추가
+B37003100018,자격(requires/anyOf),(중학생 | 초등학생),(고등학생 | 중학생 | 초등학생) & (기초생활수급가구 | 차상위계층 | 한부모가족),교체
+B37003100019,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업 & (스포츠 서비스업 | 스포츠 시설업 | 스포츠 용품 제조업),교체
+B41000200002,자격(requires/anyOf),(기타업종(법인) | 농림어업(법인) | 제조업(법인)),축냉설비 설치 고객,교체
+B41000200003,자격(requires/anyOf),-,기초생활수급자 & 다자녀가구 & 장애인 & 질병/질환자 & 차상위계층 & 출산/입양 & 확대가족 & (5.18민주유공자 | 국가보훈대상자 | 독립유공자),추가
+B41000200004,자격(requires/anyOf),영업중,법인/시설/단체 & 소상공인,교체
+B41000200005,자격(requires/anyOf),영업중,(법인/시설/단체 | 소상공인),교체
+B41000200007,자격(requires/anyOf),영업중,(가구 | 법인/시설/단체 | 소상공인),교체
+B41000200008,자격(requires/anyOf),영업중,(가구 | 법인/시설/단체 | 소상공인),교체
+B41000200010,자격(requires/anyOf),영업중,(법인/시설/단체 | 소상공인),교체
+B41000200011,자격(requires/anyOf),영업중,(가구 | 법인/시설/단체 | 소상공인),교체
+B41000200013,자격(requires/anyOf),(영업중 | 예비창업자),한전 고객,교체
+B41000200016,자격(requires/anyOf),영업중 & (기타업종 | 제조업),어업인,교체
+B41000200017,자격(requires/anyOf),영업중 & (기타업종 | 제조업),농업인,교체
+B41000200018,자격(requires/anyOf),-,사업자등록증 소지자,추가
+B41000200020,자격(requires/anyOf),영업중,(법인/시설/단체 | 소상공인),교체
+B41000200021,자격(requires/anyOf),(영업중 | 예비창업자),(법인/시설/단체 | 소상공인),교체
+B41000200037,자격(requires/anyOf),기타업종(법인) & 영업중 & 음식점업 & (기관/단체 | 중소기업),법인/시설/단체 & 소상공인,교체
+B41000200038,자격(requires/anyOf),영업중,소상공인,교체
+B41000200040,자격(requires/anyOf),-,주택용 전기 사용 고객,추가
+B41000200041,자격(requires/anyOf),-,복지 할인 대상자,추가
+B41000200042,자격(requires/anyOf),영업중,송전선로 및 변전소 주변 주민,교체
+B46001400001,자격(requires/anyOf),-,(봉사단체 | 자원봉사자),추가
+B46001400002,자격(requires/anyOf),-,복지 소외계층,추가
+B46001400003,자격(requires/anyOf),-,긴급지원대상자 & 차상위계층 & (생계급여 신청 탈락자 | 생계급여 중지자 | 의료급여 신청 탈락자 | 의료급여 중지자),추가
+B46001400005,자격(requires/anyOf),-,독거노인 & 비수급인 & 비정형 거주자 & (위기 아동 | 위기 청소년) & (다문화가족 | 조손가정 | 한부모가족),추가
+B49000100043,자격(requires/anyOf),근로자/직장인,산업재해 근로자,교체
+B49000100205,자격(requires/anyOf),기관/단체,사업주 & 사업주 단체,교체
+B49000100207,자격(requires/anyOf),영업중 & 중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),사업주,교체
+B49000100208,자격(requires/anyOf),근로자/직장인,근로자,교체
+B49000100210,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B49000100212,자격(requires/anyOf),구직자/실업자,퇴직근로자,교체
+B49000100214,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),근로자/직장인,교체
+B49000100215,자격(requires/anyOf),영업중,소상공인,교체
+B49000100216,자격(requires/anyOf),영업중 & 중소기업,법인/시설/단체 & 소상공인,교체
+B49000700017,자격(requires/anyOf),근로자/직장인,해외취업자,교체
+B49000700201,자격(requires/anyOf),-,기술자,추가
+B49000700205,자격(requires/anyOf),근로자/직장인 & 다문화가족 & 중소기업,(사업주 | 외국인 근로자),교체
+B49000700206,자격(requires/anyOf),-,대한민국 명장,추가
+B49000700208,자격(requires/anyOf),(기타업종(법인) | 농림어업(법인) | 제조업(법인)) & (기관/단체 | 중소기업),중소기업,교체
+B49000700210,자격(requires/anyOf),근로자/직장인,(협약기업 재직자 | 협약기업 채용 예정자),교체
+B49000700211,자격(requires/anyOf),구직자/실업자 & 다문화가족,외국국적동포,교체
+B50000100001,income_max_pct,100,80,교체
+B50000100002,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생,교체
+B50000400003,자격(requires/anyOf),-,친환경차,추가
+B50000400004,자격(requires/anyOf),기타업종(법인) & 중소기업,대여업용 건설기계 & 사업용 화물차,교체
+B50000400007,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),벤처기업 & 중소기업,교체
+B50000400011,자격(requires/anyOf),-,대한민국 국민,추가
+B50000400013,자격(requires/anyOf),기관/단체,대학 창업 동아리,교체
+B50000400014,자격(requires/anyOf),-,경차 이용 고객,추가
+B50000400015,자격(requires/anyOf),(국가보훈대상자 | 장애인),유공자 & 장애인,교체
+B50000400016,자격(requires/anyOf),기관/단체,교통 유관 기관,교체
+B50000400042,age_max,-,18,추가
+B55029700002,자격(requires/anyOf),다문화가족 & 질병/질환자,외국인,교체
+B55029700002,income_max_pct,100,90,교체
+B55037300001,자격(requires/anyOf),-,국가유공상이자 & 기초생활수급자 & 다자녀가구 & 중증장애인 & (차상위계층 | 차상위계층에 준하는 자) & (독립유공자 | 독립유공자 유족),추가
+B55037300002,자격(requires/anyOf),기관/단체,(고등학생 | 일반인 | 중학생 | 초등학생),교체
+B55057600006,자격(requires/anyOf),고등학생,(마이스터고 | 일반계 고등학교 | 직업계 고등학교 | 특성화고),교체
+B55092800002,자격(requires/anyOf),질병/질환자,건강보험 가입자,교체
+B55092800003,자격(requires/anyOf),질병/질환자,금연치료 이수자,교체
+B55092800005,자격(requires/anyOf),질병/질환자,건강보험 가입자 & (항암제 투여자 | 희귀질환 치료제 투여자),교체
+B55092800042,자격(requires/anyOf),출산/입양,(저체중 출생아 | 조산아),교체
+B55100100004,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생,교체
+B55100100006,자격(requires/anyOf),기관/단체,(국외 한국학교 | 소외지역 초등학교 및 군부대),교체
+B55100100007,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 장애인),추가
+B55100100008,자격(requires/anyOf),기관/단체,(공공기관 | 단체),교체
+B55100100009,자격(requires/anyOf),-,(유치원 교사 | 초등·중등 교사),추가
+B55100100012,자격(requires/anyOf),(국가보훈대상자 | 장애인),(경차 및 하이브리드차 | 국가보훈대상자 | 병역 명문가 | 의사상자 | 장애인 | 저공해자동차),교체
+B55101400003,자격(requires/anyOf),기타업종(법인) & 중소기업,예비창업자,교체
+B55101400004,자격(requires/anyOf),-,국가대표 활동 경력자 & (기초생활수급자 | 차상위계층),추가
+B55101400005,자격(requires/anyOf),-,국가대표 선수 & 국가대표 지도자,추가
+B55101500003,자격(requires/anyOf),농림어업(법인) & 중소기업,농업인,교체
+B55101500004,자격(requires/anyOf),-,20-40대 가족 & 고령자 가족,추가
+B55101500007,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 다자녀가구 | 장애인),추가
+B55102900001,자격(requires/anyOf),(국가보훈대상자 | 장애인),국가보훈대상자 & 임산부 & 장애인 & 질병/질환자,교체
+B55102900002,자격(requires/anyOf),구직자/실업자,(기초생활수급자 | 차상위계층 | 한부모가족),교체
+B55117700003,자격(requires/anyOf),구직자/실업자,(취업준비생 | 항공산업 구직자),교체
+B55117700004,자격(requires/anyOf),(고등학생 | 중학생),(5세 이상 어린이 | 일반인 | 중고등학생),교체
+B55117700004,age_min,-,5,추가
+B55118200001,자격(requires/anyOf),질병/질환자,응급환자,교체
+B55120200001,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (4·19혁명부상자 | 5·18민주화운동부상자 | 6·18자유상이자 | 공상공무원 | 공상군경 | 국가사회발전 특별공로상이자 | 애국지사 | 전상군경 | 특수임무부상자) & (4·19혁명공로자 | 국가사회발전 특별공로자 | 국가유공자의 유족 또는 가족 | 무공수훈자 | 보국수훈자),교체
+B55120200004,자격(requires/anyOf),-,국가보훈대상자 & (4·19혁명부상자 | 5·18민주화운동부상자 | 6·18자유상이자 | 공상공무원 | 공상군경 | 국가사회발전 특별공로상이자 | 애국지사 | 전상군경 | 특수임무부상자) & (4·19혁명공로자 | 국가사회발전 특별공로자 | 국가유공자의 유족 또는 가족 | 무공수훈자 | 보국수훈자),추가
+B55120200007,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (4·19혁명부상자 | 5·18민주화운동부상자 | 6·18자유상이자 | 공상공무원 | 공상군경 | 국가사회발전 특별공로상이자 | 애국지사 | 전상군경 | 특수임무부상자) & (4·19혁명공로자 | 국가사회발전 특별공로자 | 국가유공자의 유족 또는 가족 | 무공수훈자 | 보국수훈자),교체
+B55120200012,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & 참전유공자 배우자 & (4·19혁명부상자 | 5·18민주화운동부상자 | 6·18자유상이자 | 공상공무원 | 공상군경 | 국가사회발전 특별공로상이자 | 애국지사 | 전상군경 | 특수임무부상자) & (4·19혁명공로자 | 국가사회발전 특별공로자 | 국가유공자의 유족 또는 가족 | 무공수훈자 | 보국수훈자),교체
+B55120200016,자격(requires/anyOf),국가보훈대상자,국가유공자 미망인 & (4·19혁명 사망자 | 4·19혁명공로자 | 4·19혁명부상자 | 5·18민주화운동 부상자 | 5·18민주화운동 사망자 | 5·18민주화운동 희생자 | 6·25참전 재일학도의용군인 | 가족 | 공상공무원 | 공상군경 | 국가보훈대상자 | 국가사회발전 공로자 | 국가사회발전 상이자 | 국가사회발전 특별공로순직자 | 무공수훈자 | 보국수훈자 | 순국선열 | 순직 공무원 | 순직군경 | 애국지사 | 유족 | 전몰군경 | 전상군경 | 특수임무 공로자 | 특수임무부상자),교체
+B55120200017,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (4·19혁명부상자 | 5·18민주화운동부상자 | 6·18자유상이자 | 공상공무원 | 공상군경 | 국가사회발전 특별공로상이자 | 애국지사 | 전상군경 | 특수임무부상자) & (4·19혁명공로자 | 국가사회발전 특별공로자 | 국가유공자의 유족 또는 가족 | 무공수훈자 | 보국수훈자),교체
+B55120200022,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (4·19혁명부상자 | 5·18민주화운동부상자 | 6·18자유상이자 | 공상공무원 | 공상군경 | 국가사회발전 특별공로상이자 | 애국지사 | 전상군경 | 특수임무부상자) & (4·19혁명공로자 | 국가사회발전 특별공로자 | 국가유공자의 유족 또는 가족 | 무공수훈자 | 보국수훈자),교체
+B55120200025,자격(requires/anyOf),국가보훈대상자,(4·19민주유공자 | 5.18민주유공자 | 6·18자유상이자 | 고엽제후유의증 | 고엽제후유증 2세 환자 | 국가보훈대상자 | 독립유공자 | 무공/보국수훈자 | 순직·공상공무원 | 재일학도의용군인 | 전몰/전상/순직/공상군경 | 특별공로순직자 | 특수임무유공자),교체
+B55120200027,자격(requires/anyOf),(국가보훈대상자 | 장애인),(국가유공자 직계 유가족 | 장애인) & (4·19민주유공자 | 5.18민주유공자 | 6·18자유상이자 | 고엽제후유의증 | 고엽제후유증 2세 환자 | 국가보훈대상자 | 독립유공자 | 무공/보국수훈자 | 순직·공상공무원 | 재일학도의용군인 | 전몰/전상/순직/공상군경 | 특별공로순직자 | 특수임무유공자),교체
+B55121000002,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),법인/시설/단체,교체
+B55121000003,자격(requires/anyOf),-,(5.18민주화운동 관련자 | 국가보훈대상자 | 독립유공자 또는 선순위 유족) & (기초생활수급자 | 다자녀가구 | 위탁가정 다자녀가구 | 중증장애인 | 차상위계층),추가
+B55139800001,자격(requires/anyOf),다자녀가구 & (국가보훈대상자 | 임산부 | 장애인),국가보훈대상자 & 다자녀가구 세대주 & 임산부 & 장애인 & (5.18민주유공자 | 5.18민주유공자 유족) & (기초생활수급자 | 차상위계층) & (독립유공자 | 독립유공자 유족) & (가정폭력 피해자 보호시설 운영자 | 노인복지시설 운영자 | 성매매피해자 지원시설 운영자 | 성폭력 피해 상담소 운영자 | 성폭력 피해자 보호시설 운영자 | 아동복지시설 운영자 | 어린이집 운영자 | 장애인복지시설 운영자 | 정신재활시설 운영자 | 한부모가족복지시설 운영자),교체
+B55139800003,자격(requires/anyOf),-,일반용 전기설비 소유자 & 일반용 전기설비 점유자,추가
+B55139800004,자격(requires/anyOf),-,일반용 전기설비 소유자 & 일반용 전기설비 점유자,추가
+B55139800005,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),법인/시설/단체,교체
+B55139800006,자격(requires/anyOf),기관/단체,초·중·고등학교,교체
+B55139800007,자격(requires/anyOf),기관/단체 & 영업중 & (기타업종 | 제조업),전기계측장비 보유자,교체
+B55139800008,자격(requires/anyOf),기관/단체,10가구 이상 마을 또는 동,교체
+B55139800009,자격(requires/anyOf),다자녀가구 & (국가보훈대상자 | 임산부 | 장애인),국가보훈대상자 & 다자녀가구 세대주 & 임산부 & 장애인 & (5.18민주유공자 | 5.18민주유공자 유족) & (기초생활수급자 | 차상위계층) & (독립유공자 | 독립유공자 유족) & (가정폭력 피해자 보호시설 운영자 | 노인복지시설 운영자 | 성매매피해자 지원시설 운영자 | 성폭력 피해 상담소 운영자 | 성폭력 피해자 보호시설 운영자 | 아동복지시설 운영자 | 어린이집 운영자 | 장애인복지시설 운영자 | 정신재활시설 운영자 | 한부모가족복지시설 운영자),교체
+B55139800010,자격(requires/anyOf),(고등학생 | 대학생/대학원생),(예비전기인 | 전기산업 종사자),교체
+B55139800011,자격(requires/anyOf),기관/단체,(국내·국제 행사 | 선거시설),교체
+B55145700003,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (국가유공상이자 | 독립유공자),교체
+B55145700016,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+B55145800002,자격(requires/anyOf),-,(초·중·고교 한문관련 과목 교사 | 한국학 및 관련분야 전공희망자),추가
+B55151000066,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+B55151000068,자격(requires/anyOf),-,(문화누리카드 이용자 | 사회복지사 | 저소득층 | 지자체 문화이용권 담당자 | 차상위계층),추가
+B55190400003,자격(requires/anyOf),구직자/실업자,(대학생 | 성인 구직자 | 청소년),교체
+B55190400005,자격(requires/anyOf),-,구직자/실업자,추가
+B55191900002,자격(requires/anyOf),기관/단체,(국가·지방자치단체 | 사업자등록증 소지자 | 소비자 | 소비자 단체 | 한국소비자원),교체
+B55191900005,자격(requires/anyOf),-,소비자,추가
+B55191900006,자격(requires/anyOf),-,소비자,추가
+B55201400002,자격(requires/anyOf),구직자/실업자,구직자,교체
+B55201500004,자격(requires/anyOf),구직자/실업자,구직급여 수급자,교체
+B55201500201,자격(requires/anyOf),-,국민연금 지역가입자,추가
+B55203800001,자격(requires/anyOf),기관/단체,(국내외 병원 및 기관 | 의료민간단체 | 의료봉사단체),교체
+B55207000002,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),(ESG 지원기업 | 국산화 R&D 참여기업 | 그린뉴딜 기업 | 동반성장 지원기업 | 동서발전 중소기업 협의회 | 유자격 기업 | 일자리 창출 기업 | 정비적격 기업 | 코로나19 피해기업),교체
+B55207000003,자격(requires/anyOf),제조업(법인) & 중소기업,중소기업,교체
+B55207000006,자격(requires/anyOf),구직자/실업자,취업준비생,교체
+B55209300001,자격(requires/anyOf),기관/단체,(단체 | 일반인),교체
+B55209300002,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생,교체
+B55211100001,자격(requires/anyOf),-,(기초생활수급자 | 차상위계층),추가
+B55214900001,자격(requires/anyOf),농업인,(농업법인 | 비농업인 | 은퇴(예정) 농업인 | 전업농업인 | 전업농육성대상자),교체
+B55214900004,자격(requires/anyOf),농업인,농지소유자 & (귀농인 | 농업인 | 청년 후계농 | 후계 농업인),교체
+B55214900005,자격(requires/anyOf),농업인,(귀농인 | 농업인 | 상속농지 소유자 | 은퇴(예정) 농업인 | 이농 | 청년 후계농 | 후계 농업인),교체
+B55214900006,자격(requires/anyOf),농림어업(법인) & 중소기업,해외농업자원개발사업자,교체
+B55246800001,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),산재보험 가입 사업장,교체
+B55246800002,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),개인사업자,교체
+B55246800006,자격(requires/anyOf),중소기업,근로자 & (노인 | 비정규직 근로자 | 여성 | 외국인) & (특수형태 근로종사자 | 필수노동자),교체
+B55246800007,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),기타업종(법인) & 제조업(법인),교체
+B55246800009,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),100인 이상 모기업 & 협력업체,교체
+B55246800011,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),건설일용직 근로자 사용자 & 공동주택 경비 및 청소원 사용자 & (30인 미만 사업장 | 산업재해 근로자),교체
+B55247300001,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),장애인 & 중소기업 & (고엽제후유의증 환자 | 상이등급 소지자 | 장애인등록증 소지자),교체
+B55247300002,자격(requires/anyOf),기타업종(법인) & (기관/단체 | 중소기업),사회적기업 & 예비마을기업 & 자활기업 & (사회적 협동조합 | 사회적 협동조합연합회 | 이종협동조합연합회 | 협동조합 | 협동조합연합회) & (소비자생활협동조합 전국연합회 | 소비자협동조합 | 소비자협동조합연합회),교체
+B55247300003,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),관리종결(소각)기업 & 대위변제기업 & 법적채무 종결기업 & 채권 매각 기업,교체
+B55247300004,자격(requires/anyOf),영업중,소상공인,교체
+B55251800004,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),환경산업체,교체
+B55251800006,자격(requires/anyOf),-,질병/질환자,추가
+B55252100002,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),(성적 우수 학생 | 취약계층),교체
+B55252100003,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생,교체
+B55252100004,자격(requires/anyOf),-,서천군 서면 주민,추가
+B55252100005,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),주민 자녀,교체
+B55252100006,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생 & (성적 우수 학생 | 취약계층),교체
+B55252100007,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생 & (모범학생 | 성적 우수 학생 | 예체능 특기자 | 취약계층),교체
+B55252100009,자격(requires/anyOf),(고등학생 | 중학생),고등학생 & 중학생,교체
+B55252200008,자격(requires/anyOf),-,특성화고 학생,추가
+B55252500001,자격(requires/anyOf),기관/단체,청소년,교체
+B55252500002,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생),(기초생활수급자 | 저소득층 | 차상위계층),교체
+B55252500002,income_max_pct,200,120,교체
+B55252500006,자격(requires/anyOf),-,(사회복지종사자 | 소방관 | 시민영웅 | 해경),추가
+B55252900005,자격(requires/anyOf),대학생/대학원생,대학생/대학원생 & 대한민국 국민 & 자연과학 및 공학계열 우수학생,교체
+B55252900010,자격(requires/anyOf),고등학생,고등학생 & (기초생활수급자 | 차상위계층),교체
+B55252900018,자격(requires/anyOf),대학생/대학원생,예술 및 체육계열 재학생,교체
+B55252900201,자격(requires/anyOf),-,대학생/대학원생 & 대학생 창업자 & 일반 상환 학자금대출 잔액 보유자 & ((본인/부모) 실직 또는 폐업 | 수급자 또는 차상위계층) & ((본인/부모) 중증질환 또는 상해 | 부모사망 | 장애인),추가
+B55252900203,자격(requires/anyOf),대학생/대학원생,학자금대출 장기연체자,교체
+B55252900204,자격(requires/anyOf),대학생/대학원생,대학생,교체
+B55252900208,자격(requires/anyOf),대학생/대학원생,한국장학재단 장기연체자,교체
+B55252900212,자격(requires/anyOf),대학생/대학원생,대학생,교체
+B55252900213,자격(requires/anyOf),대학생/대학원생,대학생,교체
+B55252900214,자격(requires/anyOf),근로자/직장인,고등학교 졸업자,교체
+B55252900215,자격(requires/anyOf),-,1년 이상 실무경력자 & 기업현장교사 & 연구기관 해당분야 연구 경력자 & 해당 분야 자격증 소지자,추가
+B55252900221,자격(requires/anyOf),-,대학생/대학원생 & (고등학생 | 중학생 | 초등학생),추가
+B55252900222,자격(requires/anyOf),(구직자/실업자 | 대학생/대학원생),근로자/직장인,교체
+B55252900223,자격(requires/anyOf),-,채무자,추가
+B55252900224,자격(requires/anyOf),-,(구속수감 | 군입대 | 기초생활수급자 | 미성년자 자녀 부양 | 부모사망 | 중증질병/장애),추가
+B55252900230,자격(requires/anyOf),-,군 복무자,추가
+B55252900231,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),대학생 & (고등학생 | 중학생 | 초등학생),교체
+B55252900232,자격(requires/anyOf),대학생/대학원생,대학생 & 대학원생,교체
+B55252900233,자격(requires/anyOf),대학생/대학원생,농식품인재 지원대상학과 재학생 & 대학원생 & 학부생 & (농어업 종사자 | 농어촌지역 거주자),교체
+B55254600001,자격(requires/anyOf),-,(5.18민주유공자 | 국가보훈대상자 | 기초생활수급자 | 장애인),추가
+B55257000001,자격(requires/anyOf),기관/단체,노인복지 단체 & 사회적기업 & 장애인복지 단체,교체
+B55258300001,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중증장애인,교체
+B55258300002,자격(requires/anyOf),기관/단체,기초생활수급자,교체
+B55258300003,자격(requires/anyOf),고등학생,고등학생 & 장애인,교체
+B55258300005,자격(requires/anyOf),장애인,등록장애인 & 디지털능력개발원 & (공무원 준비과정 | 중등교원임용 준비과정),교체
+B55258300006,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),장애인 고용부담금 납부의무 기관의 장 & 장애인 고용부담금 납부의무 사업주,교체
+B55258300007,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(공단 임직원 | 사업체 임직원 | 장애인고용 종사자 | 장애인고용에 관심 있는 사람),교체
+B55258300011,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),상시 50명 이상 근로자 고용 사업주,교체
+B55258400009,자격(requires/anyOf),-,탄소포인트제 참여자 & (상업시설 실제 사용자 | 세대주),추가
+B55258400201,자격(requires/anyOf),-,마을회관 운영 담당자 & 주택 거주자,추가
+B55258400202,자격(requires/anyOf),구직자/실업자,대학생/대학원생 & 대학졸업자 & 전문대졸업자,교체
+B55258400203,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업,교체
+B55258400207,자격(requires/anyOf),-,(배출가스 4등급 경유차 | 배출가스 5등급 경유차),추가
+B55263500001,자격(requires/anyOf),-,사립학교 퇴직예정 교직원,추가
+B55263500002,자격(requires/anyOf),-,사립학교 퇴직 교직원,추가
+B55263500003,자격(requires/anyOf),-,사립학교 교직원,추가
+B55263500004,자격(requires/anyOf),-,사립학교 교직원 & 사학연금수급자,추가
+B55263500005,자격(requires/anyOf),-,사학연금 가입자,추가
+B55263500006,자격(requires/anyOf),-,사립학교 퇴직 교직원,추가
+B55263500008,자격(requires/anyOf),-,사학연금 가입자,추가
+B55263500009,자격(requires/anyOf),-,사립학교 퇴직 교직원,추가
+B55263500010,자격(requires/anyOf),-,사립학교 교직원,추가
+B55263500011,자격(requires/anyOf),-,사립학교 퇴직 교직원,추가
+B55263500012,자격(requires/anyOf),-,사립학교 퇴직 교직원,추가
+B55263500013,자격(requires/anyOf),-,교직원 자녀 & 사학연금 가입자,추가
+B55263500014,자격(requires/anyOf),-,사립학교 교직원,추가
+B55263500015,자격(requires/anyOf),-,사립학교 퇴직 교직원,추가
+B55263500016,자격(requires/anyOf),-,사립학교 교직원,추가
+B55264800001,자격(requires/anyOf),-,언론인,추가
+B55264800002,자격(requires/anyOf),-,언론인금고 회원사 근무자,추가
+B55264800003,자격(requires/anyOf),-,언론인,추가
+B55264800004,자격(requires/anyOf),정보통신업(법인) & 중소기업,방송사 & 방송채널 사용사업자,교체
+B55264800005,자격(requires/anyOf),정보통신업(법인) & 중소기업,유료 일간신문 & 전국일간신문 & 지역일간신문,교체
+B55264800006,자격(requires/anyOf),-,(신문 | 인터넷 신문 | 인터넷뉴스서비스 | 잡지),추가
+B55264800013,자격(requires/anyOf),기관/단체,비영리민간단체 & 비영리법인 & (언론관련 직능단체 | 협회),교체
+B55264800014,자격(requires/anyOf),기관/단체,(대학 | 대학 부설 연구소) & (단체 | 언론 유관 학회 | 연구소),교체
+B55264800016,자격(requires/anyOf),정보통신업(법인) & 중소기업,(인터넷 신문 | 일간신문 | 주간신문),교체
+B55264800017,자격(requires/anyOf),(1인가구 | 다문화가족 | 북한이탈주민 | 한부모/조손),(1인가구 | 기초생활수급자 | 다문화가족 | 북한이탈주민 | 장애인 | 차상위계층 | 한부모가족),교체
+B55265700002,자격(requires/anyOf),(예비부모/난임 | 임산부),양육모 & 예비부모/난임 & 임산부 & 출산/입양,교체
+B55267900001,자격(requires/anyOf),농림어업(법인) & 중소기업,예비창업자 & 축산분야 벤처창업자,교체
+B55267900002,자격(requires/anyOf),(기관/단체 | 사회복지시설),공공급식 관계자,교체
+B55271100001,자격(requires/anyOf),-,건설노동자,추가
+B55271100002,자격(requires/anyOf),-,건설노동자,추가
+B55271100002,age_max,64,65,교체
+B55271100003,자격(requires/anyOf),-,건설노동자 & (개인회생절차 개시자 | 대학생 자녀 학자금 | 본인 또는 가족의 입원·수술비 | 본인 또는 자녀 결혼자금 | 파산선고(최근 5년 내)),추가
+B55271100004,자격(requires/anyOf),-,건설노동자,추가
+B55271100005,자격(requires/anyOf),-,건설노동자,추가
+B55271100006,자격(requires/anyOf),-,건설노동자,추가
+B55271100007,자격(requires/anyOf),-,건설노동자 & 건설노동자 대학생 자녀 & 대학생,추가
+B55271100008,자격(requires/anyOf),-,건설근로자,추가
+B55271100009,자격(requires/anyOf),-,건설노동자,추가
+B55271100020,자격(requires/anyOf),근로자/직장인,건설노동자,교체
+B55271300004,자격(requires/anyOf),-,청소년 관련업 종사자,추가
+B55271300008,자격(requires/anyOf),기관/단체,(비영리법인 | 사회적 협동조합 | 청소년 시설),교체
+B55271900001,자격(requires/anyOf),대학생/대학원생,공문 신청자,교체
+B55273500003,자격(requires/anyOf),중소기업,예비창업자,교체
+B55273500006,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(유한책임회사 | 유한회사 | 주식회사 | 합명회사 | 합자회사),교체
+B55273500009,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),예비창업자,교체
+B55273500010,자격(requires/anyOf),제조업(법인) & 중소기업,제조업(법인),교체
+B55273500013,자격(requires/anyOf),중소기업,예비창업자,교체
+B55273500014,자격(requires/anyOf),중소기업,영업중,교체
+B55273500015,자격(requires/anyOf),중소기업,예비창업자,교체
+B55273500016,자격(requires/anyOf),중소기업,창업기업 & (글로벌팁스 투자 유치 기업 | 팁스R&D 협약 기업 | 포스트팁스 완료 기업 | 프리팁스 추천 기업),교체
+B55273500018,자격(requires/anyOf),중소기업,예비창업자 & (1인 창조기업 | 만 40세 이상 중장년),교체
+B55273500018,age_min,-,40,추가
+B55273500019,자격(requires/anyOf),중소기업,예비창업자,교체
+B55274500001,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(단체 | 시설 | 예비창업자),교체
+B55274500004,자격(requires/anyOf),기관/단체,사회적기업 성장지원센터 입주기업 & 소셜벤처 & 한국사회적기업가 육성사업 창업팀 & (사회적 협동조합 | 사회적경제기업 | 예비사회적기업),교체
+B55283600001,자격(requires/anyOf),-,국가보훈대상자 & 기초생활수급자 & 노인 & 장애인,추가
+B55284200001,자격(requires/anyOf),북한이탈주민,북한이탈주민 자녀 & 탈북청소년,교체
+B55284200003,자격(requires/anyOf),대학생/대학원생 & 북한이탈주민,대학생 & 북한이탈주민,교체
+B55284200004,자격(requires/anyOf),구직자/실업자 & 북한이탈주민,북한이탈주민,교체
+B55284200005,age_max,69,70,교체
+B55284200006,자격(requires/anyOf),북한이탈주민,북한이탈주민 & 예비창업자 & (미용 | 사회복지 | 의류수선 및 리폼),교체
+B55284200007,자격(requires/anyOf),(북한이탈주민 | 한부모/조손),북한이탈주민,교체
+B55284200012,자격(requires/anyOf),북한이탈주민,개인사업자 & 북한이탈주민,교체
+B55284500001,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(대형 유통업체 | 바이어 | 수출업체),교체
+B55284500002,자격(requires/anyOf),기관/단체,(농업법인 | 농협 | 사회적기업 | 생활협동조합 | 지방자치단체),교체
+B55284500003,자격(requires/anyOf),제조업(법인) & 중소기업,농식품 수출업체 & 수출농가(법인),교체
+B55284500005,자격(requires/anyOf),제조업(법인) & (기관/단체 | 중소기업),법인/시설/단체 & (개인사업자 | 농공상융합형 중소기업 | 농업경영체 | 농협경제지주 관리 이외 조직 | 단체급식사업자 | 생산자단체 | 생협 | 소매판매점 | 수산물 가공업체 | 식품 제조·가공업체 | 일반업체 | 전문 유통업체 | 전자상거래사업자 | 프랜차이즈 본부),교체
+B55284500009,자격(requires/anyOf),제조업(법인) & 중소기업,(기타업종(법인) | 농림어업(법인) | 정보통신업(법인) | 제조업(법인)),교체
+B55284500010,자격(requires/anyOf),-,생계급여 수급가구 & (고등학생 | 영유아 | 임산부 | 중학생 | 청년 | 초등학생),추가
+B55284500025,자격(requires/anyOf),영업중 & 중소기업,법인/시설/단체 & 소상공인 & (농식품 수출업체 | 수출예정업체),교체
+B55285400001,자격(requires/anyOf),(국가보훈대상자 | 장애인),(5.18민주유공자 | 국가보훈대상자 | 독립유공자 | 장애인),교체
+B55286100001,자격(requires/anyOf),기관/단체,(보건의료기관 개설자 | 보건의료인 | 환자),교체
+B55288100003,자격(requires/anyOf),-,보호자,추가
+B55288100004,자격(requires/anyOf),-,기초생활수급자,추가
+B55291900003,자격(requires/anyOf),-,청소년 & 청소년지도자,추가
+B55291900003,age_max,-,24,추가
+B55291900005,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생),(대학생 | 청소년),교체
+B55291900011,자격(requires/anyOf),기관/단체,학교 밖 청소년,교체
+B55307700001,자격(requires/anyOf),영업중 & (기타업종 | 제조업),소상공인 & (백년소상공인 | 사회연대경제조직 | 신사업창업사관학교 수료생) & (2년 연속 매출 10% 이상 신장 | 강한소상공인 | 로컬크리에이터 | 소상공인 졸업후보기업 | 수출 | 스마트공장 도입 | 직접대출 성실상환 소상공인),교체
+B55307700002,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),소공인 관련 비영리 법인,교체
+B55307700005,자격(requires/anyOf),영업중,소상공인,교체
+B55307700005,income_max_pct,-,125,추가
+B55307700010,자격(requires/anyOf),영업중,소상공인,교체
+B55307700011,자격(requires/anyOf),영업중,소상공인 & 청년 근로자 고용 유지 소상공인 & 청년 근로자 과반수 소상공인 & 청년 소상공인,교체
+B55307700014,자격(requires/anyOf),영업중,소상공인,교체
+B55307700015,자격(requires/anyOf),영업중 & 제조업,소공인,교체
+B55307700016,자격(requires/anyOf),영업중 & 제조업,소공인,교체
+B55307700018,자격(requires/anyOf),영업중 & 제조업,소공인 & 소상공인 & (백년소공인 | 소공인특화지원 참여 소공인),교체
+B55307700021,자격(requires/anyOf),영업중,소상공인,교체
+B55307700023,자격(requires/anyOf),영업중,소상공인,교체
+B55307700024,자격(requires/anyOf),영업중,소상공인,교체
+B55307700027,자격(requires/anyOf),(영업중 | 예비창업자),소상공인 & 예비창업자,교체
+B55307700032,자격(requires/anyOf),(생계곤란/폐업예정 | 영업중),소상공인 & (경영애로 소상공인 | 재해 피해 소상공인),교체
+B55307700033,자격(requires/anyOf),영업중,소상공인 & 장애인,교체
+B55307700034,자격(requires/anyOf),영업중,소상공인,교체
+B55307700035,자격(requires/anyOf),(영업중 | 예비창업자),소상공인 & (재창업 준비단계 | 재창업 초기단계 | 채무조정 소상공인) & (성장하는 성실상환 소상공인 | 재창업(업력 2년 이상)),교체
+B55307700036,자격(requires/anyOf),(생계곤란/폐업예정 | 영업중),소상공인,교체
+B55307700037,자격(requires/anyOf),영업중,소상공인,교체
+B55307700038,자격(requires/anyOf),(영업중 | 예비창업자),소상공인,교체
+B55307700039,자격(requires/anyOf),(영업중 | 예비창업자),소상공인,교체
+B55307700040,자격(requires/anyOf),영업중,소상공인,교체
+B55307700041,자격(requires/anyOf),영업중,TOPS 2단계 소상공인 & 소상공인,교체
+B55307700043,자격(requires/anyOf),-,소상공인,추가
+B55344100002,자격(requires/anyOf),농업인 & 중소기업 & (농림어업(법인) | 제조업(법인)),(농림 식품 관련 산업 종사자 | 농업경영체 | 식품사업자),교체
+B55346600001,자격(requires/anyOf),-,전 장병 & 전역예정 간부 & 전역예정장병,추가
+B55346600005,자격(requires/anyOf),-,전역예정장병,추가
+B55346600007,자격(requires/anyOf),-,전역예정 간부,추가
+B55349600001,자격(requires/anyOf),(기관/단체 | 사회복지시설),(아동복지시설 | 초등학생),교체
+B55350500001,자격(requires/anyOf),-,시청자미디어재단 일반회원 & 시청자미디어재단 정회원,추가
+B55353000001,자격(requires/anyOf),-,가구 & 기초생활수급자 & 노인 & 소년소녀가정 & 장애인 & 차상위계층 & 한부모가족,추가
+B55353000201,자격(requires/anyOf),-,주택소유자,추가
+B55353000204,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),신재생에너지 관련 기업 & (유관기관 | 협회),교체
+B55353000205,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),(신재생에너지 설치의무자 | 신재생에너지보급사업 설치자),교체
+B55353000206,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업,교체
+B55353000207,age_max,-,5,추가
+B55353000212,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업,교체
+B55353000213,age_max,-,5,추가
+B55353000214,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),신재생에너지 설비 소유자,교체
+B55353000215,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),(고등학생 | 교사 | 중학생 | 초등학생),교체
+B55353000216,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B55353000218,자격(requires/anyOf),-,공공 및 민간 에너지 담당자,추가
+B55353000220,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소 중견기업,교체
+B55353000223,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(법인/시설/단체 | 설비사무소),교체
+B55353000226,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(중견기업 | 중소기업),교체
+B55353000227,자격(requires/anyOf),제조업(법인) & 중소기업,(검사대상기기 제조업자 | 설치자),교체
+B55366400001,자격(requires/anyOf),사회복지시설,아동양육시설,교체
+B55366400003,자격(requires/anyOf),사회복지시설,노인복지시설,교체
+B55366400006,자격(requires/anyOf),(장애인 | 초등학생),(고령자 | 미취학 | 장애인 | 초등학생),교체
+B55366400007,자격(requires/anyOf),사회복지시설,장애인거주시설,교체
+B55369400001,자격(requires/anyOf),제조업(법인) & 중소기업,예비창업자 & (기술경력 뿌리창업기업 | 이공계챌린저 창업기업 | 지식문화창업기업 | 첨단성장 연계창업기업),교체
+B55369400002,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인)),신성장 미래전략산업 기업 & (벤처기업 | 이노비즈기업 | 혁신성장산업 영위기업 | 협약기관 추천기업) & (벤처기업 | 이노비즈기업 | 혁신성장산업 영위기업),교체
+B55369400003,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),예비창업자,교체
+B55369400004,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B55369400005,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),고용배려기업 & 고용유지기업 & 고용창출 우수기업,교체
+B55369400006,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),실패기업 & 실패기업 연대보증인,교체
+B55369400007,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업 & 채무조정 신청자,교체
+B55369400008,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B55369400010,자격(requires/anyOf),기타업종(법인) & 중소기업,중소기업,교체
+B55369400011,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중견기업 & 중소기업,교체
+B55369400012,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(관리종결 확정자 | 채무 미변제자 | 채무조정 완료자),교체
+B55369400013,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),청년창업기업,교체
+B55369400014,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),중소기업,교체
+B55369400015,자격(requires/anyOf),정보통신업(법인) & 중소기업,제조업(법인) & (일반기업 | 핵심기업),교체
+B55369400016,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),(기타업종(법인) | 농림어업(법인) | 정보통신업(법인) | 제조업(법인)),교체
+B55369400017,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),아기유니콘 200 기업 & 중소기업 & (TIPS R&D 성공 기업 | 포스트 팁스 기업) & (20억 이상 투자 유치 기업 | BB등급 이상 기술기업 | 벤처투자 유치 기업 | 비상장 중소기업),교체
+B55369400018,자격(requires/anyOf),정보통신업(법인) & 중소기업,(게임 | 공연 | 광고 | 방송 | 비디오 | 애니메이션 | 영화 | 음악 | 정보서비스 산업 | 출판 | 캐릭터 산업) & (교육지원 서비스업 | 기타 과학기술 서비스업 | 소프트웨어 개발 및 공급업 | 시스템 통합 및 관리업 | 연구개발업 | 전문디자인업 | 전시·컨벤션·행사 대행업 | 전자상거래 소매업 및 중개업 | 창작·예술·여가 서비스업 | 컴퓨터 프로그래밍) & (기타업종(법인) | 농림어업(법인) | 정보통신업(법인) | 제조업(법인)),교체
+B55369400019,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(경영개선지원기업 | 기보벤처캠프 참여기업 | 성장도약기업 | 재기지원기업),교체
+B55369400020,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B55369400021,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B55369400022,자격(requires/anyOf),기타업종(법인) & 중소기업,(녹색산업 영위기업 | 물산업 영위기업 | 미세먼지 저감기업 | 신재생에너지 발전기업 | 우수환경기업),교체
+B55369400023,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),경력 창업자 & 대중견기업 스핀오프 창업자 & 예비창업자,교체
+B55369400024,자격(requires/anyOf),정보통신업(법인) & 중소기업,문화산업전문회사 & (게임 | 공연 | 디지털콘텐츠 | 만화 | 방송 | 애니메이션 | 영화 | 음악 | 출판 | 캐릭터),교체
+B55369400025,자격(requires/anyOf),정보통신업(법인) & 중소기업,선도콘텐츠산업 영위기업 & (게임 | 공연 | 광고 | 방송 | 비디오 | 애니메이션 | 영화 | 음악 | 정보서비스 산업 | 출판 | 캐릭터 산업),교체
+B55369400026,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),(디지털 기업 | 비대면 기업),교체
+B55369400027,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),소셜벤처기업,교체
+B55369400028,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),기술혁신선도형기업 & (수출선정기업 | 수출실적기업 | 수출예상기업 | 수출우수기업 | 수출주력기업),교체
+B55369400029,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),(정보통신업(법인) | 제조업(법인)),교체
+B55369400030,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B55369400031,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),(기타업종(법인) | 농림어업(법인) | 정보통신업(법인) | 제조업(법인)),교체
+B55369400032,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),창업기업,교체
+B55369400033,자격(requires/anyOf),중소기업,예비창업자 & (교수 | 기능장 | 기술사 | 대·중견기업 기술경력자 | 연구원 | 특급기술자 | 특허권 소유자),교체
+B55369400034,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),(연구원 출신 창업기업 | 협약대학에 재직중인 교수),교체
+B55369400035,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),중소기업,교체
+B55370000011,자격(requires/anyOf),-,(개인회생 성실상환자 | 소액금융기금 별도지정자 | 신용회복위원회 채무조정 성실상환자),추가
+B55370000012,자격(requires/anyOf),-,금융 피해자,추가
+B55370100003,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),무등록사업자 & 자영업자 & (개인신용평점 하위 20% | 근로장려금 수급 자격자 | 차상위계층),교체
+B55370100006,자격(requires/anyOf),영업중,소상공인 & 저신용 영세자영업자 & 정책 서민금융 상품 이용자,교체
+B55370100009,자격(requires/anyOf),-,개인사업자 & 중소기업 근로자 & (대학생 | 미취업 청년),추가
+B55370100013,자격(requires/anyOf),-,"개인신용평점 하위 20% & 근로장려금 수급 자격자 & 차상위계층 & (신용 하위 50% | 연 소득 3,500만원 이하)",추가
+B55370100028,자격(requires/anyOf),영업중,소규모 개인사업자,교체
+B55370100030,자격(requires/anyOf),-,(미소금융 대출자 | 민간 기관 대출자 | 신용회복위원회 채무조정자),추가
+B55370100031,자격(requires/anyOf),-,(국민행복기금 성실상환자 | 신용회복 성실상환자) & (근로장려금 수급자 | 차상위계층 | 취약계층 자립자금 대출자),추가
+B55370100034,자격(requires/anyOf),영업중,소상공인,교체
+B55370100035,자격(requires/anyOf),중소기업,고용촉진장려금 수령 사업주 & 채무조정자 채용 사업주,교체
+B55370100036,자격(requires/anyOf),근로자/직장인,신용회복 대상자 & 자력 취업 신용회복지원자 & 채무조정자,교체
+B55370100037,자격(requires/anyOf),-,신용 하위 20%,추가
+B55370100038,income_max_pct,-,35,추가
+B55370100041,자격(requires/anyOf),영업중,소상공인,교체
+B55370100042,자격(requires/anyOf),-,개인신용평점 하위 20% & 근로장려금 수급자 & 차상위계층 & 청년,추가
+B55370100044,income_max_pct,100,200,교체
+B55370100045,자격(requires/anyOf),-,(개인워크아웃 | 개인회생 | 새출발기금 | 이행완료 후 3년 이내인 자),추가
+B55371400001,자격(requires/anyOf),-,(국가보훈대상자 | 다자녀가구 | 임산부 | 장애인 | 지역주민),추가
+B55371400002,자격(requires/anyOf),(고등학생 | 대학생/대학원생),(산림·임업 분야 전공자 | 산림·임업인),교체
+B55374800001,자격(requires/anyOf),중소기업 & (농림어업(법인) | 제조업(법인)),(HACCP 신청 업체 | HACCP 인증 업체),교체
+B55374800002,자격(requires/anyOf),중소기업 & (농림어업(법인) | 제조업(법인)),HACCP 인증업체 & 가공유통업체,교체
+B55374800003,자격(requires/anyOf),중소기업 & (농림어업(법인) | 제조업(법인)),HACCP 의무적용 & HACCP 인증 업체,교체
+B55374800004,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),식품 수출업체,교체
+B55374800005,자격(requires/anyOf),농림어업(법인) & 중소기업,(기타업종 | 음식점업 | 제조업 | 축산업),교체
+B55374800006,자격(requires/anyOf),-,(HACCP 관심 국민 | HACCP 인증 및 희망업체),추가
+B55374800007,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),행정처분 받은 영업자 & (식용란 선별 포장업 | 식용란 수집 판매업 | 식육 부산물 전문 판매업 | 식육 판매업 | 식육가공업 | 식육즉석판매가공업 신규영업자 | 식육포장처리업 | 알가공업 | 유가공업 | 축산물보관업 | 축산물운반업 | 축산물유통전문판매업) & (식용란 선별 포장업 | 식용란 수집 판매업 | 식육 부산물 전문 판매업 | 식육 판매업 | 식육가공업 | 식육즉석판매가공업 기존영업자 | 식육포장처리업 | 알가공업 | 유가공업),교체
+B55374800008,자격(requires/anyOf),(기관/단체 | 중소기업),(축산물 안전관리인증농장 | 축산물 안전관리인증업소 | 축산물 안전관리인증작업장),교체
+B55374800010,자격(requires/anyOf),제조업(법인) & 중소기업,식품 및 축산물 제조가공업체,교체
+B55374800011,자격(requires/anyOf),-,(HACCP 관심 국민 | HACCP 인증 및 희망업체),추가
+B55380400001,자격(requires/anyOf),예비창업자,업종전환 대상자 & 장애인 예비창업자 & 장애인기업 대표자,교체
+B55391700003,자격(requires/anyOf),기타업종 & 기타업종(법인) & 영업중 & 중소기업,중소기업,교체
+B55393100001,자격(requires/anyOf),기관/단체,어업인,교체
+B55393100002,자격(requires/anyOf),기관/단체,초등학생,교체
+B55393100002,age_min,-,5,추가
+B55393100002,age_max,-,9,추가
+B55396800001,자격(requires/anyOf),기관/단체,어촌체험휴양마을,교체
+B55396800002,자격(requires/anyOf),어업인,어선원 & (소규모어가 | 수산자원보호 | 조건불리지역 | 친환경 수산물 생산지원),교체
+B55399100003,자격(requires/anyOf),(기관/단체 | 사회복지시설),(기초생활수급자 | 다문화가족 | 사회복지법인 생활자 | 소년소녀가장 | 장애인 | 한부모가족),교체
+B55399100004,자격(requires/anyOf),(국가보훈대상자 | 장애인),(국가보훈대상자 | 장애인 | 저공해자동차),교체
+B55400900001,자격(requires/anyOf),구직자/실업자,대·중견기업 협력사 & 청년 구직자,교체
+B55400900005,자격(requires/anyOf),기관/단체,전문대학 & 중소기업 & (박사학위과정 운영 대학 | 전문학사 운영 대학 | 학사 운영 대학) & (산업수요 맞춤형 고등학교 | 일반고등학교 특성화과 | 특성화고),교체
+B55400900007,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B55400900008,자격(requires/anyOf),제조업(법인) & 중소기업,제조업(법인),교체
+B55400900009,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),생계곤란/폐업예정,교체
+B55400900010,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),정책금융기관 부실징후기업 & 캠코 협업 금융지원 대상 기업,교체
+B55400900012,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업 & (넷제로 유망기업 | 스케일업 금융 대상 기업 | 제조현장 스마트화 대상 기업 | 혁신성장지원자금 대상 기업 | 협동화자금 대상 기업),교체
+B55400900014,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),기업,교체
+B55400900016,자격(requires/anyOf),정보통신업(법인) & 중소기업,예비창업자,교체
+B55400900017,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),영업중,교체
+B55400900018,자격(requires/anyOf),제조업(법인) & 중소기업,중소기업,교체
+B55400900020,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업 & (수출 유망 기업 | 해외 법인 지원자금) & (기술 수출 중소기업 | 수출 지원사업 참여 기업 | 수출 초보 기업 | 해외 법인 지원자금),교체
+B55400900023,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),창업 기업 대표자,교체
+B55400900024,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업 & (사회재난 피해 기업 | 자연재난 피해 기업) & (개성공단 철수 기업 | 고용/산업위기지역 소재 기업 | 기술유출 피해 기업 | 대기업 구조조정 피해 기업 | 대형사고 피해 기업 | 보호무역 피해 기업 | 산업구조조정 대상업종 피해 기업 | 산업위기 선제대응지역 소재 기업 | 우크라이나 사태 피해 기업 | 원자재 가격급등 피해 기업 | 원전 협력 중소기업 | 정의로운전환 특별지구 소재 기업 | 중소기업 특별지원지역 경영애로 기업 | 한-중 FTA 지원업종 피해 기업 | 화학안전 법령 이행 기업 | 환율 피해 기업),교체
+B55400900028,자격(requires/anyOf),구직자/실업자 & 중소기업,(구직자/실업자 | 중소기업),교체
+B55400900029,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),중소기업,교체
+B55400900031,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),예비창업자 & 중소기업 & (3년 미만 신생 기업 | 대표자 만 39세 이하) & (정부 R&D 참여 기업 | 특허 등록 기술 보유),교체
+B55400900031,age_max,-,39,추가
+B55400900044,자격(requires/anyOf),구직자/실업자,예비창업자 & 재창업자,교체
+B55400900047,자격(requires/anyOf),(기타업종(법인) | 정보통신업(법인)),서비스업 법인 & 중소기업 & (기타업종(법인) | 농림어업(법인) | 정보통신업(법인) | 제조업(법인)),교체
+B55400900051,자격(requires/anyOf),중소기업,(ARS 신청 기업 | Pre-ARS 신청 기업 | 워크아웃 신청 기업 | 하이브리드 구조조정 신청 기업 | 회생 신청 기업),교체
+B55404700001,자격(requires/anyOf),-,보육교직원,추가
+B55424400001,자격(requires/anyOf),기관/단체 & 장애인,(장애인 | 장애인 단체 | 장애인복지카드 소지자),교체
+B55424400002,자격(requires/anyOf),장애인,대학생/대학원생 & 성적 우수 장학생 & 예체능 특기 장학생 & 장애인 & 정보통신 특기 장학생,교체
+B55435200001,자격(requires/anyOf),기관/단체,(도서산간 학교 | 지역아동센터),교체
+B55435200002,자격(requires/anyOf),-,고하도 주민 & 국가보훈대상자 & 국립호남권생물자원관 회원 & 기초생활수급자 & 노인 & 만4세 이하 10명당 인솔자 & 소년소녀가장 & 어린이 및 청소년 20명당 인솔자 & 장애인 & 차상위계층,추가
+B55435200002,age_max,-,65,추가
+B55435200003,자격(requires/anyOf),(농업인 | 어업인),농어업 종사자,교체
+B55462500001,자격(requires/anyOf),-,(고등학생 | 교사 | 대학생 | 성인 | 중학생 | 초등학생 | 학부모),추가
+B55462500002,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),(고등학생 | 대학생 | 중학생 | 초등학생),교체
+B55472900002,자격(requires/anyOf),영업중 & (기타업종 | 제조업),소상공인 & (농식품 벤처 인턴 기업 | 대기업 상생 기업 | 민간투자기반 스케일업 지원 참여기업),교체
+B55472900003,자격(requires/anyOf),-,청년,추가
+GEF000000030,자격(requires/anyOf),(고등학생 | 중학생),청소년,교체
+GEF000000050,자격(requires/anyOf),-,가정폭력 피해자 & 성폭력 피해자,추가
+GEF000000070,자격(requires/anyOf),구직자/실업자,경력단절 여성,교체
+GES000000100,자격(requires/anyOf),대학생/대학원생,(대학원생 | 학부생 | 학점은행제 수강자),교체
+GES000000110,자격(requires/anyOf),대학생/대학원생,대학원생 & 학부생,교체
+GES000000120,자격(requires/anyOf),대학생/대학원생,대학생,교체
+GES000000130,자격(requires/anyOf),고등학생,(기초생활수급자 | 차상위계층 | 한부모가족),교체
+GES000000130,income_max_pct,50,80,교체
+GES000000140,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),(기초생활수급자 | 차상위계층 | 한부모가족),교체
+GES000000150,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),(기초생활수급자 | 난민 인정자 | 난임 | 차상위계층 | 한부모가족),교체
+GES000000150,income_max_pct,50,100,교체
+GFO000000030,자격(requires/anyOf),구직자/실업자,성인 & (도시녹지관리원 | 산림휴양 서비스 매니저 | 수목원 코디네이터 | 숲길등산지도사 | 숲생태 관리자 | 학교 숲 코디네이터),교체
+GKC000000050,자격(requires/anyOf),장애인,장애인 & (기초생활수급자 | 차상위계층),교체
+GKE000000070,자격(requires/anyOf),-,사회복지시설 & (기초생활수급자 | 차상위계층),추가
+GMO000000010,자격(requires/anyOf),(국가보훈대상자 | 장애인),장애인,교체
+GMW000000060,자격(requires/anyOf),기관/단체,기타업종(법인),교체
+GMW000000120,자격(requires/anyOf),장애인,여성 & 장애인,교체
+GMW000000220,자격(requires/anyOf),질병/질환자,결핵 환자,교체
+GMW000000220,income_max_pct,200,120,교체
+GMW000000260,자격(requires/anyOf),출산/입양,장애인 & 출산/입양,교체
+GMW000000270,자격(requires/anyOf),-,노숙인 & 알코올 중독자,추가
+GPV000000070,자격(requires/anyOf),국가보훈대상자,제대군인,교체
+GPV000000110,자격(requires/anyOf),구직자/실업자,제대군인,교체
+O00012200001,income_max_pct,50,120,교체
+O00021300001,자격(requires/anyOf),기관/단체,(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),교체
+O00021300001,age_min,-,10,추가
+O00021400001,자격(requires/anyOf),장애인,국가보훈대상자 & 보호자 & 일시적 장애인 & 장애인 & 중증보행장애인 & 휠체어 이용 장애인,교체
+O00021400002,자격(requires/anyOf),장애인,장애인콜택시 등록 이용고객,교체
+O00021400003,자격(requires/anyOf),국가보훈대상자,기초생활수급자 & (4·19혁명공로자 | 4·19혁명부상자 | 4·19혁명사망자 | 5.18 민주화운동 부상자 | 5.18 민주화운동 희생자 | 6.25참전유공자 | 6·25참전 재일학도의용군인 | 고엽제후유의증 | 고엽제후유증 | 공상공무원 | 공상군경 | 국가보훈대상자 | 국가사회발전 특별공로상이자 | 국가사회발전 특별공로순직자 | 국가사회발전 특별공로자 | 무공수훈자 | 보국수훈자 | 순국선열 | 순직 공무원 | 순직군경 | 애국지사 | 월남참전 유공자 | 재해부상 공무원 | 재해부상 군경 | 재해사망공무원 | 재해사망군경 | 전몰군경 | 전상군경 | 중·장기복무 제대군인 | 지원순직군경 | 특수임무 공로자 | 특수임무 사망자 또는 행방불명자 | 특수임무부상자),교체
+O00021500001,자격(requires/anyOf),-,(일반인 | 초등학생),추가
+O00021500001,age_min,13,6,교체
+O00021500002,자격(requires/anyOf),-,(고령자 | 독립국가유공자 및 유가족 | 장애인 | 한부모가족의 모 또는 부),추가
+O00022200004,자격(requires/anyOf),-,(5.18민주유공자 | 고엽제후유의증 환자 | 국가보훈대상자 | 성실납세자 | 임산부 탑승 차량 | 장기기증자 | 장애인),추가
+O00022200005,자격(requires/anyOf),-,(5.18 민주화유공자 | 고엽제후유의증 환자 | 국가보훈대상자 | 다자녀 | 모범납세자 | 장애인 | 저공해자동차),추가
+O00022300001,자격(requires/anyOf),-,고령자 & 국가보훈대상자 & 기초생활수급자 & 다자녀가구 & 자원봉사자 & 장애인,추가
+O00022300006,자격(requires/anyOf),-,강북구 거주자 & 국가보훈대상자 & 기초생활수급자 & 노인 & 다자녀 & 병역명문가 & 자원봉사증 소지자 & 장애인,추가
+O00022300006,age_max,-,65,추가
+O00022500001,자격(requires/anyOf),(국가보훈대상자 | 장애인),5.18민주유공자 & 경차 및 저공해차량 소유자 & 고엽제후유의증 환자 & 국가유공상이자 & 다둥이행복카드 소지자 & 병역 명문가 & 임산부 & 자원봉사증 소지자 & 장애인 & 전기자동차 소유자 & 전통시장 및 상권활성화구역 구매자 & 착한임대인 인증서 소지자 & 투표확인증 소지자 & (국세청장발행 모범납세자 | 서울시 유공납세자) & (생명나눔증서 소지자 | 조직기증희망등록증 소지자),교체
+O00022500005,자격(requires/anyOf),(국가보훈대상자 | 장애인),5.18 민주화운동 부상자 & 고엽제후유의증 환자 & 국가보훈대상자 & 모범납세자 & 병역명문가 & 자원봉사자 & 장애인 & (경형자동차 소유자 | 저공해자동차 소유자),교체
+O00022500006,자격(requires/anyOf),(국가보훈대상자 | 장애인),"(5.18민주유공자 | 경차 및 저공해차량 | 고엽제후유의증 환자 | 국가유공상이자 | 다둥이 2자녀, 3자녀 | 유공납세자 및 모범납세자 | 장애인)",교체
+O00022500007,자격(requires/anyOf),(임산부 | 출산/입양) & (다문화가족 | 다자녀가구 | 무주택세대 | 북한이탈주민 | 신규전입 | 한부모/조손 | 확대가족),관악구 거주자 & (영유아 | 임산부),교체
+O00022500007,age_max,-,7,추가
+O00022600003,자격(requires/anyOf),국가보훈대상자,(국가보훈대상자 | 국가유공자 유족 | 배우자 | 활동보조자),교체
+O00022600004,age_max,-,18,추가
+O00022600006,자격(requires/anyOf),-,저공해자동차 이용자,추가
+O00022600007,자격(requires/anyOf),-,자원봉사자,추가
+O00022600009,자격(requires/anyOf),-,경형자동차,추가
+O00022600010,자격(requires/anyOf),-,성실납세자,추가
+O00022600012,자격(requires/anyOf),-,광진구 거주자,추가
+O00022600013,자격(requires/anyOf),장애인,장애인 & 중증장애인,교체
+O00022600014,자격(requires/anyOf),-,광진구 거주자 우선주차 구획 배정자,추가
+O00022600015,자격(requires/anyOf),-,기초생활수급자,추가
+O00022600021,자격(requires/anyOf),장애인,장애인 & 중증장애인의 활동보조자,교체
+O00022600022,자격(requires/anyOf),국가보훈대상자,5.18민주유공자,교체
+O00022600023,age_max,-,18,추가
+O00022600024,자격(requires/anyOf),-,저공해자동차 이용자,추가
+O00022600025,자격(requires/anyOf),-,광진구 거주자,추가
+O00022600026,자격(requires/anyOf),-,경형자동차,추가
+O00022600028,자격(requires/anyOf),-,광진구 거주자,추가
+O00022600029,자격(requires/anyOf),-,(의사자 유족 | 의상자 배우자 | 의상자 본인 | 의상자 자녀 | 중증장애인의 활동보조자),추가
+O00022600031,자격(requires/anyOf),-,에코마일리지카드 소유자,추가
+O00022600035,자격(requires/anyOf),-,병역 명문가,추가
+O00022600036,자격(requires/anyOf),-,여성,추가
+O00022600039,age_max,-,18,추가
+O00022600041,자격(requires/anyOf),-,제대군인,추가
+O00022800001,자격(requires/anyOf),(국가보훈대상자 | 장애인 | 질병/질환자),경형자동차 & 국가보훈대상자 & 다자녀가구 & 모범납세자 & 병역명문가 & 장애인 & 저공해자동차 & 질병/질환자,교체
+O00022800003,자격(requires/anyOf),-,국가보훈대상자 & 기초생활수급자 & 다자녀가구 & 장애인,추가
+O00022800004,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),금천구야구소프트볼연합회 소속 야구회,교체
+O00022800007,자격(requires/anyOf),기관/단체,금천구 소속 체육회,교체
+O00022800008,자격(requires/anyOf),-,65세 이상 금천구 주민 & 65세 이상 타지역 주민 & 국가보훈대상자 & 기초생활수급자 & 장애인,추가
+O00022800008,age_max,-,55,추가
+O00022800009,자격(requires/anyOf),-,국가보훈대상자 & 기초생활수급자 & 다자녀가구 & 장애인,추가
+O00022900001,자격(requires/anyOf),(국가보훈대상자 | 장애인),(5.18민주유공자 | 경형자동차 소유자 | 고엽제후유의증 환자 | 국가보훈대상자 | 다자녀카드 소지자 | 독립유공자 | 병역 명문가 | 승용차 공동이용 정기권 이용자 | 의사상자 | 장애인 | 환경친화적자동차 소유자),교체
+O00022900002,자격(requires/anyOf),-,13세 이상 55세 이하 여성 & 기초생활수급자 & (65세 이상 주민 | 다문화가족 | 병역 명문가 | 한부모가족 증명서 소지자) & (5.18민주유공자 | 국가유공자 | 다자녀카드 소지자 | 의사상자증 소지자 | 장애인 동반자 | 장애인복지카드 소지자 | 특수임무 유공자증 소지자),추가
+O00022900002,age_min,-,13,추가
+O00022900002,age_max,-,55,추가
+O00022900004,자격(requires/anyOf),(국가보훈대상자 | 장애인),(5.18민주유공자 | 고엽제후유의증 환자 | 국가보훈대상자 | 독립유공자 | 모범납세자 | 병역 명문가 | 의사상자 | 장애인),교체
+O00022900006,자격(requires/anyOf),-,(13세 이상 55세 이하 여성 | 5.18민주유공자 | 경로우대자 | 고엽제후유의증 환자 | 국가보훈대상자 | 국군포로 | 기초생활수급자 | 다둥이 | 다문화가족 | 독립유공자 | 병역명문가 | 의사상자 | 장기복무 제대군인 | 장애인 | 특수임무유공자 | 한부모가족),추가
+O00022900007,자격(requires/anyOf),-,(13세 이상 55세 이하 여성 | 5.18민주유공자 | 경로우대자 | 고엽제후유의증 환자 | 국가보훈대상자 | 국군포로 | 기초생활수급자 | 다둥이 | 다문화가족 | 독립유공자 | 병역명문가 | 의사상자 | 장기복무 제대군인 | 장애인 | 특수임무유공자 | 한부모가족),추가
+O00023000001,자격(requires/anyOf),(국가보훈대상자 | 장애인),(국가유공자증소지자 | 다둥이행복카드소지자 | 병역명문가증과 주소 기입 된 신분증 | 유공납세자 | 장애인복지카드 소지자 | 차량등록증 확인),교체
+O00023000003,자격(requires/anyOf),(국가보훈대상자 | 장애인),(국가유공자증소지자 | 다둥이행복카드소지자 | 임산부 | 장애인복지카드 소지자),교체
+O00023100001,자격(requires/anyOf),(국가보훈대상자 | 장애인),국가보훈대상자 & 기초생활수급자 & 노인 & 다자녀가구 & 병역 명문가 & 에코마일리지카드 소유자 & 우수 자원봉사자 & 장애인,교체
+O00023100003,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 다자녀가구 | 소년소녀가장 | 자원봉사자증 소지자 | 장애인),추가
+O00023100005,자격(requires/anyOf),(국가보훈대상자 | 장애인),국가보훈대상자 & 기초생활수급자 & 노인 & 다자녀가구 & 병역 명문가 & 에코마일리지카드 소유자 & 우수 자원봉사자 & 장애인,교체
+O00023100006,자격(requires/anyOf),(국가보훈대상자 | 장애인),(국가보훈대상자 | 의사상자 | 자원봉사자증 소지자 | 장애인),교체
+O00023100007,자격(requires/anyOf),(국가보훈대상자 | 장애인),국가보훈대상자 & 다자녀가구 & 장애인 & 질병/질환자,교체
+O00023100008,자격(requires/anyOf),(국가보훈대상자 | 장애인),(국가보훈대상자 | 의사상자 | 자원봉사자증 소지자 | 장애인),교체
+O00023100009,자격(requires/anyOf),장애인,국가보훈대상자 & 기초생활수급자 & 노인 & 다자녀가구 & 병역 명문가 & 에코마일리지카드 소유자 & 우수 자원봉사자 & 장애인,교체
+O00023100010,자격(requires/anyOf),-,고령자 & 국가보훈대상자 & 기초생활수급자 & 다자녀가구 & 만18세 이하 어린이 및 청소년 & 병역 명문가 & 우수 자원봉사자 & 장애인 & 한부모가족,추가
+O00023200002,자격(requires/anyOf),다자녀가구,(경형자동차 | 고엽제후유증 | 국가유공상이자 | 다자녀(2인) | 다자녀(3인) | 모범납세자 | 병역명문가 | 의사상자 및 가족 | 장애인 | 저공해 | 투표참여자),교체
+O00023300001,자격(requires/anyOf),-,(1인가구 | 국가보훈대상자 | 다자녀가구 | 무주택세대 | 예비창업자 | 장애인 | 질병/질환자 | 한부모/조손),추가
+O00023300002,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 다자녀가구 | 병역명문가 | 이용료 3개월분 이상 선납 | 장애인),추가
+O00023300003,자격(requires/anyOf),(다자녀가구 | 한부모/조손),(국가보훈대상자 | 기타업종 | 기타업종(법인) | 장애인 | 중소기업 | 질병/질환자 | 한부모/조손),교체
+O00023400002,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 다자녀가구 | 서대문구 거주자 | 장애인 | 한부모가족),추가
+O00023400002,age_max,-,65,추가
+O00023400003,자격(requires/anyOf),-,5.18민주유공자 & 고엽제후유의증 환자 & 국가보훈대상자 & 국군포로 & 기초생활수급자 & 다둥이행복카드 발급자(부모) & 독립유공자 & 병역 명문가 & 서대문구 고령자 & 의사상자 & 장애인 & 특수임무유공자,추가
+O00023400003,age_max,-,65,추가
+O00023400004,자격(requires/anyOf),-,5.18민주유공자 & 고엽제후유의증 환자 & 국가보훈대상자 & 국군포로 & 기초생활수급자 & 다둥이행복카드 발급자(부모) & 독립유공자 & 병역 명문가 & 서대문구 고령자 & 의사상자 & 장애인 & 특수임무유공자,추가
+O00023400004,age_max,-,65,추가
+O00023400005,자격(requires/anyOf),-,5.18민주유공자 & 고엽제후유의증 환자 & 국가보훈대상자 & 국군포로 & 기초생활수급자 & 다둥이행복카드 발급자(부모) & 독립유공자 & 병역 명문가 & 서대문구 고령자 & 의사상자 & 장애인 & 특수임무유공자,추가
+O00023400005,age_max,-,65,추가
+O00023400006,자격(requires/anyOf),-,(5.18민주유공자 | 고엽제후유의증 환자 | 국가보훈대상자 | 기초생활수급자 | 독립유공자 | 장애인) & (다자녀카드 소지자 | 명문가 예우대상자 및 가족 | 서대문구 고령자),추가
+O00023400006,age_min,-,65,추가
+O00023400007,자격(requires/anyOf),-,(고엽제후유의증 환자 | 국가보훈대상자 | 독립유공자 | 모범납세자 | 병역 명문가 | 서대문구 유공납세자 | 서대문구 자원봉사자증 | 장애인),추가
+O00023400009,자격(requires/anyOf),-,(경형자동차 | 국가보훈대상자 | 다둥이 | 장애인 | 저공해),추가
+O00023400010,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 노인 | 다자녀가구 | 장애인),추가
+O00023400010,age_max,-,65,추가
+O00023400011,자격(requires/anyOf),(임산부 | 장애인 | 출산/입양),(생후 1년 영아 보호자 | 임산부 | 장애인),교체
+O00023500002,자격(requires/anyOf),-,(고령자 | 기초생활수급자 | 다둥이 행복카드 소지자 | 다문화가족 | 병역명문가 | 한부모가족) & (5.18 민주유공자 및 배우자 | 6.25및 월남전 참전자 | 고엽제 피해자 | 국가보훈대상자 | 다자녀가구 | 장애인),추가
+O00023500002,age_min,-,12,추가
+O00023500002,age_max,-,55,추가
+O00023500003,자격(requires/anyOf),(국가보훈대상자 | 임산부 | 장애인),(5.18민주유공자 | 경형자동차 | 국가보훈대상자 | 다둥이 | 모범납세자 | 병역명문가 | 성동구 거주자 | 임산부 | 장애인 | 저공해자동차 | 전기자동차 | 전통시장 상품 구매자),교체
+O00023700001,자격(requires/anyOf),(국가보훈대상자 | 장애인),다자녀가구 & 생존시 장기기증자 & 장애인 & (경형자동차 | 저공해자동차 이용자) & (구정유공자 | 모범납세자) & (고엽제후유의증 환자 | 국가보훈대상자),교체
+O00023700002,자격(requires/anyOf),-,(국가보훈대상자 | 다둥이 행복카드 소지자 | 다문화가족 | 독립유공자 | 에코마일리지카드 소유자 | 장기기증등록자) & (경로우대자 | 생계·의료급여 수급자 | 장기기증자 | 장애인등록자 | 한부모가족),추가
+O00023700002,age_max,-,18,추가
+O00023700003,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+O00023700005,자격(requires/anyOf),-,(경형자동차 이용자 | 고엽제후유의증 환자 | 국가보훈대상자 | 장애인 | 장애인복지단체 | 장애인복지시설 | 저공해자동차 이용자),추가
+O00023800002,자격(requires/anyOf),-,(경형자동차 | 국가유공상이자 | 다둥이행복카드소자자 | 모범납세자 | 장애인 | 친환경차),추가
+O00023800003,자격(requires/anyOf),장애인,(노인 | 외국인 | 장애인),교체
+O00023800004,자격(requires/anyOf),-,(경형자동차 | 국가유공상이자 | 다둥이행복카드소지자 | 임산부 | 장애인 | 친환경차),추가
+O00023800005,자격(requires/anyOf),-,경형자동차 & 모범납세자 & 서울시 다둥이 행복 카드를 소지자 & 장애인 & (양천구 자원봉사자 | 양천구 장기기증자) & (고엽제후유의증 환자 | 국가보훈대상자 | 국가유공상이자 | 독립유공자 | 병역명문가 | 장기복무제대군인),추가
+O00023900005,자격(requires/anyOf),(국가보훈대상자 | 장애인),(경형자동차 | 국가보훈대상자 | 다자녀가구 | 장애인 | 저공해자동차 | 질병/질환자),교체
+O00023900006,자격(requires/anyOf),(국가보훈대상자 | 장애인),(고엽제후유의증 환자 | 국가보훈대상자 | 독립유공자 | 의사상자 | 장애인),교체
+O00024000002,자격(requires/anyOf),-,용산구 등록 봉사자,추가
+O00024000007,자격(requires/anyOf),-,여성,추가
+O00024000008,자격(requires/anyOf),-,기초생활수급자,추가
+O00024000009,자격(requires/anyOf),한부모/조손,한부모가족,교체
+O00024000017,자격(requires/anyOf),-,자원봉사자,추가
+O00024000019,자격(requires/anyOf),-,기초생활수급자,추가
+O00024000021,자격(requires/anyOf),국가보훈대상자,(국가보훈대상자 | 국가유공자의 유족 또는 가족),교체
+O00024000026,자격(requires/anyOf),국가보훈대상자,(국가보훈대상자 | 국가유공자의 유족 또는 가족),교체
+O00024000029,자격(requires/anyOf),-,자원봉사자,추가
+O00024000033,자격(requires/anyOf),-,기초생활수급자,추가
+O00024000039,자격(requires/anyOf),-,기초생활수급자,추가
+O00024000042,자격(requires/anyOf),-,기초생활수급자,추가
+O00024000043,자격(requires/anyOf),-,여성,추가
+O00024000045,자격(requires/anyOf),-,용산구 등록 봉사자,추가
+O00024000051,자격(requires/anyOf),-,국가보훈대상자,추가
+O00024000052,age_max,-,18,추가
+O00024000056,자격(requires/anyOf),-,기초생활수급자,추가
+O00024000057,자격(requires/anyOf),-,여성,추가
+O00024000059,자격(requires/anyOf),-,용산구 등록 봉사자,추가
+O00024100001,자격(requires/anyOf),-,가임기 여성 & 가족 & 경로우대 & 국가보훈대상자 & 기초생활수급자 & 다둥이 & 단체 & 백련배드민턴장 사용 은평구민 & 병역명문가 & 자원봉사자 & 장기등록 고객 & 장애인,추가
+O00024200001,자격(requires/anyOf),-,(고령자 | 국가보훈대상자 | 기초생활수급자 | 다둥이 행복카드 소지자 | 에코마일리지카드 소유자 | 장애인 | 종로구에 주민등록이 되어있는 사람),추가
+O00024200001,age_min,19,65,교체
+O00024200002,자격(requires/anyOf),-,국가보훈대상자 & 기초생활수급자 & 노인 & 다자녀가구 & 에코마일리지카드 소유자 & 장애인 & 종로구에 주민등록이 되어있는 사람,추가
+O00024200003,자격(requires/anyOf),(국가보훈대상자 | 장애인),5.18민주유공자 & 65세 이상 운전자 & 경차 운전자 & 국가보훈대상자 & 다자녀가구 & 병역명문가 & 선거 참여자 & 성실납세자 & 장애인 & 저공해자동차 운전자 & 지하철 환승 이용자 & 질병/질환자,교체
+O00024200004,자격(requires/anyOf),(국가보훈대상자 | 장애인),(경형자동차 | 고엽제후유의증 환자 | 국가보훈대상자 | 성실납세증 소지자 | 장애인 | 저공해자동차 | 지하철 환승 주차 | 투표 참여자(3개월 이내)),교체
+O00024200005,자격(requires/anyOf),-,국가보훈대상자 & 기초생활수급자 & 노인 & 다자녀가구 & 에코마일리지카드 소유자 & 장애인 & 종로구에 주민등록이 되어있는 사람,추가
+O00024300001,자격(requires/anyOf),(국가보훈대상자 | 장애인),5.18민주유공자 & 국가보훈대상자 & 다자녀가구 & 장애인,교체
+O00024300002,자격(requires/anyOf),-,가임기 여성 & 고령자 & 국가보훈대상자 & 다자녀가구 & 병역 명문가 & 장애인 & 장애인 동반 보호자 & (기초생활수급자 | 차상위계층),추가
+O00081600001,자격(requires/anyOf),-,(5.18민주유공자 | 국가보훈대상자 | 기초생활수급자 | 의사자유가족 | 장애인) & (경로우대자 | 다문화가족 | 다자녀가구 | 북한이탈주민 | 외국인 근로자 | 청소년 | 한부모가족),추가
+O00081600006,자격(requires/anyOf),장애인,등록장애인,교체
+O00082800001,자격(requires/anyOf),영업중,소상공인,교체
+O00082800002,자격(requires/anyOf),영업중,소상공인,교체
+O00082800004,자격(requires/anyOf),예비창업자,외식업 창업희망청년,교체
+O00082800004,age_min,-,19,추가
+O00082800004,age_max,-,39,추가
+O00082800005,자격(requires/anyOf),영업중,소상공인,교체
+O00083100001,income_max_pct,200,120,교체
+O00083200001,자격(requires/anyOf),-,예술인,추가
+O00083200002,자격(requires/anyOf),기관/단체,(교육예술가 | 기획자 | 문화예술교육단체),교체
+O00083200003,자격(requires/anyOf),기관/단체 & 기타업종(법인),창작자,교체
+O00083700001,자격(requires/anyOf),-,병역 명문가 & (고엽제후유의증 환자 | 국가보훈대상자 | 장애인) & (5.18민주유공자 | 경형자동차 | 다자녀가구 차량 | 임산부 탑승 차량 | 장기기증자 | 저공해자동차) & (긴급자동차 | 성실납세자),추가
+O00083800001,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),(기초생활수급자 | 차상위계층),교체
+O00083800001,income_max_pct,100,120,교체
+O00083900001,자격(requires/anyOf),기관/단체,지역 예술인,교체
+O00083900002,자격(requires/anyOf),-,(국가보훈대상자 | 기초생활수급자 | 노인 | 다자녀가구 | 자원봉사증 소지자 | 장기복무 제대군인 | 장애인),추가
+O00083900002,age_max,-,65,추가
+O00084400004,자격(requires/anyOf),-,여성,추가
+O00084400005,자격(requires/anyOf),초등학생,(국가보훈대상자 | 기초생활수급자 | 다문화가족 | 다자녀가구 | 아동복지시설 입소자 | 조손 | 차상위계층 | 한부모/조손),교체
+O00084500001,income_max_pct,-,150,추가
+O00084600001,income_max_pct,100,120,교체
+O00084700001,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),다문화가족 & 생계곤란/폐업예정 & (고등학생 | 대학생/대학원생 | 중학생 | 초등학생),교체
+O00084700001,income_max_pct,-,100,추가
+O00085100001,자격(requires/anyOf),기관/단체,(국가보훈대상자 | 장애인 | 전시 관람자 | 행사 관계자) & (공연 신청 방문객 | 공연장 관람객 | 관용차량 | 문화강좌 수강자 | 시설 행사 차량 | 언론 취재 차량 | 예원회 자원봉사자 | 지자체 소속 예술 단체) & (경형자동차 | 다자녀가구 | 친환경),교체
+O00085100002,자격(requires/anyOf),-,10인 이상 단체 & 50인 이상 단체 & 국가보훈대상자 & 기초생활수급자 & 노인 & 다자녀가구 & 대학생 & 무료 멤버십 소유자 & 예술인 & 의사상자 & 중증장애인,추가
+O00085100003,자격(requires/anyOf),-,10인 이상 단체 & 50인 이상 단체 & 국가보훈대상자 & 기초생활수급자 & 노인 & 다자녀가구 & 문화예술회관 유료 멤버 & 예술인 & 의사상자 & 중증장애인 & 학생,추가
+O00085500003,자격(requires/anyOf),-,동대문구 거주자,추가
+O00085500004,자격(requires/anyOf),-,동대문구 거주자,추가
+O00085700001,자격(requires/anyOf),기관/단체,(국가 | 동작구 문화원 | 서울특별시) & (국가 | 서울특별시),교체
+O00086000001,age_max,29,30,교체
+O00086200001,자격(requires/anyOf),(고등학생 | 대학생/대학원생),고등학생 & 대학생,교체
+O00087300002,자격(requires/anyOf),-,(20이상 성인 | 노인 | 만13~18세 | 만6~12세 | 영유아),추가
+O00087300004,자격(requires/anyOf),(국가보훈대상자 | 장애인),국가보훈대상자 & 다자녀가구 & 요일제 차량 운전자 & 장애인 & 질병/질환자,교체
+O00087300005,자격(requires/anyOf),-,(국가보훈대상자 | 문화누리카드 보유자 | 예술인 전용 패스 소지자 | 장애인 | 정기&공연 후원자 | 지역주민),추가
+O00087300006,자격(requires/anyOf),(중학생 | 초등학생),중학생 & 초등학생,교체
+O00087300007,자격(requires/anyOf),-,청소년,추가
+O00087300007,age_min,-,11,추가
+O00087300007,age_max,-,19,추가
+O00087300009,자격(requires/anyOf),-,(기술인 | 예술인),추가
+O00087500003,income_max_pct,100,120,교체
+O00087500008,income_max_pct,50,120,교체
+O00087700002,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),대학생 & (고등학생 | 중학생 | 초등학생),교체
+O00087700002,income_max_pct,200,180,교체
+O00087800001,자격(requires/anyOf),중소기업 & (기타업종(법인) | 농림어업(법인) | 제조업(법인)),청년 창업 기업,교체
+O00358700001,자격(requires/anyOf),장애인,시각장애인 & 안마사 자격 소지자,교체
+O00358700002,자격(requires/anyOf),-,(노약자 | 장애인),추가
+PTR000050390,자격(requires/anyOf),(임산부 | 출산/입양),임산부 & (생계·의료·주거·교육급여 수급자 | 차상위계층),교체
+PTR000050390,income_max_pct,200,150,교체
+PTR000050660,자격(requires/anyOf),다문화가족 & (임산부 | 초등학생),다문화가족 & (아동기 | 유아기 | 임신·출산·영아기) & (결혼이민자 | 중도입국자녀),교체
+PTR000050660,age_max,-,12,추가
+PTR000050697,자격(requires/anyOf),-,가정폭력 피해자 & 동반 가족,추가
+PTR000050701,자격(requires/anyOf),-,성폭력 피해자,추가
+PTR000050702,자격(requires/anyOf),-,(가정폭력 피해자 | 성매매피해자 | 성폭력 피해자),추가
+PTR000050703,자격(requires/anyOf),-,성매매피해자,추가
+PTR000050831,자격(requires/anyOf),구직자/실업자,대학생/대학원생,교체
+PTR000050831,age_min,18,15,교체
+PTR000051175,자격(requires/anyOf),-,청소년,추가
+PTR000051327,자격(requires/anyOf),근로자/직장인,근로자 & (간이대지급금 | 근로자/직장인) & (도산대지급금 | 퇴직근로자) & (간이대지급금 | 퇴직근로자),교체
+PTR000051411,자격(requires/anyOf),기관/단체,(공공기관 | 교육기관 | 국가보훈단체 | 연구기관 | 지방자치단체),교체
+PTR000051460,자격(requires/anyOf),-,(도박중독자 | 도박중독자 가족),추가
+PTR000051505,자격(requires/anyOf),대학생/대학원생,4년제 대학 졸업자 또는 동등 자격자 & (중소기업 1년 이상 재직자 | 특성화고 또는 마이스터고 졸업자) & (기준중위소득 일정범위 이하 | 기초생활수급자 | 장애인등록자 | 차상위계층 | 한부모가족 지원 대상자),교체
+PTR000051551,자격(requires/anyOf),-,분양계약자 & (선착순 분양자 | 우선 분양자 | 일반 분양자),추가
+PTR000051664,자격(requires/anyOf),-,(목격자 | 직접 피해 당사자 | 피해자 가족),추가
+PTR000051677,자격(requires/anyOf),중소기업,중견기업 & 중소기업,교체
+PTR000051678,자격(requires/anyOf),중소기업,기관 & 중소기업 & (기술 신뢰성 보장 필요 기업 | 기술유출 우려 기업 | 기술자료 보호 필요 기업 | 특허 출원 미실시 기업 | 특허 출원 중 기업 | 핵심기술 제공 요구 기업),교체
+PTR000051679,자격(requires/anyOf),중소기업,중견기업 & 중소기업,교체
+PTR000051702,자격(requires/anyOf),무주택세대,무주택세대 & 임차인,교체
+PTR000051706,자격(requires/anyOf),무주택세대,무주택세대주,교체
+PTR000051906,자격(requires/anyOf),국가보훈대상자 & 확대가족,병역명문가,교체
+PTR000051968,자격(requires/anyOf),장애인,(노인 | 다문화가족 | 장애인 | 저소득층) & (미혼모 | 위기청소년 | 임산부),교체
+PTR000052152,자격(requires/anyOf),중소기업,소상공인 & 전통시장·골목상권 상인조직 & 중소기업,교체
+PTR000052159,자격(requires/anyOf),-,구술심리 참석자 10인 이상 & 신속심판 대상 사건 & 증거자료 과대·과중 & (당사자계 사건 | 추가 증거 제출 없음) & (거동불편자 | 노인 | 장애인),추가
+PTR000052170,자격(requires/anyOf),-,여성과학기술인,추가
+PTR000054368,자격(requires/anyOf),-,민간인,추가
+PTR000054374,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),(기업 관련 대상 해당자 | 학생),교체
+SBA000000050,자격(requires/anyOf),-,기초생활수급자,추가
+SBA000000100,자격(requires/anyOf),구직자/실업자,(일반 수급자 | 자활특례자 | 전문기술보유자 | 조건부 수급자 | 차상위계층),교체
+SCY000000040,자격(requires/anyOf),출산/입양,입양가정,교체
+SCY000000050,자격(requires/anyOf),출산/입양,장애인,교체
+SCY000000050,age_max,-,18,추가
+SCY000000060,자격(requires/anyOf),출산/입양,입양아동을 국내입양한 가정,교체
+SCY000000060,age_max,-,18,추가
+SCY000000190,자격(requires/anyOf),출산/입양,장애인,교체
+SCY000000190,age_max,49,18,교체
+SD0000001087,자격(requires/anyOf),장애인,"언어, 청각 장애인 & 장애인",교체
+SD0000001490,자격(requires/anyOf),기관/단체,창업보육센터,교체
+SD0000001491,자격(requires/anyOf),(영업중 | 예비창업자),소상공인 & 예비창업자,교체
+SD0000001492,자격(requires/anyOf),영업중,소상공인,교체
+SD0000001507,자격(requires/anyOf),기관/단체,청소년수련시설,교체
+SD0000002014,자격(requires/anyOf),출산/입양,(기초생활수급자 | 의료급여 수급자 | 주거급여 수급자),교체
+SD0000002244,자격(requires/anyOf),중소기업,에너지절약형 설비(사업),교체
+SD0000002447,자격(requires/anyOf),-,개발제한구역 지정 당시 거주자,추가
+SD0000002815,자격(requires/anyOf),(장애인 | 질병/질환자),장애인 & (권역 재활병원 환자 | 지역사회 장애인),교체
+SD0000002891,자격(requires/anyOf),(다문화가족 | 북한이탈주민),이주배경청소년,교체
+SD0000002891,age_min,8,9,교체
+SD0000002891,age_max,19,24,교체
+SD0000002892,자격(requires/anyOf),제조업(법인) & 중소기업,중소기업,교체
+SD0000003008,자격(requires/anyOf),중소기업,산업기술 보유기관,교체
+SD0000003276,자격(requires/anyOf),중소기업,소상공인 & 중소기업 & (대기업 | 중견기업),교체
+SD0000003418,자격(requires/anyOf),중소기업,법인/시설/단체,교체
+SD0000003440,자격(requires/anyOf),기타업종(법인) & 중소기업,어린이 급식소,교체
+SD0000003474,자격(requires/anyOf),(1인가구 | 다문화가족 | 한부모/조손),(1인가구 | 다문화가족 | 맞벌이 가족 | 조손가족 | 한부모),교체
+SD0000003485,자격(requires/anyOf),기관/단체 & (농업인 | 축산업인),기술창업자 & 꿀·녹용 가공사업자 & 농산물 가공사업자 & 무기질비료 원료 구입 농업인 & 수출 확대 및 규모화 농업경영체 & 쌀가공사업자 & 원예 생산 농업경영체 & 축산물 생산 농업경영체 & (개인 육종가 | 종자업 등록 업체) & (스마트팜 농업법인 | 스마트팜 농업인 | 청년 농업인) & (곤충 사육 판매 경영체 | 천적 생산 공급 경영체) & (농기계 구입자 | 농기계 사후관리자 | 농기계 생산자) & (관광농원 운영자 | 농촌민박 운영자 | 농촌체험휴양마을 운영자),교체
+SD0000003485,age_max,-,39,추가
+SD0000003567,자격(requires/anyOf),질병/질환자,HIV/AIDS 감염자,교체
+SD0000003627,자격(requires/anyOf),제조업(법인) & 중소기업,중소기업,교체
+SD0000003857,자격(requires/anyOf),중소기업,법인/시설/단체 & 소상공인 & (구직등록자 | 취업지원프로그램 이수자) & (여성가장 | 중증장애인),교체
+SD0000003995,자격(requires/anyOf),-,우체국 예금 고객 & (고령자 | 국가보훈대상자 | 기초생활수급자 | 대학생 | 독립유공자 | 소년소녀가장 | 장애인 | 차상위계층),추가
+SD0000004048,자격(requires/anyOf),중소기업,7년 이상 중소기업 & 그린기술 사업화 중인 중소기업 & 중소기업 & (ICT 생산 효율화 기업 | 스마트공장 참여기업),교체
+SD0000004184,자격(requires/anyOf),장애인,시각장애인 & (시각장애인용 단체 | 시각장애인용 법인 | 시각장애인용 시설),교체
+SD0000004508,자격(requires/anyOf),대학생/대학원생,대학생,교체
+SD0000004508,income_max_pct,200,9,교체
+SD0000004601,자격(requires/anyOf),사회복지시설,법인/시설/단체,교체
+SD0000005037,자격(requires/anyOf),무주택세대,무주택세대 & (국가보훈대상자 | 다자녀가구 | 비닐 간이공작물 거주자 | 사업 지구 철거민 | 신혼부부 | 영구임대 퇴거자 | 장애인),교체
+SD0000005037,income_max_pct,-,100,추가
+SD0000005098,자격(requires/anyOf),기관/단체,농업인 & (단지 | 생산자단체 | 연구회) & (4-H 회원 | 강소농 | 농수산대학 졸업생 | 농업경영인 | 농촌지도자 | 전업농가),교체
+SD0000005486,자격(requires/anyOf),제조업(법인) & 중소기업,기술혁신형 중소기업 & 방산 중소기업 & 벤처기업 & 신기술을 개발·개량한 중소기업 & 중소기업,교체
+SD0000005852,자격(requires/anyOf),구직자/실업자,공무원 채용시험 응시자 & (기초생활수급자 | 중증장애인 | 차상위계층 | 한부모가족),교체
+SD0000006941,자격(requires/anyOf),근로자/직장인 & 다문화가족,(국적 취득 전 결혼이민자 | 난민 | 외국인 근로자),교체
+SD0000006941,age_max,64,18,교체
+SD0000007418,자격(requires/anyOf),중소기업,(여고생 | 여대생 | 여성 기업),교체
+SD0000007429,자격(requires/anyOf),영업중,소상공인,교체
+SD0000007457,자격(requires/anyOf),-,난민인정 신청자,추가
+SD0000007484,자격(requires/anyOf),-,(난민 인정자 | 난민인정 신청자 | 인도적 체류허가자),추가
+SD0000007626,자격(requires/anyOf),장애인,(국가유공상이자 | 장기요양대상자 | 장애인),교체
+SD0000007672,자격(requires/anyOf),(임산부 | 출산/입양),임산부,교체
+SD0000007964,자격(requires/anyOf),중소기업,영세 및 중소기업,교체
+SD0000007975,자격(requires/anyOf),영업중 & 제조업,소상공인 & (식육가공업 | 식육포장처리업),교체
+SD0000008677,자격(requires/anyOf),농업인,농업법인 & 농업인,교체
+SD0000008743,income_max_pct,50,100,교체
+SD0000009104,자격(requires/anyOf),중소기업,중소기업 & (메인비즈 기업 | 벤처기업 | 이노비즈기업 | 지식재산경영 인증 기업 | 크라우드펀딩 1억 이상 유치 기업) & (건설신기술 인증 기술 보유 기업 | 공인 기업부설연구소 보유 기업 | 공인기관 인증 기술 보유 기업 | 대학 기술 이전 기업 | 신기술 인증 기술 보유 기업 | 실용신안 기술 보유 기업 | 연구개발전담부서 보유 기업 | 저작권 등록 기술 보유 기업 | 전력신기술 인증 기술 보유 기업 | 특허 등록 기술 보유 기업),교체
+SD0000009367,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),제조업(법인) & (EPC 회사 | 설비 제조업체 | 엔지니어링 회사),교체
+SD0000009385,자격(requires/anyOf),(농업인 | 축산업인),농업인 & (경종·과수·원예 특작 농업인 | 소규모 축산 농업인 | 재해 농축산 농업인),교체
+SD0000010096,자격(requires/anyOf),농업인,지역푸드플랜 참여 경영체,교체
+SD0000010098,자격(requires/anyOf),기관/단체 & 농업인,(농업법인 | 농업인 | 생산자단체),교체
+SD0000010100,자격(requires/anyOf),기관/단체 & 농업인,(20·30세대 농지 지원 대상자 | 과수 전업농 육성 대상자 | 과수 주작목 법인) & (과원 축소 농가 | 비농가 | 비농업 법인 | 은퇴 | 전업),교체
+SD0000010100,age_max,-,64,추가
+SD0000010429,자격(requires/anyOf),중소기업,벤처기업,교체
+SD0000010494,자격(requires/anyOf),대학생/대학원생,대학생/대학원생 & 장애인,교체
+SD0000010578,자격(requires/anyOf),대학생/대학원생,농어업 종사 대학생 & 대학생/대학원생,교체
+SD0000010605,자격(requires/anyOf),농업인,농업인 & (농업 부채 농업인 | 준전업 농업인),교체
+SD0000010647,자격(requires/anyOf),중소기업 & (기타업종(법인) | 정보통신업(법인) | 제조업(법인)),중소기업 & (일시적 경영 애로 기업 | 재해 중소기업),교체
+SD0000010823,자격(requires/anyOf),임업인,귀산촌인 & 임업인 & 조림 묘목 생산 대행자 & 해외산림자원개발 사업 신고자 & (산림 법인 | 산림조합 | 산림조합중앙회) & (생산자단체 | 임산물 생산자) & (국산 원목 구입자 | 국산재 가공품 구입자 | 임목 부산물 및 폐목재 구입자 | 임업 기계장비 구입자 | 임업 기계장비 생산자) & (목재 이용·가공시설 운영자 | 보드류 생산시설 운영자) & (독림가 | 신지식 임업인 | 임업후계자) & (산양삼 생산자 단체 | 산양삼 재배자) & (산림 경영자 | 산림소유자) & (사립 휴양시설 운영자 | 사립 휴양시설 허가자),교체
+SD0000010824,자격(requires/anyOf),기관/단체 & 임업인,(독림가 | 생산자단체 | 신지식 임업인 | 임업인 | 임업후계자),교체
+SD0000010825,자격(requires/anyOf),기관/단체 & 임업인,생산자단체 & 임업인 & (농업법인 | 산림조합),교체
+SD0000010879,자격(requires/anyOf),중소기업 & (정보통신업(법인) | 제조업(법인)),중소기업 & 테크서비스 분야 수출(예정) 중소기업 & (강소 | 내수 | 성장 | 유망 | 초보),교체
+SD0000010902,자격(requires/anyOf),제조업(법인) & 중소기업,예비창업자 & 중소기업,교체
+SD0000011355,자격(requires/anyOf),기관/단체,(생산자단체 | 지방자치단체),교체
+SD0000011371,자격(requires/anyOf),제조업(법인) & 중소기업,중소기업,교체
+SD0000011447,자격(requires/anyOf),-,기초생활수급자 & 상이등급자 & 장애인 & 한부모가족,추가
+SD0000011447,age_min,18,16,교체
+SD0000011848,자격(requires/anyOf),근로자/직장인,중소기업 & 청년,교체
+SD0000011848,age_max,34,39,교체
+SD0000012202,자격(requires/anyOf),-,의사상자,추가
+SD0000012326,자격(requires/anyOf),임산부,의료급여 수급자 & (영유아 수급권자 | 임신 수급권자 | 자궁 외 임신 수급권자 | 출산 수급권자),교체
+SD0000012326,age_max,44,2,교체
+SD0000012329,자격(requires/anyOf),농업인,농업인 & (농업법인 | 작목반 | 지역농협),교체
+SD0000012531,자격(requires/anyOf),-,청소년,추가
+SD0000012622,자격(requires/anyOf),중소기업 & (기타업종(법인) | 제조업(법인)),중소기업 & (기업부설 연구소 | 연구개발전담부서 보유 또는 설립계획) & (대학 | 연구기관),교체
+SD0000012652,자격(requires/anyOf),기타업종 & 기타업종(법인) & 영업중 & (기관/단체 | 사회복지시설),(5.18 민주유공자 및 유가족 | 국가유공자 및 유가족 | 대기업 분쟁 중기업 | 소기업 | 의료급여 수급권자 | 장애인 | 학생) & ((예비)청년창업자 | 국가보훈대상자 | 다문화가족 | 독립유공자 및 유가족 | 병 또는 사회복무요원 | 차상위계층 | 한부모가족),교체
+SD0000012652,age_min,19,6,교체
+SD0000012652,age_max,-,18,추가
+SD0000012652,income_max_pct,-,125,추가
+SD0000012704,자격(requires/anyOf),기타업종(법인) & 중소기업,중소기업,교체
+SD0000015536,자격(requires/anyOf),구직자/실업자,근로자/직장인,교체
+SD0000015573,자격(requires/anyOf),근로자/직장인,무역 관련 기업 실무자,교체
+SD0000015789,자격(requires/anyOf),농업인,(고엽제후유의증 환자 | 국가보훈대상자 | 국가유공자 | 기초생활수급자 | 독립유공자 | 장애인 | 특수임무유공자),교체
+SD0000015802,자격(requires/anyOf),기관/단체 & 농업인,농업법인 & 농업인,교체
+SD0000016119,자격(requires/anyOf),장애인,중증장애인,교체
+SD0000016138,income_max_pct,100,140,교체
+SD0000016200,자격(requires/anyOf),기관/단체,의료기관,교체
+SD0000016522,자격(requires/anyOf),임업인,(마을공동체 | 생산자단체),교체
+SD0000016523,자격(requires/anyOf),기타업종(법인) & 중소기업,(LPG 충전사업자 | LPG 판매사업자 | 가스용품 및 용기 등 제조사업자 | 도시가스사업자 | 수입사 | 전문검사기관 | 집단공급사업자),교체
+SD0000016528,자격(requires/anyOf),영업중 & (기타업종 | 제조업),소상공인 & (대기업 | 중견기업 | 중소기업),교체
+SD0000016529,자격(requires/anyOf),제조업(법인) & 중소기업,(중견기업 | 중소기업),교체
+SD0000018900,자격(requires/anyOf),제조업(법인) & 중소기업,중소기업,교체
+SD0000018904,자격(requires/anyOf),영업중,중소기업,교체
+SD0000019989,자격(requires/anyOf),-,(19~29세 | 5.18민주유공자 | 6~18세 | 고엽제후유의증 환자 | 공공연구기관 | 국가보훈대상자 | 기술신탁관리기관 | 노인 | 독립유공자 | 병역요원 | 은행 | 의료급여 수급자 | 의사상자 | 장애인 | 전담조직 | 중견기업 | 중소기업 | 지방자치단체 | 초·중등학생 | 특수임무유공자),추가
+SD0000020006,자격(requires/anyOf),어업인,어업인 & 장애인 & (어업근로자 | 염업종사자),교체
+SD0000020007,자격(requires/anyOf),어업인,양식어업인 & 양식업 관련 법인,교체
+SD0000020008,자격(requires/anyOf),어업인,어선 소유자,교체
+SHE000000020,자격(requires/anyOf),-,의료급여 수급권자,추가
+SHE000000060,자격(requires/anyOf),장애인,의료급여 수급권자 & 장애인,교체
+SHE000000090,자격(requires/anyOf),-,의료급여 2종 수급권자,추가
+SHE000000180,자격(requires/anyOf),질병/질환자,의료급여 수급권자 & (뇌혈관질환자 | 심장질환자 | 중증암환자 | 중증외상환자 | 중증화상환자),교체
+SME000000110,자격(requires/anyOf),출산/입양,미숙아 & 선천성이상아,교체
+SPE000000010,자격(requires/anyOf),장애인,장애인 & (기초생활수급자 | 차상위계층),교체
+SPE000000030,자격(requires/anyOf),장애인,기초생활수급자 & 장애인 & 차상위계층,교체
+SPE000000060,자격(requires/anyOf),장애인,건강보험 가입자 & 장애인,교체
+SPE000000070,자격(requires/anyOf),장애인,등록장애인 & 의료급여 2종 수급권자 & 차상위 본인 부담 경감 대상자,교체
+SPE000000080,자격(requires/anyOf),(구직자/실업자 | 장애인),중증장애인,교체
+SPE000000090,자격(requires/anyOf),구직자/실업자,장애인,교체
+SSI000000020,자격(requires/anyOf),한부모/조손,조손가족 & 한부모가족,교체
+SSI000000020,income_max_pct,50,65,교체
+VOU000000020,age_max,64,65,교체
+VOU000000040,자격(requires/anyOf),-,(의료급여 수급자 | 장애인 | 조손가정 | 중증질환자 | 한부모 가정 | 희귀난치성 질환자),추가
+VOU000000040,income_max_pct,75,70,교체
+WII000000040,자격(requires/anyOf),국가보훈대상자,75세 이상 보상금을 받은 유족 & (4·19혁명공로자 | 5·18민주화운동 희생자 | 국가보훈대상자 | 국가사회발전 특별공로자 | 무공수훈자 | 보국수훈자 | 재일학도의용군 | 특수임무 공로자) & (6·25참전 재일학도의용군인 | 국가보훈대상자 | 무공수훈자) & (5.18유공자의 배우자 | 국가유공자의 배우자 | 독립유공자 유족 | 보훈보상대상자의 배우자 | 특수임무유공자 배우자) & (4·19혁명부상자 | 5·18민주화운동부상자 | 6·18자유상이자 | 고엽제후유의증 환자 | 고엽제후유증 2세 환자 | 공상공무원 | 공상군경 | 애국지사 | 재해부상 공무원 | 재해부상 군경 | 전상군경 | 특별공로상이자 | 특수임무부상자),교체
+WII000000060,자격(requires/anyOf),-,도서민,추가
+WII000000080,자격(requires/anyOf),북한이탈주민 & (고등학생 | 대학생/대학원생 | 중학생),북한이탈주민 자녀,교체
+WII000000100,자격(requires/anyOf),기관/단체 & 북한이탈주민,북한이탈주민 & 북한이탈주민 자녀,교체
+WII000000120,자격(requires/anyOf),북한이탈주민,(북한이탈주민 | 북한이탈주민 고용사업체),교체
+WII000000160,자격(requires/anyOf),무주택세대,납북피해자 & 무주택세대,교체
+WII000000200,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생),(기초생활수급자 | 다문화가족 | 북한이탈주민 | 중증장애인 | 차상위계층 | 한부모가족),교체
+WII000000230,자격(requires/anyOf),(고등학생 | 중학생 | 초등학생) & (다문화가족 | 북한이탈주민),다문화가족 & 탈북학생,교체
+WII000000260,자격(requires/anyOf),출산/입양,국민연금 가입자 & (입양 | 출산),교체
+WII000000350,자격(requires/anyOf),장애인,장애인 & (발달장애인 | 자폐성 장애),교체
+WII000000380,자격(requires/anyOf),-,사회복지 종사자,추가
+WII000000390,자격(requires/anyOf),장애인,시각장애인,교체
+WII000000450,자격(requires/anyOf),출산/입양,가정위탁아동 & 입양아동,교체
+WII000000450,age_max,44,18,교체
+WII000000520,자격(requires/anyOf),장애인,중도 시각장애인,교체
+WII000000560,자격(requires/anyOf),사회복지시설,지역자활센터,교체
+WII000000570,자격(requires/anyOf),장애인,척수장애인,교체
+WII000000620,자격(requires/anyOf),-,가정 밖 청소년,추가
+WII000000700,자격(requires/anyOf),-,성폭력 피해자,추가
+WII000000760,자격(requires/anyOf),-,청소년,추가
+WII000000770,자격(requires/anyOf),(고등학생 | 대학생/대학원생 | 중학생 | 초등학생),(가족 | 부모 | 청소년),교체
+WII000000790,자격(requires/anyOf),-,(가족 | 부모 | 청소년),추가
+WII000000820,자격(requires/anyOf),한부모/조손,한부모가족 & (모자 | 미혼모 | 부자 | 조손 가족),교체
+WII000000820,income_max_pct,50,100,교체
+WII000000850,자격(requires/anyOf),중소기업,여성 기업,교체
+WII000000860,자격(requires/anyOf),중소기업,여성(예비)창업자 & 예비창업자,교체
+WII000000870,자격(requires/anyOf),(영업중 | 예비창업자),(3년 미만 장애인기업 | 장애인 예비창업자),교체
+WII000000880,자격(requires/anyOf),(영업중 | 예비창업자),(장애인 예비창업자 | 장애인기업),교체
+WII000001060,자격(requires/anyOf),중소기업,사업주 & 우선지원대상기업,교체
+WII000001080,age_min,18,15,교체
+WII000001130,자격(requires/anyOf),-,(소상공인 | 온실 소유자 | 주택소유자),추가
+WII000001190,자격(requires/anyOf),장애인,(청각·언어장애인 | 청각·언어장애인과 통화를 원하는 국민),교체
+WII000001280,자격(requires/anyOf),-,(노인 | 영유아 | 임산부 | 취약계층 임산부),추가
+WII000001310,자격(requires/anyOf),국가보훈대상자,국가보훈대상자 & (유공자 본인 | 전몰·순직·사망 행불자 자녀 | 전몰·순직·사망 행불자의 배우자),교체
+WII000001340,자격(requires/anyOf),장애인,등록장애인,교체
+WII000001360,자격(requires/anyOf),국가보훈대상자,제대군인,교체
+WII000001410,income_max_pct,50,32,교체
+WII000001460,자격(requires/anyOf),출산/입양,근로자,교체
+WII000001470,income_max_pct,200,140,교체
+WII000001480,자격(requires/anyOf),-,(가정폭력 피해자 | 교제폭력 피해자 | 스토킹 피해자 | 피해자 가족),추가
+WII000001490,자격(requires/anyOf),-,가정폭력 피해자 & 동반 아동,추가
+WII000001510,자격(requires/anyOf),질병/질환자,원폭 피해자,교체
+WII000001520,자격(requires/anyOf),질병/질환자,한센인 피해자,교체
+WII000001550,자격(requires/anyOf),한부모/조손,기준중위소득 65% 이하 & 한부모,교체
+WII000001550,income_max_pct,75,65,교체
+WII000001600,자격(requires/anyOf),-,(고립·은둔 청소년 | 교육적 선도 대상자 | 보호자 없거나 보호 불가능 청소년 | 학교 밖 청소년),추가
+WII000001620,자격(requires/anyOf),질병/질환자,(건강보험 가입자 | 의료급여 수급자 | 차상위 본인부담 경감 대상자),교체
+WII000001620,age_max,-,17,추가
+WLU000000020,자격(requires/anyOf),질병/질환자,만성질환자 & 질병/질환자 & (중증난치질환 | 중증질환자 | 희귀질환),교체
+WLU000000020,age_max,-,17,추가

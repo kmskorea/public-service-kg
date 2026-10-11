@@ -1,0 +1,25 @@
+# Q1. 중구에 사는 22세 기초생활수급자 대학생이 받을 수 있는 사업 (자격 판정 규칙 1~6)
+#  사람의 범주: 라벨이 아래 목록인 개념 + 그 skos:broader 상위 개념
+SELECT ?title ?region ?tier WHERE {
+  ?s a kg:Service ; dct:title ?title ; kg:tier ?tier ; kg:coversRegion ?r ; kg:forUserType kgc:ut_개인 .
+  ?r rdfs:label ?region .
+  kgr:region_서울_중구 kg:partOf* ?r .                                         # 규칙 6
+  FILTER EXISTS { { ?s kg:requires ?any } UNION { ?s kg:hasRequirementGroup ?anyg } }   # 대상이 정해진 사업만 (설계서 5.3 의 77건 정의)
+  FILTER NOT EXISTS { ?s kg:ageMin ?a FILTER(?a > 22) }
+  FILTER NOT EXISTS { ?s kg:ageMax ?b FILTER(?b < 22) }
+  FILTER NOT EXISTS {                                                    # 규칙 1: requires 모두
+    ?s kg:requires ?c .
+    FILTER NOT EXISTS { ?c ^skos:broader* ?pc . ?pc skos:prefLabel|skos:altLabel ?l .
+                        FILTER(STR(?l) IN ("대학생", "대학생/대학원생", "기초생활수급자")) } }
+  FILTER NOT EXISTS {                                                    # 규칙 1·2: 그룹마다 하나 이상
+    ?s kg:hasRequirementGroup ?g .
+    FILTER NOT EXISTS { ?g kg:anyOf ?c2 . ?c2 ^skos:broader* ?pc2 . ?pc2 skos:prefLabel|skos:altLabel ?l2 .
+                        FILTER(STR(?l2) IN ("대학생", "대학생/대학원생", "기초생활수급자")) } }
+  FILTER NOT EXISTS {                                                    # 규칙 3: excludes 하나라도
+    ?s kg:excludes ?c3 . ?c3 ^skos:broader* ?pc3 . ?pc3 skos:prefLabel|skos:altLabel ?l3 .
+    FILTER(STR(?l3) IN ("대학생", "대학생/대학원생", "기초생활수급자")) }
+  OPTIONAL { ?s kg:prefers ?pf . ?pf ^skos:broader* ?pp . ?pp skos:prefLabel|skos:altLabel ?lp .
+             FILTER(STR(?lp) IN ("대학생", "대학생/대학원생", "기초생활수급자")) }    # 규칙 4: 순위만
+}
+GROUP BY ?title ?region ?tier
+ORDER BY DESC(COUNT(?pf)) DESC(?tier) ?title

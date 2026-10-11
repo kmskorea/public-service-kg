@@ -1,0 +1,8 @@
+# Q3. 대학생이 제외되는 사업
+SELECT DISTINCT ?title ?region ?excluded WHERE {
+  ?s a kg:Service ; dct:title ?title ; kg:coversRegion/rdfs:label ?region ; kg:excludes ?c .
+  ?c skos:prefLabel ?excluded .
+  ?c ^skos:broader* ?pc . ?pc skos:prefLabel|skos:altLabel ?l .
+  FILTER(STR(?l) IN ("대학생", "대학생/대학원생") || CONTAINS(STR(?excluded), "대학"))
+}
+ORDER BY ?title

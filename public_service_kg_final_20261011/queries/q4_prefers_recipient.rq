@@ -1,0 +1,7 @@
+# Q4. 다른 서비스의 수혜자가 우대받는 사업 (예: 근로장려금 수급자) — prefers + recipientOf
+SELECT ?title ?group ?sourceService WHERE {
+  ?s a kg:Service ; dct:title ?title ; kg:prefers ?c .
+  ?c kg:recipientOf ?x ; skos:prefLabel ?group .
+  ?x dct:title ?sourceService .
+}
+ORDER BY ?sourceService ?title

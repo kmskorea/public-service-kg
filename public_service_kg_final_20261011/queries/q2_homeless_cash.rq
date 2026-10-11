@@ -1,0 +1,9 @@
+# Q2. 무주택자를 대상으로 하는 현금 지원 사업 (requires 또는 OR 묶음에 무주택 범주, 지원유형 ⊑ 현금)
+SELECT DISTINCT ?title ?region ?stype WHERE {
+  ?s a kg:Service ; dct:title ?title ; kg:coversRegion/rdfs:label ?region .
+  { ?s kg:requires ?c } UNION { ?s kg:hasRequirementGroup/kg:anyOf ?c }
+  ?c skos:broader* ?home .
+  ?home skos:prefLabel|skos:altLabel ?hl . FILTER(CONTAINS(STR(?hl), "무주택"))
+  ?s kg:hasSupportType ?st . ?st skos:broader* kgc:st_현금 ; skos:prefLabel ?stype .
+}
+ORDER BY ?region ?title

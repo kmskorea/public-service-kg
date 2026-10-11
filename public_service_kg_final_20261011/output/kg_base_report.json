@@ -1,0 +1,23 @@
+{
+ "triples": 42656,
+ "Service": 2461,
+ "Organization": 200,
+ "Region": 27,
+ "Concept": 88,
+ "TargetGroup": 37,
+ "RequirementGroup": 376,
+ "anyOf": 965,
+ "budgetLimited": 49,
+ "deadline_ALWAYS": 1258,
+ "deadline_ANNUAL": 131,
+ "deadline_EVENT": 69,
+ "deadline_FROM": 14,
+ "deadline_NO_APPLICATION": 43,
+ "deadline_RANGE": 114,
+ "deadline_UNKNOWN": 161,
+ "deadline_UNTIL": 1,
+ "deadline_VARIES": 670,
+ "gender": 103,
+ "income": 450,
+ "requires": 1738
+}

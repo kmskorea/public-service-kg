@@ -1,0 +1,18 @@
+# Q5. 이번 달(기준일 2026-10-09)에 신청할 수 있는 장학금
+SELECT ?title ?region ?kind ?start ?end ?sm ?em WHERE {
+  BIND("2026-10-09"^^xsd:date AS ?today)
+  BIND(10 AS ?month)
+  ?s a kg:Service ; dct:title ?title ; kg:coversRegion/rdfs:label ?region ;
+     kg:hasSupportType kgc:st_현금_장학금 ; kg:deadlineKind ?kind .
+  OPTIONAL { ?s kg:applyStart ?start } OPTIONAL { ?s kg:applyEnd ?end }
+  OPTIONAL { ?s kg:applyStartMonth ?sm } OPTIONAL { ?s kg:applyEndMonth ?em }
+  FILTER(
+    ?kind = "ALWAYS" ||
+    (?kind IN ("RANGE", "FROM", "UNTIL") && (!BOUND(?start) || ?start <= ?today) && (!BOUND(?end) || ?end >= ?today)) ||
+    (?kind = "ANNUAL" && BOUND(?em) && (
+        (!BOUND(?sm) && ?month <= ?em) ||
+        (BOUND(?sm) && ?sm <= ?em && ?sm <= ?month && ?month <= ?em) ||
+        (BOUND(?sm) && ?sm > ?em && (?month >= ?sm || ?month <= ?em))))
+  )
+}
+ORDER BY ?kind ?title
