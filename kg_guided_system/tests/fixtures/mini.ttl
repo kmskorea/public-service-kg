@@ -1,0 +1,49 @@
+@prefix kg:   <http://kg.example.org/ontology#> .
+@prefix kgc:  <http://kg.example.org/concept/> .
+@prefix kgr:  <http://kg.example.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# 판정기 단위 테스트용 작은 KG
+kgr:region_전국 a kg:Region ; rdfs:label "전국" .
+kgr:region_서울 a kg:Region ; rdfs:label "서울특별시" ; kg:partOf kgr:region_전국 .
+kgr:region_서울_중구 a kg:Region ; rdfs:label "중구" ; kg:partOf kgr:region_서울 .
+kgr:region_서울_강남구 a kg:Region ; rdfs:label "강남구" ; kg:partOf kgr:region_서울 .
+
+kgc:ut_개인 skos:prefLabel "개인"@ko .
+kgc:저소득층 a kg:TargetGroup ; skos:prefLabel "저소득층"@ko .
+kgc:기초생활수급자 a kg:TargetGroup ; skos:prefLabel "기초생활수급자"@ko ; skos:altLabel "기초수급자"@ko ; skos:broader kgc:저소득층 .
+kgc:생계급여_수급자 a kg:TargetGroup ; skos:prefLabel "생계급여 수급자"@ko ; skos:broader kgc:기초생활수급자 .
+kgc:학생 a kg:TargetGroup ; skos:prefLabel "학생"@ko .
+kgc:대학생 a kg:TargetGroup ; skos:prefLabel "대학생"@ko ; skos:broader kgc:학생 .
+kgc:장애인 a kg:TargetGroup ; skos:prefLabel "장애인"@ko .
+kgc:중증장애인 a kg:TargetGroup ; skos:prefLabel "중증장애인"@ko ; skos:broader kgc:장애인 .
+kgc:한부모가족 a kg:TargetGroup ; skos:prefLabel "한부모가족"@ko .
+kgc:무주택세대 a kg:TargetGroup ; skos:prefLabel "무주택세대"@ko .
+kgc:근로장려금_수급자 a kg:TargetGroup ; skos:prefLabel "근로장려금 수급자"@ko ; kg:recipientOf kgr:svc_9 .
+
+# 1: 저소득층 필수, 전국, 19~34세
+kgr:svc_1 a kg:Service ; dct:identifier "1" ; dct:title "저소득 청년 지원" ; kg:forUserType kgc:ut_개인 ;
+  kg:coversRegion kgr:region_전국 ; kg:requires kgc:저소득층 ; kg:ageMin 19 ; kg:ageMax 34 ; kg:deadlineKind "ALWAYS" .
+# 2: (장애인 | 한부모가족), 중구
+kgr:svc_2 a kg:Service ; dct:identifier "2" ; dct:title "중구 취약계층 지원" ; kg:forUserType kgc:ut_개인 ;
+  kg:coversRegion kgr:region_서울_중구 ; kg:hasRequirementGroup kgr:grp_2 ; kg:deadlineKind "VARIES" .
+kgr:grp_2 a kg:RequirementGroup ; kg:anyOf kgc:장애인, kgc:한부모가족 .
+# 3: 대학생 필수, 학생 제외 아님 / 무주택세대 제외, 여성, 소득 50% 이하
+kgr:svc_3 a kg:Service ; dct:identifier "3" ; dct:title "여대생 주거 지원" ; kg:forUserType kgc:ut_개인 ;
+  kg:coversRegion kgr:region_서울 ; kg:requires kgc:대학생 ; kg:excludes kgc:무주택세대 ;
+  kg:gender "여성" ; kg:incomeMaxPct 50 ; kg:deadlineKind "ANNUAL" ; kg:applyStartMonth 11 ; kg:applyEndMonth 2 .
+# 4: 대상 조건 없음, 강남구
+kgr:svc_4 a kg:Service ; dct:identifier "4" ; dct:title "강남구 관람료 할인" ; kg:forUserType kgc:ut_개인 ;
+  kg:coversRegion kgr:region_서울_강남구 ; kg:deadlineKind "NO_APPLICATION" .
+# 5: 학생 제외, 근로장려금 수급자 우대, 소득 50% 초과
+kgr:svc_5 a kg:Service ; dct:identifier "5" ; dct:title "근로자 지원" ; kg:forUserType kgc:ut_개인 ;
+  kg:coversRegion kgr:region_전국 ; kg:excludes kgc:학생 ; kg:prefers kgc:근로장려금_수급자 ;
+  kg:incomeMinPct 50 ; kg:deadlineKind "RANGE" ; kg:applyStart "2026-11-01"^^xsd:date ; kg:applyEnd "2026-11-30"^^xsd:date .
+# 6: 법인 대상
+kgr:svc_6 a kg:Service ; dct:identifier "6" ; dct:title "법인 지원" ; kg:forUserType kgc:ut_법인_시설_단체 ;
+  kg:coversRegion kgr:region_전국 ; kg:requires kgc:저소득층 ; kg:deadlineKind "UNKNOWN" .
+kgr:svc_9 a kg:Service ; dct:identifier "9" ; dct:title "근로장려금" ; kg:forUserType kgc:ut_개인 ;
+  kg:coversRegion kgr:region_전국 ; kg:deadlineKind "ANNUAL" ; kg:applyStartMonth 5 ; kg:applyEndMonth 5 .

@@ -1,0 +1,2 @@
+pyoxigraph>=0.4
+pytest
