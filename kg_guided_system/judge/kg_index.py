@@ -218,6 +218,8 @@ def load_kg(path: str | Path) -> KGIndex:
             groups[s].add(o.value)
         elif p == KG + "recipientOf":
             recipient_of[s].add(o.value)
+        elif p == DCT + "title" and s not in services:      # 기관 이름
+            labels[s] = o.value
         elif s in services:
             x = svc(s)
             name = p.rsplit("#", 1)[-1] if p.startswith(KG) else p

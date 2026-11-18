@@ -7,6 +7,7 @@ import argparse
 import datetime as dt
 import sys
 
+from .answer import answer_consultation
 from .cli import show
 from .judge import Tier, missing_info
 from .llm import LLMClient, LLMError
@@ -20,6 +21,7 @@ def main():
     ap.add_argument("--today", default=None, help="YYYY-MM-DD (기본: 오늘)")
     ap.add_argument("--no-llm-link", action="store_true", help="개념 연결에 LLM 을 쓰지 않음")
     ap.add_argument("--top", type=int, default=8)
+    ap.add_argument("--no-answer", action="store_true", help="답변 생성 없이 판정 결과만")
     ap.add_argument("-v", "--verbose", action="store_true")
     a = ap.parse_args()
     today = dt.date.fromisoformat(a.today) if a.today else dt.date.today()
@@ -49,6 +51,12 @@ def main():
     mi = missing_info(out.result, 5, rel or None)     # 질문과 관련된 사업이 있으면 그 안에서 묻는다
     if mi:
         print("\n■ 더 알려주시면 판정이 정리됩니다:", ", ".join(f"{n} ({k}건)" for n, k in mi))
+    if not a.no_answer:
+        ans = answer_consultation(c, out, llm)
+        print("\n■ 답변\n" + ans.text)
+        print("\n  근거: " + ", ".join(f"[{f.key}] {f.title} {f.url}" for f in ans.facts if f.service_id in ans.cited))
+        if ans.warnings:
+            print("  ⚠ 근거 검사: " + " / ".join(ans.warnings))
     print(f"\n(LLM 호출 {llm.calls}회, 캐시 재사용 {llm.cache_hits}회, 판정 {out.result.seconds * 1000:.0f}ms)")
 
 

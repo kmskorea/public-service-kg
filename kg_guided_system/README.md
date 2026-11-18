@@ -3,12 +3,38 @@
 ```
 문장 ─① 프로필 추출(LLM)─▶ 프로필 JSON ─② 개념 연결(규칙·정확·n-gram·LLM 확인)─▶ KG 개념
      ─③ 판정기(KG 규칙)─▶ 적합 / 확인 필요 / 부적합 + 근거 경로 ─▶ 질문 관련 순위 · 되물을 정보
+     ─⑥ 답변 생성(LLM, 근거 [S#] 만 사용)─▶ 근거 검사(없는 사업명·숫자·인용 불일치)
 ```
 
 `../public_service_kg_final_20261011/output/kg.ttl`(또는 `kg_base.ttl`)을 쓴다.
-LLM 은 해석(①②)만 하고, 자격은 판정기가 KG 로 결정한다.
+LLM 은 해석(①②)과 문장 쓰기(⑥)만 하고, 자격은 판정기가 KG 로 결정한다.
 
-## 문장으로 묻기 (①②③)
+## 비교 실험 (KG vs KG-base vs 텍스트 RAG)
+
+```bash
+python scripts/compare_systems.py      # 질문 15개 × 시스템 3개 → results/compare.jsonl, compare.md, pool_for_annotation.csv
+# pool_for_annotation.csv 의 gold 열에 적합 / 확인 필요 / 부적합 을 채운 뒤 (원문 target_text 를 보고)
+python scripts/score_systems.py        # P@5, P@10, 적합 정밀도, 위험한 오판, 적합 재현율, 답변 경고율, 호출 수, 시간
+```
+
+| 시스템 | 검색·판정 | 답변 | LLM 호출 (질문당) |
+|---|---|---|---|
+| KG | ①추출 → ②연결 → ③판정기(`kg.ttl`) | ⑥ 판정 근거로 생성 | 추출 1 + 개념 확인 2~4 + 답변 1 |
+| KG-base | 같은 파이프라인, 수업 기본 KG `kg_base.ttl` | 같음 | 같음 |
+| RAG (B1) | BM25 상위 20건 → LLM 이 원문을 읽고 5건씩 판정 | 같은 생성기, 근거는 원문 | 판정 4 + 답변 1 |
+
+- RAG 는 KG 의 구조(조건 관계, 상위 개념, 수치, 지역 계층)는 쓰지 않고 KG 에 보존된 원문 텍스트만 쓴다.
+- 정답은 풀링으로 만든다: 세 시스템이 낸 상위 10건의 합집합만 사람이 판정한다 → KG 로 정답을 만드는 순환을 피한다.
+- 위험한 오판 = 시스템은 '적합' 이라 했는데 정답은 '부적합'. 상담 시스템에서 가장 피해야 할 오류다.
+
+| 파일 | 하는 일 |
+|---|---|
+| `judge/answer.py` | 근거 묶음(질문 관련 사업 7 + 그 밖의 적합 3), 답변 프롬프트, 되물을 질문, 근거 검사, LLM 없을 때 틀 답변 |
+| `judge/rag.py` | B1: BM25(단어 + 글자 2-gram), LLM 원문 판정, 같은 답변 생성기 |
+| `judge/systems.py` | 두 시스템을 같은 형식(`SystemOutput`: 순위 목록·답변·호출 수·시간)으로 실행 |
+| `scripts/compare_systems.py`, `scripts/score_systems.py` | 비교 실행·풀 생성, 채점 |
+
+## 문장으로 묻기 (①②③⑥)
 
 ```bash
 # 연구실 서버: vLLM 을 띄운 뒤 (기본 http://localhost:8000/v1, 모델 Qwen/Qwen3-32B)
@@ -16,6 +42,7 @@ python -m judge.ask "신당동 사는 22살 대학생인데 기초수급자예�
 python scripts/eval_understanding.py                 # 추출·연결 평가 (문장 15개)
 # GPU 없이: 한 번 돌린 LLM 호출은 cache/llm_cache.jsonl 에 남으므로 그대로 재생
 LLM_CACHE_MODE=only python -m judge.ask "..."
+python -m judge.ask "..." --no-answer                # 답변 생성 없이 판정 결과만
 ```
 
 환경 변수: `LLM_BASE_URL`, `LLM_MODEL`, `LLM_API_KEY`(외부 API), `LLM_CACHE_MODE`(use / only / off).
