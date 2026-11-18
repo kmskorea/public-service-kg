@@ -1,16 +1,47 @@
-# KG 기반 공공서비스 자격 상담 — 판정기
+# KG 기반 공공서비스 자격 상담
 
-`../public_service_kg_final_20261011/output/kg.ttl`(또는 `kg_base.ttl`)을 읽어
-사람의 프로필로 서비스 2,461건을 **적합 / 확인 필요 / 부적합**으로 나누고, 판정마다 근거(개념 경로)를 남긴다.
-LLM 단계(프로필 추출·개념 연결·답변 생성)는 이 판정기의 결과만 사용한다.
+```
+문장 ─① 프로필 추출(LLM)─▶ 프로필 JSON ─② 개념 연결(규칙·정확·n-gram·LLM 확인)─▶ KG 개념
+     ─③ 판정기(KG 규칙)─▶ 적합 / 확인 필요 / 부적합 + 근거 경로 ─▶ 질문 관련 순위 · 되물을 정보
+```
 
-## 실행
+`../public_service_kg_final_20261011/output/kg.ttl`(또는 `kg_base.ttl`)을 쓴다.
+LLM 은 해석(①②)만 하고, 자격은 판정기가 KG 로 결정한다.
+
+## 문장으로 묻기 (①②③)
+
+```bash
+# 연구실 서버: vLLM 을 띄운 뒤 (기본 http://localhost:8000/v1, 모델 Qwen/Qwen3-32B)
+python -m judge.ask "신당동 사는 22살 대학생인데 기초수급자예요. 장애는 없어요. 월세 지원 있나요?"
+python scripts/eval_understanding.py                 # 추출·연결 평가 (문장 15개)
+# GPU 없이: 한 번 돌린 LLM 호출은 cache/llm_cache.jsonl 에 남으므로 그대로 재생
+LLM_CACHE_MODE=only python -m judge.ask "..."
+```
+
+환경 변수: `LLM_BASE_URL`, `LLM_MODEL`, `LLM_API_KEY`(외부 API), `LLM_CACHE_MODE`(use / only / off).
+
+| 단계 | 파일 | 하는 일 |
+|---|---|---|
+| LLM | `judge/llm.py` | OpenAI 호환 클라이언트(vLLM·외부 API), 호출 캐시, 1차 자유 생성 → 실패 시 2차 JSON 스키마 강제 |
+| ① 추출 | `judge/extract.py` | KG 에서 많이 쓰이는 범주 120개를 프롬프트 어휘로 제시. 나이(출생연도)·소득 → 2026 기준중위소득 % 환산은 코드가 계산 |
+| ② 연결 | `judge/linker.py` | 규칙(청년·노인·여성·○○구 거주자·국민) → 정확 일치 → 글자 n-gram 후보 → LLM 이 '확실히 속하는' 개념만 선택 |
+| 묶음 | `judge/pipeline.py` | `Consultant.consult(문장)`. 질문 키워드·분야·지원유형이 맞는 사업을 먼저 보이고, 그 안에서 판정 단계 순 |
+| 실행 | `judge/ask.py` | 명령줄 상담 |
+
+설계에서 정한 것
+- **연결 방향**: 사람이 X 면 X 의 상위 개념에도 속하지만 하위 개념은 아니다. 'X 아님'은 반대. LLM 확인 프롬프트가 이 방향을 지킨다.
+- **동의 개념**: KG 에는 같은 대상이 여러 개념으로 나뉘어 있다(한부모 11건 / 한부모가족 69건 / 한부모가정). 정확 일치가 있어도 유사 후보 중 같은 대상을 LLM 이 더 고른다.
+- **청소년은 규칙에서 뺐다**: 법(9~24세)대로 22세를 청소년으로 넣으면 10대 대상 사업이 잘못 적합이 된다.
+- **개인 사용자는 가구 단위 사업(ut_가구)도 본다.**
+- **LLM 없이도 동작**: `--no-llm-link` 이면 정확 일치 + n-gram 0.8 이상만 쓴다 (비교 실험용).
+
+## 판정기만 쓰기 (③)
 
 ```bash
 pip install -r requirements.txt          # pyoxigraph, pytest (conda pskg 환경이면 이미 있음)
 python -m judge.cli --age 22 --region 중구 --groups 대학생 기초생활수급자 --today 2026-11-18
 python -m judge.cli --age 22 --region 중구 --income 30 --groups 대학생 대학생/대학원생 무주택세대 --closed --targeted-only   # = Q0
-python -m pytest -q                      # 30개 테스트
+python -m pytest -q                      # 전체 테스트 (GPU·네트워크 불필요, 가짜 LLM 사용)
 ```
 
 ```python
@@ -65,3 +96,6 @@ for j in res.by_tier(Tier.ELIGIBLE)[:5]:
 - `대한민국 국민`, `가구`, `일반인` 같은 일반어가 requires로 남아 있어 대부분 사람에게 '확인 필요'가 된다.
 - 범주와 수치의 관계는 모른다. 예: 기초생활수급자인데 '중위소득 50% 이하'를 따로 묻는다.
 - `kg.ttl`의 AND/OR 구조 오류(표본 정답률 62.5%)가 그대로 판정에 반영된다. 원문 검증 단계에서 보완할 것.
+- 같은 대상인데 상위 관계가 없는 개념이 있다. 예: 기초생활수급자인 사람에게 「희망두배 청년통장」의 제외 조건
+  「생계·의료·주거·교육급여 수급자」가 '모름'(주의 사항)으로만 나온다.
+- 2026 기준중위소득 표(`extract.py`)는 고시문과 한 번 대조할 것.

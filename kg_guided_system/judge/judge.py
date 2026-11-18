@@ -331,17 +331,19 @@ def apply_status(s: Service, today: dt.date) -> Apply:
     return Apply.UNKNOWN
 
 
-def missing_info(result: Result, top: int = 10) -> list[tuple[str, int]]:
+def missing_info(result: Result, top: int = 10, judgments: list[Judgment] | None = None) -> list[tuple[str, int]]:
     """'확인 필요' 서비스들이 어떤 정보를 몰라서 판정을 못 했는지 센다.
 
     많이 나온 것부터 물어보면 후보가 가장 많이 정리된다 (되묻기 단계의 기초).
     범주 조건은 개념 라벨, 수치 조건은 '나이'·'소득'·'성별'·'거주 구'로 센다.
+    judgments 를 주면 그 안에서만 센다 (예: 질문과 관련된 사업만).
     """
     from collections import Counter
 
     names = {"age": "나이", "income": "소득(기준중위소득 %)", "gender": "성별", "region": "거주 구"}
     cnt: Counter[str] = Counter()
-    for j in result.by_tier(Tier.NEEDS_INFO):
+    pool = result.judgments if judgments is None else judgments
+    for j in (x for x in pool if x.tier is Tier.NEEDS_INFO):
         seen = set()
         for c in j.unknowns:
             if c.kind in names:
