@@ -238,7 +238,10 @@ def answer_consultation(c, consultation, llm: LLMClient | None, **kw) -> Answer:
     """pipeline.Consultation → 답변. 되물을 질문은 질문과 관련된 사업 기준."""
     u = consultation.understanding
     rel = [j for j in consultation.ranked if c.relevant(j, u.extraction)]
-    ask = follow_up(missing_info(consultation.result, 3, rel or None, skip=c.skip_labels(u.extraction)))
+    # 같은 횟수끼리는 이름 순으로 고정한다 (missing_info 는 set 순회 순서로 동점을 정해 프로세스마다 질문·캐시 키가 바뀐다)
+    missing = sorted(missing_info(consultation.result, None, rel or None, skip=c.skip_labels(u.extraction)),
+                     key=lambda kv: (-kv[1], kv[0]))[:3]
+    ask = follow_up(missing)
     facts = kg_facts(c.kg, consultation.ranked, {j.service.iri for j in rel},
                      other_ok=lambda j: c.specific(j) > 0, **kw)
     return AnswerGenerator(llm).generate(u.text, facts, ask)
