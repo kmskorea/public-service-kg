@@ -83,7 +83,8 @@ def concept_usage(kg: KGIndex) -> Counter:
 def vocabulary(kg: KGIndex, n: int = 120) -> list[str]:
     """프롬프트에 넣을 대상 범주 어휘: 많이 쓰이는 순. '…거주자'처럼 지역에서 계산되는 것은 뺀다."""
     out = []
-    for c, _ in concept_usage(kg).most_common():
+    # 같은 횟수끼리는 IRI 순으로 고정한다 (set 순회 순서는 프로세스마다 달라 프롬프트·캐시 키가 바뀐다)
+    for c, _ in sorted(concept_usage(kg).items(), key=lambda kv: (-kv[1], kv[0])):
         if not is_target_group(c):
             continue
         lab = kg.label(c)
