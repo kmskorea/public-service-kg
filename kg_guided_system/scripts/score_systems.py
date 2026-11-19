@@ -8,7 +8,7 @@ gold: 적합 / 확인 필요 / 부적합 (빈칸은 채점에서 뺀다)
   적합 정밀도       시스템이 '적합'이라 한 것 중 gold 도 적합인 비율
   위험한 오판       시스템 '적합' 인데 gold '부적합' 인 비율 (낮을수록 좋음)
   적합 재현율       풀 안의 gold 적합 중 시스템이 (어느 단계로든) 낸 비율
-  답변 경고         근거 검사(없는 사업명·숫자·인용)에 걸린 답변 비율
+  답변 경고         근거 검사(없는 사업명·숫자·인용·조건부 단정)에 걸린 답변 비율. 다시 쓰기 전 → 최종
 """
 import argparse
 import csv
@@ -66,12 +66,13 @@ def main():
             rec_n += len(gold_el[r["qid"]])
             rec_hit += len(gold_el[r["qid"]] & mine)
         warn = sum(1 for r in rs if r["warnings"])
+        warn0 = sum(1 for r in rs if r.get("first_warnings", r["warnings"]))
 
         def pct(x, y):
             return f"{100 * x / y:.0f}% ({x}/{y})" if y else "-"
 
         print(f"| {name} | {pct(*pk[5])} | {pct(*pk[10])} | {pct(el_ok, el_n)} | {pct(el_bad, el_n)} | "
-              f"{pct(rec_hit, rec_n)} | {pct(warn, len(rs))} | {sum(r['llm_calls'] for r in rs) / len(rs):.1f} | "
+              f"{pct(rec_hit, rec_n)} | {pct(warn0, len(rs))} → {pct(warn, len(rs))} | {sum(r['llm_calls'] for r in rs) / len(rs):.1f} | "
               f"{sum(r['seconds'] for r in rs) / len(rs):.1f}s |")
     print(f"\n정답 표시 {len(gold)}건 (적합 {sum(len(v) for v in gold_el.values())}건)")
 

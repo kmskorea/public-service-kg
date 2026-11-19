@@ -175,6 +175,9 @@ def _lit(term) -> object:
 def load_kg(path: str | Path, patches: list[str | Path] | None = None) -> KGIndex:
     """KG 를 읽는다. patches 를 주면 그 TTL 의 skos:broader / skos:exactMatch 를 개념 계층에 더한다.
 
+    skos:altLabel 은 개념의 별칭을 더한다 (정확 일치 연결용).
+    서비스를 주어로 한 kg:requires / kg:excludes / kg:prefers 는 그 조건을 더하고,
+    kg:patchRemove 는 그 개념을 서비스의 모든 조건에서 뺀다.
     patches 는 원본 KG 를 고치지 않고, 운영 중 발견한 누락 관계를 따로 관리하기 위한 것이다
     (data/kg_patches.ttl). 원본만 읽은 결과는 SPARQL 과 같다 (tests/test_sparql_compat.py).
     """
@@ -289,9 +292,24 @@ def load_kg(path: str | Path, patches: list[str | Path] | None = None) -> KGInde
     for patch in patches or ():
         for t in ox.parse(path=str(patch), format=ox.RdfFormat.TURTLE):
             a, p, b = t.subject.value, t.predicate.value, t.object.value
+            if a in services:                     # 서비스 조건 보정: 더하기(kg:requires 등) / 빼기(kg:patchRemove)
+                x = services[a]
+                if p == KG + "requires":
+                    x.requires.add(b)
+                elif p == KG + "excludes":
+                    x.excludes.add(b)
+                elif p == KG + "prefers":
+                    x.prefers.add(b)
+                elif p == KG + "patchRemove":
+                    for bag in (x.requires, x.excludes, x.prefers, *x.groups.values()):
+                        bag.discard(b)
+                continue
             if p == SKOS + "broader":
                 parents[a].add(b)
                 children[b].add(a)
+            elif p == SKOS + "altLabel":         # 별칭: 정확 일치로 찾을 수 있게 한다
+                label_to_concepts[b].add(a)
+                label_nospace[_nospace(b)].add(a)
             elif p == SKOS + "exactMatch":       # 같은 대상: 양방향 상위 관계로 넣는다 (폐포가 순환을 처리)
                 for x, y in ((a, b), (b, a)):
                     parents[x].add(y)

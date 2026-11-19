@@ -23,7 +23,7 @@ def handler(path, body):
 
 
 def test_end_to_end(kg_final):
-    c = Consultant(kg_final, FakeLLM(handler))
+    c = Consultant(kg_final, FakeLLM(handler), link_with_llm=True)     # LLM 연결 경로를 시험한다 (기본은 끔)
     out = c.consult("신당동 사는 22살 대학생인데 기초수급자예요. 장애는 없어요. 월세 지원 있나요?", TODAY)
     u, kg = out.understanding, kg_final
     pos = {kg.label(x) for x in u.profile.groups}

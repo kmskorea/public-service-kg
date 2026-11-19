@@ -48,7 +48,8 @@ def test_judge_parsing_and_ranking(kg_final):
     llm = FakeLLM(universal_handler({}, rag_verdict=verdict, answer=lambda u: "「청년월세 지원」 [S1]", log=log))
     r = TextRAG(kg_final, llm, k=20, batch=5)
     res = r.run("청년 월세 지원 받고 싶어요")
-    assert log.count("rag") == 4 and log.count("answer") == 1         # 20건 / 5건씩 + 답변 1
+    # 20건 / 5건씩 + 답변 1 (근거 검사 경고가 있으면 다시 쓰기 1)
+    assert log.count("rag") == 4 and log.count("answer") == (2 if res.answer.first_warnings else 1)
     assert len(res.retrieved) == 20
     tiers = [j.tier for j in res.retrieved]
     assert tiers.count("판정 없음") == 6

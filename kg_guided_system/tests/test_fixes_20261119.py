@@ -92,8 +92,8 @@ def test_generic_only_services_ranked_last(kg_patched):
     spec = [c.specific(j) > 0 for j in el]
     assert spec == sorted(spec, reverse=True) and spec[0]          # 구체적 범주로 충족된 것이 먼저
     first_generic = spec.index(False)
-    assert all(kg_patched.label(r) in ("대한민국 국민", "일반인", "지역주민")
-               for j in el[first_generic:first_generic + 5] for cond in j.conditions for r in cond.via)
+    # 뒤로 간 사업은 충족된 서비스 조건이 모두 일반 범주(국민·일반인·가구·…거주자 등)
+    assert all(m in c.generic for j in el[first_generic:first_generic + 5] for cond in j.conditions for m in cond.matched)
 
 
 # ---------------------------------------------------------------- 6. 개인에게 법인·기관 범주를 묻지 않음

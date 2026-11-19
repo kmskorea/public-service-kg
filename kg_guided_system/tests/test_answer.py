@@ -66,14 +66,15 @@ def test_answer_from_consultation(kg_final):
     log = []
     h = universal_handler(EXTRACTED, {"기초수급자": {"기초생활수급자"}},
                           answer=lambda user: "「청년월세 지원」은 무주택 확인이 필요해요 [S1].", log=log)
-    c = Consultant(kg_final, FakeLLM(h))
+    c = Consultant(kg_final, FakeLLM(h), link_with_llm=True)
     out = c.consult("신당동 22살 대학생 기초수급자, 장애 없음. 월세 지원?", TODAY)
     facts = kg_facts(kg_final, out.ranked)
     assert [f.key for f in facts] == [f"S{i}" for i in range(1, len(facts) + 1)]
     assert all(any(x.startswith("지원 내용:") for x in f.lines) for f in facts)
     ans = answer_consultation(c, out, c.llm)
-    assert log.count("answer") == 1
-    sent = c.llm.requests[-1][1]["messages"][1]["content"]
+    # 첫 답변에 근거 검사 경고가 있으면 한 번 다시 쓴다
+    assert log.count("answer") == (2 if ans.first_warnings else 1)
+    sent = next(b["messages"][1]["content"] for p, b in c.llm.requests if "상담원" in b["messages"][0]["content"])
     assert "[되물을 질문]" in sent and "무주택세대" in sent            # 월세 질문 → 무주택 여부를 되묻는다
     # 답변에 쓰인 근거는 질문과 관련된 사업이 먼저 (관련 7건 + 그 밖의 적합 3건)
     rel_ids = {j.service.id for j in out.ranked if c.relevant(j, out.understanding.extraction)}

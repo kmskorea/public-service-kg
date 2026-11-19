@@ -13,8 +13,9 @@ LLM 호출은 cache/llm_cache.jsonl 에 남으므로, 이후에는 GPU 없이 �
           해당하지 않는다 → 정답 개념이거나 그 KG 하위 개념이면 맞음
   - 방향 규칙으로 뺀 수: LLM 이 골랐지만 linker.enforce_direction 이 뺀 개념 수 (LLM 이 방향을 어긴 횟수)
 
-data/understanding_eval.jsonl 은 프롬프트를 고칠 때 본 문장(개발용)이고,
-data/understanding_heldout.jsonl 은 고칠 때 보지 않은 문장(확인용)이다. 발표에는 둘을 따로 보고한다.
+data/understanding_eval.jsonl (15) 은 프롬프트를 고칠 때 본 문장(개발용).
+data/understanding_heldout.jsonl (10) 은 1차 수정 때는 보지 않았지만 2차 수정(2026-11-19 RUN_REPORT2)에 쓰였다.
+data/understanding_heldout2.jsonl (10) 은 마지막 수정까지 보지 않은 문장(최종 확인용)이다. 발표에는 셋을 따로 보고한다.
 """
 import argparse
 import datetime as dt
@@ -64,12 +65,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=str(ROOT / "data" / "understanding_eval.jsonl"))
     ap.add_argument("--kg", default=str(DEFAULT_KG))
-    ap.add_argument("--no-llm-link", action="store_true", help="개념 연결에 LLM 을 쓰지 않음 (비교용)")
+    ap.add_argument("--llm-link", action="store_true", help="개념 연결에 LLM 확인을 씀 (시스템 기본은 끔, 비교용)")
+    ap.add_argument("--no-llm-link", action="store_true", help="(이전 옵션, 지금은 기본값)")
     ap.add_argument("--out", default=str(ROOT / "results" / "understanding_eval.jsonl"))
     a = ap.parse_args()
 
     llm = LLMClient()
-    c = Consultant.from_paths(a.kg, llm, link_with_llm=not a.no_llm_link)
+    c = Consultant.from_paths(a.kg, llm, link_with_llm=a.llm_link and not a.no_llm_link)
     kg = c.kg
     rows = [json.loads(x) for x in Path(a.data).read_text(encoding="utf-8").splitlines() if x.strip()]
     tot = {"field_ok": 0, "field_n": 0, "g_hit": 0, "g_n": 0, "g_good": 0, "g_links": 0,

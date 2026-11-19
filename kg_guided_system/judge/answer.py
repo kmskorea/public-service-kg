@@ -14,7 +14,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-from .judge import Judgment, Tier, missing_info
+from .judge import Judgment, Tier
 from .llm import LLMClient
 
 
@@ -36,8 +36,9 @@ class Answer:
     text: str
     facts: list[Fact]
     cited: list[str] = field(default_factory=list)          # 인용된 서비스 ID
-    warnings: list[str] = field(default_factory=list)       # 근거 검사에서 걸린 것
-    mode: str = ""                                          # llm | template
+    warnings: list[str] = field(default_factory=list)       # 근거 검사에서 걸린 것 (최종 답변)
+    mode: str = ""                                          # llm | llm-retry | template
+    first_warnings: list[str] = field(default_factory=list)  # 다시 생성하기 전 첫 답변의 경고
 
 
 def _clip(s: str, n: int) -> str:
@@ -201,7 +202,7 @@ def verify(text: str, facts: list[Fact], question: str = "") -> tuple[list[str],
                 warnings.append(f"인용 불일치 「{t}」 [{', '.join(keys)}]")
     # 확인이 필요한 사업을 조건 없이 '받을 수 있다'고 단정했는가
     for sent in re.split(r"(?<=[.!?。])\s+|\n", text):
-        if "받을 수 있" not in sent or any(w in sent for w in ("확인", "않으면", "라면", "이면", "경우", "해당하시면")):
+        if "받을 수 있" not in sent or any(w in sent for w in ("확인", "않으면", "라면", "이면", "시면", "으면", "경우")):
             continue
         for k in _CITE.findall(sent):
             if k in by_key and by_key[k].tier != Tier.ELIGIBLE.value:
@@ -217,28 +218,57 @@ def verify(text: str, facts: list[Fact], question: str = "") -> tuple[list[str],
     return cited, warnings
 
 
+_LIST_LINE = re.compile(r"^\s*(?:[-•*·]|\d+[.)])\s*")
+
+
+def clean_answer(text: str) -> str:
+    """<think>·제목 태그를 지우고, 앞에서 이미 나온 사업만 다시 나열하는 목록 줄을 지운다 (섹션 간 중복)."""
+    text = re.sub(r"<think>.*?</think>", "", text or "", flags=re.S)
+    text = re.sub(r"^\s*\[(?:질문|근거|되물을? 질문)\][^\n]*\n?", "", text, flags=re.M)
+    text = re.sub(r"\[(?:되물을? 질문)\]\s*", "", text)
+    seen, out = set(), []
+    for line in text.splitlines():
+        titles = [t.strip() for t in _TITLE.findall(line)]
+        if titles and _LIST_LINE.match(line) and all(t in seen for t in titles):
+            continue
+        seen.update(titles)
+        out.append(line)
+    return "\n".join(out).strip()
+
+
+RETRY = """위 답변을 근거 검사기로 확인했더니 다음 문제가 있다.
+{problems}
+[근거]에 있는 것만 써서 이 문제를 고친 답변을 다시 써라. 설명 없이 답변만 쓴다."""
+
+
 class AnswerGenerator:
-    def __init__(self, llm: LLMClient | None, max_tokens: int = 900):
-        self.llm, self.max_tokens = llm, max_tokens
+    def __init__(self, llm: LLMClient | None, max_tokens: int = 900, retry: bool = True):
+        self.llm, self.max_tokens, self.retry = llm, max_tokens, retry
 
     def generate(self, question: str, facts: list[Fact], ask: str = "") -> Answer:
         if self.llm is None:
-            text, mode = template_answer(facts, ask), "template"
-        else:
-            text = self.llm.chat(answer_messages(question, facts, ask), max_tokens=self.max_tokens)
-            text = re.sub(r"<think>.*?</think>", "", text, flags=re.S)
-            text = re.sub(r"^\s*\[(?:질문|근거|되물을? 질문)\][^\n]*\n?", "", text, flags=re.M)    # 남은 제목 태그
-            text = re.sub(r"\[(?:되물을? 질문)\]\s*", "", text)
-            text, mode = text.strip(), "llm"
+            text = template_answer(facts, ask)
+            cited, warnings = verify(text, facts, question)
+            return Answer(text, facts, cited, warnings, "template", list(warnings))
+        msgs = answer_messages(question, facts, ask)
+        text = clean_answer(self.llm.chat(msgs, max_tokens=self.max_tokens))
         cited, warnings = verify(text, facts, question)
-        return Answer(text, facts, cited, warnings, mode)
+        first, mode = list(warnings), "llm"
+        if warnings and self.retry:          # 경고가 있으면 문제를 알려주고 한 번 다시 쓰게 한다
+            fix = msgs + [{"role": "assistant", "content": text},
+                          {"role": "user", "content": RETRY.format(problems="\n".join("- " + w for w in warnings))}]
+            text2 = clean_answer(self.llm.chat(fix, max_tokens=self.max_tokens))
+            cited2, warnings2 = verify(text2, facts, question)
+            if len(warnings2) < len(warnings):
+                text, cited, warnings, mode = text2, cited2, warnings2, "llm-retry"
+        return Answer(text, facts, cited, warnings, mode, first)
 
 
 def answer_consultation(c, consultation, llm: LLMClient | None, **kw) -> Answer:
     """pipeline.Consultation → 답변. 되물을 질문은 질문과 관련된 사업 기준."""
     u = consultation.understanding
     rel = [j for j in consultation.ranked if c.relevant(j, u.extraction)]
-    ask = follow_up(missing_info(consultation.result, 3, rel or None, skip=c.skip_labels(u.extraction)))
+    ask = follow_up(c.follow_up_items(consultation))
     facts = kg_facts(c.kg, consultation.ranked, {j.service.iri for j in rel},
                      other_ok=lambda j: c.specific(j) > 0, **kw)
     return AnswerGenerator(llm).generate(u.text, facts, ask)
