@@ -65,7 +65,9 @@ class Condition:
     status: Status
     text: str            # 사람이 읽을 조건 설명
     evidence: str = ""   # 충족·불충족 근거 (개념 경로 등)
-    via: tuple[str, ...] = ()   # 범주 조건을 충족시킨, 사람이 밝힌 개념들 (순위에서 일반 범주를 가려내는 데 씀)
+    via: tuple[str, ...] = ()       # 범주 조건을 충족시킨, 사람이 밝힌 개념들
+    matched: tuple[str, ...] = ()   # 충족된 서비스 쪽 개념 (requires 개념, OR 묶음에서 충족된 개념) — 일반 범주 판단에 씀
+    pending: tuple[str, ...] = ()   # 아직 모르는 개념 라벨 (OR 묶음에서 이미 '아님'인 것은 뺀다) — 되묻기에 씀
 
 
 @dataclass
@@ -252,7 +254,9 @@ class Judge:
             st = self._concept_status(c, pp, closed)
             ev = self._why(c, pp) if st is Status.MET else ("해당하지 않음" if c in pp.deny else "")
             via = tuple(sorted(pp.have_roots.get(c, ()))) if st is Status.MET else ()
-            conds.append(Condition("requires", st, f"필수: {kg.label(c)}", ev, via))
+            conds.append(Condition("requires", st, f"필수: {kg.label(c)}", ev, via,
+                                   matched=(c,) if st is Status.MET else (),
+                                   pending=(kg.label(c),) if st is Status.UNKNOWN else ()))
 
         # 규칙 2: 묶음마다 하나 이상
         for g in sorted(s.groups):
@@ -262,11 +266,12 @@ class Judge:
             met = [c for c in members if sts[c] is Status.MET]
             if met:
                 via = tuple(sorted({r for c in met for r in pp.have_roots.get(c, ())}))
-                conds.append(Condition("anyOf", Status.MET, text, self._why(met[0], pp), via))
+                conds.append(Condition("anyOf", Status.MET, text, self._why(met[0], pp), via, matched=tuple(met)))
             elif all(v is Status.UNMET for v in sts.values()):
                 conds.append(Condition("anyOf", Status.UNMET, text, "모두 해당하지 않음"))
             else:
-                conds.append(Condition("anyOf", Status.UNKNOWN, text))
+                pend = tuple(kg.label(c) for c in members if sts[c] is Status.UNKNOWN)
+                conds.append(Condition("anyOf", Status.UNKNOWN, text, pending=pend))
 
         # 규칙 3: excludes 하나라도 해당하면 부적합. 모르는 것은 주의 사항으로만 남긴다.
         caveats = []
@@ -353,13 +358,11 @@ def missing_info(result: Result, top: int = 10, judgments: list[Judgment] | None
         for c in j.unknowns:
             if c.kind in names:
                 seen.add(names[c.kind])
-            elif c.kind == "requires":
-                name = c.text.removeprefix("필수: ")
-                if not skip or name not in skip:
-                    seen.add(name)
-            elif c.kind == "anyOf":
-                name = c.text.removeprefix("하나 이상: ")
-                if not skip or not all(x in skip for x in name.split(" | ")):
-                    seen.add(name)
-        cnt.update(seen)
-    return cnt.most_common(top)
+            elif c.kind in ("requires", "anyOf"):
+                parts = list(c.pending) or c.text.split(": ", 1)[1].split(" | ")
+                if skip and all(x in skip for x in parts):
+                    continue
+                seen.add(" | ".join(parts))
+        cnt.update(sorted(seen))
+    # 동점은 이름순: Counter 의 삽입 순서(=set 순회 순서)는 해시 시드에 따라 바뀌므로 쓰지 않는다
+    return sorted(cnt.items(), key=lambda x: (-x[1], x[0]))[:top]

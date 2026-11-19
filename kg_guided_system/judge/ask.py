@@ -9,7 +9,7 @@ import sys
 
 from .answer import answer_consultation
 from .cli import show
-from .judge import Tier, missing_info
+from .judge import Tier
 from .llm import LLMClient, LLMError
 from .pipeline import DEFAULT_KG, Consultant
 
@@ -19,7 +19,8 @@ def main():
     ap.add_argument("text")
     ap.add_argument("--kg", default=str(DEFAULT_KG))
     ap.add_argument("--today", default=None, help="YYYY-MM-DD (기본: 오늘)")
-    ap.add_argument("--no-llm-link", action="store_true", help="개념 연결에 LLM 을 쓰지 않음")
+    ap.add_argument("--llm-link", action="store_true", help="개념 연결에 LLM 확인을 씀 (기본은 끔)")
+    ap.add_argument("--no-llm-link", action="store_true", help="(이전 옵션, 지금은 기본값)")
     ap.add_argument("--top", type=int, default=8)
     ap.add_argument("--no-answer", action="store_true", help="답변 생성 없이 판정 결과만")
     ap.add_argument("-v", "--verbose", action="store_true")
@@ -27,7 +28,7 @@ def main():
     today = dt.date.fromisoformat(a.today) if a.today else dt.date.today()
 
     llm = LLMClient()
-    c = Consultant.from_paths(a.kg, llm, link_with_llm=not a.no_llm_link)
+    c = Consultant.from_paths(a.kg, llm, link_with_llm=a.llm_link)
     try:
         out = c.consult(a.text, today)
     except LLMError as e:
@@ -48,7 +49,7 @@ def main():
         for j in shown:
             print(f"  [{j.tier.value}]", end="")
             show(j, a.verbose)
-    mi = missing_info(out.result, 5, rel or None, skip=c.skip_labels(u.extraction))  # 관련 사업 안에서, 개인에게 법인 범주는 묻지 않음
+    mi = c.follow_up_items(out, 5)       # 관련 사업 안에서, 민감한 범주는 뒤로, 개인에게 법인 범주는 묻지 않음
     if mi:
         print("\n■ 더 알려주시면 판정이 정리됩니다:", ", ".join(f"{n} ({k}건)" for n, k in mi))
     if not a.no_answer:

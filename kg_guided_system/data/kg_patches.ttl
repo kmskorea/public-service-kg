@@ -13,3 +13,22 @@ kgc:생계_의료_주거_교육급여_수급자 skos:exactMatch kgc:기초생활
 kgc:맞춤형_생계급여_수급자 skos:broader kgc:기초생활수급자 .
 kgc:교육급여_수급자 skos:broader kgc:기초생활수급자 .
 kgc:주거급여_수급자 skos:broader kgc:기초생활수급자 .
+
+# ---- 서비스 조건 보정 (kg:patchRemove 로 빼고 kg:requires 로 더한다) ----
+@prefix kg:  <http://kg.example.org/ontology#> .
+@prefix kgr: <http://kg.example.org/resource/> .
+
+# [2026-11-19 두 번째 실행 u01] 「개별연장급여」(고용보험 구직급여 연장)의 원문 '수급자'는 구직급여 수급자인데,
+# 추출이 기초생활수급자로 연결해 기초수급자 대학생에게 '적합'이 나왔다.
+kgr:svc_999000000002 kg:patchRemove kgc:기초생활수급자 ;
+    kg:requires kgc:구직급여_수급자 .
+
+# ---- 별칭 (2026-11-19 세 번째 수정) ----
+# 개념 연결의 기본값이 'LLM 확인 없음(정확 일치 + n-gram 0.8)'이 되면서, 사람들이 흔히 쓰는 줄임말을 별칭으로 둔다.
+# 뜻이 하나로 정해지는 말만 넣는다 (그냥 '수급자'처럼 범위가 애매한 말은 넣지 않는다).
+kgc:기초생활수급자 skos:altLabel "기초수급자"@ko, "기초수급"@ko, "기초생활보장 수급자"@ko .
+kgc:차상위계층 skos:altLabel "차상위"@ko .
+kgc:북한이탈주민 skos:altLabel "탈북민"@ko, "새터민"@ko, "탈북자"@ko .
+kgc:한부모가족 skos:altLabel "싱글맘"@ko, "싱글대디"@ko, "한부모 가정"@ko .
+kgc:취업준비생 skos:altLabel "취준생"@ko .
+kgc:다문화가족 skos:altLabel "다문화 가정"@ko .

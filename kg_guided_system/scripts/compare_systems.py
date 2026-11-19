@@ -37,7 +37,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--questions", default=str(ROOT / "data" / "understanding_eval.jsonl"),
                     help="jsonl, 줄마다 {id, text}")
-    ap.add_argument("--systems", nargs="*", default=["KG", "KG-base", "RAG"])
+    ap.add_argument("--systems", nargs="*", default=["KG", "KG-base", "RAG"],
+                    help="KG, KG-base, RAG, KG-LLM연결 (개념 연결에 LLM 확인을 켠 KG, 비교용)")
     ap.add_argument("--pool-top", type=int, default=10)
     ap.add_argument("--out", default=str(ROOT / "results"))
     ap.add_argument("--reuse-gold", default=None,
@@ -53,6 +54,9 @@ def main():
     if "KG" in a.systems:
         c = Consultant(kg_final, llm)
         runners["KG"] = lambda q, c=c: run_kg(c, q, TODAY, "KG")
+    if "KG-LLM연결" in a.systems:
+        cl = Consultant(kg_final, llm, link_with_llm=True)
+        runners["KG-LLM연결"] = lambda q, cl=cl: run_kg(cl, q, TODAY, "KG-LLM연결")
     if "KG-base" in a.systems:
         cb = Consultant(load_kg(Path(DEFAULT_KG).with_name("kg_base.ttl")), llm)
         runners["KG-base"] = lambda q, cb=cb: run_kg(cb, q, TODAY, "KG-base")
@@ -72,7 +76,9 @@ def main():
                        "llm_calls": o.llm_calls,
                        "answer": o.answer.text if o.answer else None,
                        "cited": o.answer.cited if o.answer else [],
-                       "warnings": o.answer.warnings if o.answer else [], "detail": o.detail}
+                       "warnings": o.answer.warnings if o.answer else [],
+                       "first_warnings": o.answer.first_warnings if o.answer else [],
+                       "answer_mode": o.answer.mode if o.answer else None, "detail": o.detail}
                 f.write(json.dumps(rec, ensure_ascii=False, default=str) + "\n")
                 rows.append(rec)
                 for rank, (sid, tier) in enumerate(o.ranked[: a.pool_top], 1):

@@ -83,8 +83,8 @@ def concept_usage(kg: KGIndex) -> Counter:
 def vocabulary(kg: KGIndex, n: int = 120) -> list[str]:
     """프롬프트에 넣을 대상 범주 어휘: 많이 쓰이는 순. '…거주자'처럼 지역에서 계산되는 것은 뺀다."""
     out = []
-    # 같은 횟수끼리는 IRI 순으로 고정한다 (set 순회 순서는 프로세스마다 달라 프롬프트·캐시 키가 바뀐다)
-    for c, _ in sorted(concept_usage(kg).items(), key=lambda kv: (-kv[1], kv[0])):
+    # 동점은 IRI 순: Counter 의 삽입 순서는 set 순회 순서(해시 시드)에 따라 바뀌어 프롬프트·캐시 키가 달라진다
+    for c, _ in sorted(concept_usage(kg).items(), key=lambda x: (-x[1], x[0])):
         if not is_target_group(c):
             continue
         lab = kg.label(c)
@@ -112,14 +112,19 @@ GUIDE = """출력 형식 (JSON 객체 하나만, 설명 없이):
 - 소득: "중위소득 50%" 처럼 비율을 말했으면 income_pct. 금액을 말했으면 monthly_income 에 원 단위 정수(200만원 → 2000000), 연소득이면 12로 나눈다. household_size 는 본인 포함 가구원 수.
 - groups 는 하나의 범주씩 짧은 명사로 나눈다 ("기초수급 대학생" → ["기초생활수급자", "대학생"]). 아래 어휘에 있는 표현이면 그대로 쓰고, 없으면 짧은 명사구로 쓴다. 문장으로 쓰지 않는다.
 - 나이·성별·지역에서 바로 나오는 범주(청년, 노인, 여성, ○○구 거주자)는 groups 에 넣지 않는다. 시스템이 계산한다.
-- 말에 암시된 본인의 범주도 넣는다:
+- 사용자가 자기에 대해 말한 사실에서 바로 나오는 범주는 넣는다:
   "취업 준비 중"·"일자리 구하는 중" → 구직자/실업자 / "혼자 살아요" → 1인가구 / "보육원·시설에서 나왔어요" → 자립준비청년
   "결혼한 지 1년" → 신혼부부 / "귀농했어요" → 귀농인 / "회사원"·"직장 다녀요" → 근로자/직장인 / "임신 중" → 임산부 (gender 는 "여성")
-- 가족의 상태를 본인 범주로 넣지 않는다. ("딸이 고등학생이에요" → 본인은 고등학생 아님. 넣는다면 "고등학생 자녀")
+  "집이 없어요"·"전세(월세)로 살아요"·"무주택" → 무주택세대 / "학교를 그만뒀어요"·"자퇴"·"검정고시 준비" → 학교 밖 청소년
+  "아버지가 국가유공자" → 국가유공자의 유족 또는 가족 (가족 관계 자체가 본인의 범주인 경우는 넣는다)
+- 말하지 않은 것은 넣지 않는다. 위 예시에 해당하는 말이 문장에 실제로 있을 때만 쓴다.
+  (가족과 함께 산다고 했으면 1인가구 아님. 학교를 그만뒀으면 고등학생 아님. 구직·시설 퇴소를 말하지 않았으면 구직자/실업자·자립준비청년 아님)
+- 가족의 학년·직업·상태는 본인 범주로 넣지 않는다. ("딸이 고등학생이에요" → groups 에 고등학생 X. 넣는다면 "고등학생 자녀")
 - 수급 자격(기초생활수급자, 차상위계층 등)은 사용자가 그 이름을 말했을 때만 groups 에 넣는다.
   이미 받고 있는 개별 사업(기초연금, 근로장려금, 국가장학금 등)은 receiving 에만 넣고, 그것으로 수급 자격을 추측하지 않는다.
   (기초연금 ≠ 기초생활수급자, 실업급여 ≠ 기초생활수급자)
-- not_groups 는 사용자가 명시적으로 아니라고 한 것만 ("장애는 없어요" → ["장애인"], "집이 있어요" → not_groups ["무주택세대"], groups ["주택소유자"]).
+- not_groups 는 사용자가 "없어요"·"아니에요"라고 명시적으로 말한 것만 ("장애는 없어요" → ["장애인"], "집이 있어요" → not_groups ["무주택세대"], groups ["주택소유자"]).
+  말하지 않은 것을 '아님'으로 추측하지 않는다.
 - user_type 은 보통 "개인". 가게·사업체로 묻는 경우만 "소상공인", 기관·법인이면 "법인/시설/단체".
 - fields 는 다음 중에서: {fields}
 - support_types 는 다음 중에서: {support_types}
@@ -196,7 +201,21 @@ def check_raw(obj: dict) -> dict:
     return obj
 
 
-def normalize(raw: dict, today: dt.date, fields: list[str], support_types: list[str]) -> Extraction:
+ONE_PERSON = ("1인가구", "1인 가구", "독거노인", "독거")
+# '아님' 범주가 문장에 근거가 있는지 볼 때, 라벨 앞 두 글자 말고도 인정하는 단어
+NEG_EVIDENCE = {"무주택세대": ("집", "주택"), "무주택자": ("집", "주택"), "장애인": ("장애",),
+                "기초생활수급자": ("수급", "기초"), "차상위계층": ("차상위",), "주택소유자": ("집", "주택")}
+
+
+def _negation_supported(label: str, text: str) -> bool:
+    """'X 아님'의 근거: 문장에 X 를 가리키는 말이 있어야 한다 (모델이 말하지 않은 '아님'을 지어내는 것을 막는다)."""
+    t = "".join(text.split())
+    keys = (("".join(label.split()))[:2],) + NEG_EVIDENCE.get(label, ())
+    return any(k and k in t for k in keys)
+
+
+def normalize(raw: dict, today: dt.date, fields: list[str], support_types: list[str],
+              text: str | None = None) -> Extraction:
     ex = Extraction(raw=raw)
     ex.age = _int(raw.get("age"))
     by = _int(raw.get("birth_year"))
@@ -236,7 +255,20 @@ def normalize(raw: dict, today: dt.date, fields: list[str], support_types: list[
     if ex.gender is None and any(g in ("임산부", "임신 중", "임신부") for g in ex.groups):
         ex.gender = "여성"
         ex.notes.append("임산부 → 성별 여성")
-    ex.not_groups = [x for x in _strs(raw.get("not_groups")) if x not in ex.groups]
+    size = _int(raw.get("household_size"))
+    if size and size >= 2:                       # 여러 명이 사는데 1인가구는 모순
+        drop = [g for g in ex.groups if g in ONE_PERSON]
+        if drop:
+            ex.groups = [g for g in ex.groups if g not in ONE_PERSON]
+            ex.notes.append(f"{size}인 가구라서 {', '.join(drop)} 뺌")
+    ex.not_groups = []
+    for x in _strs(raw.get("not_groups")):
+        if x in ex.groups:
+            continue
+        if text is not None and not _negation_supported(x, text):
+            ex.notes.append(f"'{x} 아님'은 문장에 근거가 없어 뺌")
+            continue
+        ex.not_groups.append(x)
     ex.receiving = _strs(raw.get("receiving"))
     ut = raw.get("user_type")
     ex.user_type = ut if ut in USER_TYPES else "개인"
@@ -265,7 +297,7 @@ class ProfileExtractor:
     def extract(self, text: str, today: dt.date | None = None) -> Extraction:
         today = today or dt.date.today()
         raw, mode = self.llm.chat_json(self.messages(text), self.schema, validate=check_raw)
-        ex = normalize(raw, today, self.fields, self.support_types)
+        ex = normalize(raw, today, self.fields, self.support_types, text)
         ex.mode = mode
         return ex
 
