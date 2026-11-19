@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>서울 공공서비스 자격 찾기</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="나이·거주 구·소득·해당 범주를 넣으면 공공서비스 2,461건의 자격을 지식그래프 규칙으로 판정합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* 배치: 왼쪽은 신청서처럼 채우는 조건 패널(넓은 화면에서 고정), 오른쪽은 판정 결과 카드 목록. 좁은 화면에서는 위아래로 쌓는다. */
+:root {
+  --bg: #f4f6f9;
+  --surface: #ffffff;
+  --sunken: #eceff4;
+  --ink: #17202c;
+  --muted: #5a6475;
+  --line: #d9dee6;
+  --accent: #1f4f9e;
+  --accent-soft: #e4ecf8;
+  --on-accent: #ffffff;
+  --ok: #1d7347;
+  --ok-soft: #e2f2e8;
+  --warn: #9a5a00;
+  --warn-soft: #fbefd9;
+  --no: #a2372f;
+  --no-soft: #f8e3e1;
+  --focus: #f0a500;
+  --font-display: "Hahmlet", "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", serif;
+  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e131a; --surface: #161d27; --sunken: #1c2531; --ink: #e6ebf2; --muted: #9aa5b5; --line: #2a3443;
+    --accent: #84a9ee; --accent-soft: #1c2b45; --on-accent: #0e131a;
+    --ok: #63c993; --ok-soft: #15301f; --warn: #f0b64e; --warn-soft: #33270f; --no: #f08b82; --no-soft: #3a1c1a;
+    --focus: #f5c04a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e131a; --surface: #161d27; --sunken: #1c2531; --ink: #e6ebf2; --muted: #9aa5b5; --line: #2a3443;
+  --accent: #84a9ee; --accent-soft: #1c2b45; --on-accent: #0e131a;
+  --ok: #63c993; --ok-soft: #15301f; --warn: #f0b64e; --warn-soft: #33270f; --no: #f08b82; --no-soft: #3a1c1a;
+  --focus: #f5c04a; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.6 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+button, input, select { font: inherit; color: inherit; }
+.wrap { max-width: 1180px; margin: 0 auto; }
+
+/* 머리말 */
+.masthead { padding-block: 28px 20px; display: grid; gap: 6px; }
+.masthead .eyebrow { font-size: 12.5px; letter-spacing: .06em; color: var(--muted); }
+.masthead h1 { font: 700 clamp(26px, 4.2vw, 36px)/1.2 var(--font-display); margin: 0; text-wrap: balance; }
+.masthead p { margin: 0; color: var(--muted); max-width: 62ch; }
+
+/* 2단 배치 */
+.layout { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 24px; align-items: start; padding-bottom: 48px; }
+@media (max-width: 860px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+
+/* 조건 패널 */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: grid; gap: 20px; }
+@media (min-width: 861px) { .panel { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); max-height: calc(100vh - 24px); overflow: auto; } }
+.panel h2 { font: 600 13px/1.3 var(--font-body); letter-spacing: .05em; color: var(--muted); margin: 0 0 10px; }
+.example { display: flex; gap: 8px; align-items: center; justify-content: space-between; background: var(--accent-soft);
+  color: var(--ink); border-radius: 8px; padding: 8px 10px; font-size: 13.5px; }
+.example[hidden] { display: none; }
+.linkbtn { background: none; border: 0; padding: 2px 4px; color: var(--accent); font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.field { display: grid; gap: 4px; min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+.field label, .field .label { font-size: 13px; color: var(--muted); }
+.field input, .field select {
+  width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+  padding: 9px 10px; font-size: 15px;
+}
+.seg { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { flex: 1; border: 0; background: var(--surface); padding: 8px 6px; cursor: pointer; font-size: 14px; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+.income-out { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.income-out b { color: var(--ink); font-family: var(--font-mono); font-weight: 500; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 11px;
+  font-size: 14px; cursor: pointer; display: inline-flex; gap: 5px; align-items: center; line-height: 1.3;
+}
+.chip:hover { border-color: var(--accent); }
+.chip[data-state="yes"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
+.chip[data-state="no"] { background: var(--sunken); color: var(--muted); text-decoration: line-through; }
+.chip .mark { font-size: 12px; }
+.hint { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; }
+.derived { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.derived b { color: var(--ink); font-weight: 500; }
+
+.search { position: relative; margin-top: 10px; }
+.search input { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; background: var(--surface); }
+.suggest { position: absolute; left: 0; right: 0; top: calc(100% + 4px); z-index: 5; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 8px; margin: 0; padding: 4px; list-style: none; box-shadow: 0 8px 24px rgb(0 0 0 / .12); }
+.suggest li { padding: 7px 9px; border-radius: 6px; cursor: pointer; display: flex; justify-content: space-between; gap: 10px; }
+.suggest li[aria-selected="true"], .suggest li:hover { background: var(--accent-soft); }
+.suggest .n { color: var(--muted); font-size: 12px; font-family: var(--font-mono); white-space: nowrap; }
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.privacy { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; margin: 0; }
+
+/* 결과 */
+.results { display: grid; gap: 16px; min-width: 0; }
+.summary { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tab {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 8px 14px; cursor: pointer;
+  display: inline-flex; gap: 8px; align-items: baseline; font-size: 15px;
+}
+.tab .num { font: 500 20px/1 var(--font-mono); font-variant-numeric: tabular-nums; }
+.tab[aria-selected="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); font-weight: 600; }
+.summary .asof { margin-left: auto; font-size: 12.5px; color: var(--muted); }
+
+.followup { background: var(--warn-soft); border-radius: var(--radius); padding: 14px 16px; display: grid; gap: 10px; }
+.followup h2 { margin: 0; font: 600 16px/1.4 var(--font-body); }
+.followup ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.followup li { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; }
+.followup .q { min-width: 0; }
+.followup .q small { color: var(--muted); }
+.followup .acts { display: flex; gap: 6px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 14px; }
+.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.group-title { font: 600 14px/1.4 var(--font-body); color: var(--muted); margin: 6px 0 -4px; letter-spacing: .02em; }
+.cards { display: grid; gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: grid; gap: 10px; min-width: 0; }
+.card-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; }
+.stamp {
+  width: 52px; height: 52px; border-radius: 8px; display: grid; place-items: center; text-align: center;
+  font: 700 13px/1.15 var(--font-display); border: 2px solid currentColor; box-shadow: inset 0 0 0 2px var(--surface), inset 0 0 0 3px currentColor;
+}
+.stamp.ok { color: var(--ok); background: var(--ok-soft); }
+.stamp.warn { color: var(--warn); background: var(--warn-soft); }
+.stamp.no { color: var(--no); background: var(--no-soft); }
+.card h3 { margin: 0; font: 600 17px/1.4 var(--font-body); text-wrap: balance; overflow-wrap: anywhere; }
+.meta { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 2px 10px; margin-top: 2px; }
+.pill { display: inline-block; font-size: 12px; border-radius: 999px; padding: 1px 8px; border: 1px solid var(--line); color: var(--muted); }
+.pill.open { color: var(--ok); border-color: currentColor; }
+.conds { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 14px; }
+.conds li { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 6px; }
+.conds .ic { font-weight: 700; text-align: center; }
+.conds .met .ic { color: var(--ok); }
+.conds .unknown .ic { color: var(--warn); }
+.conds .unmet .ic { color: var(--no); }
+.conds .ev { color: var(--muted); font-size: 13px; }
+.note { font-size: 13.5px; margin: 0; }
+.note.caveat { color: var(--warn); }
+.note.pref { color: var(--ok); }
+.card-foot { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; font-size: 13.5px; border-top: 1px solid var(--line); padding-top: 10px; }
+.card-foot .id { font-family: var(--font-mono); font-size: 12px; color: var(--muted); margin-left: auto; }
+details.raw { font-size: 13.5px; }
+details.raw summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+details.raw dl { display: grid; gap: 6px; margin: 8px 0 0; }
+details.raw dt { color: var(--muted); font-size: 12.5px; }
+details.raw dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.benefit { font-size: 14px; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.more { justify-self: start; }
+.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: var(--radius); padding: 20px; color: var(--muted); }
+.loading { padding: 40px 0; color: var(--muted); }
+.generic-toggle { justify-self: start; }
+
+.jump { display: none; }
+@media (max-width: 860px) {
+  .jump {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; text-align: center; text-decoration: none;
+    background: var(--ink); color: var(--bg); font-size: 15px;
+    padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  }
+  .jump b { font-weight: 700; }
+  body { padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
+}
+footer { border-top: 1px solid var(--line); padding-block: 18px 32px; font-size: 12.5px; color: var(--muted); display: grid; gap: 6px; }
+footer p { margin: 0; max-width: 80ch; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <span class="eyebrow">서울 거주자 · 공공서비스 2,461건 · 2026년 10월 자료</span>
+    <h1>내가 받을 수 있는 공공서비스</h1>
+    <p>조건을 넣으면 사업마다 지원 조건을 하나씩 따져 <b>적합</b>, <b>확인 필요</b>로 나눕니다. 조건 옆에 왜 충족했는지 근거가 함께 나옵니다.</p>
+  </header>
+
+  <div class="layout">
+    <form class="panel" id="profile" autocomplete="off" novalidate>
+      <div class="example" id="example-note">
+        <span>예시 조건으로 보여주고 있어요.</span>
+        <button type="button" class="linkbtn" id="clear-all">모두 지우기</button>
+      </div>
+
+      <section>
+        <h2>나에 대해</h2>
+        <div class="fields">
+          <div class="field">
+            <label for="age">나이 (만)</label>
+            <input id="age" type="number" inputmode="numeric" min="0" max="120" placeholder="예: 22">
+          </div>
+          <div class="field">
+            <label for="region">거주 구</label>
+            <select id="region"></select>
+          </div>
+          <div class="field full">
+            <span class="label" id="gender-label">성별</span>
+            <div class="seg" role="group" aria-labelledby="gender-label" id="gender">
+              <button type="button" data-v="" aria-pressed="true">말하지 않음</button>
+              <button type="button" data-v="여성" aria-pressed="false">여성</button>
+              <button type="button" data-v="남성" aria-pressed="false">남성</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="income">가구 월소득 (만원)</label>
+            <input id="income" type="number" inputmode="numeric" min="0" placeholder="예: 180">
+          </div>
+          <div class="field">
+            <label for="household">가구원 수 (본인 포함)</label>
+            <input id="household" type="number" inputmode="numeric" min="1" max="12" placeholder="예: 2">
+          </div>
+          <div class="field full income-out" id="income-out" aria-live="polite">소득을 넣으면 2026년 기준중위소득 대비 비율로 바꿔 판정합니다.</div>
+          <div class="field full">
+            <span class="label" id="ut-label">누구로 찾나요</span>
+            <div class="seg" role="group" aria-labelledby="ut-label" id="usertype">
+              <button type="button" data-v="개인" aria-pressed="true">개인</button>
+              <button type="button" data-v="소상공인" aria-pressed="false">소상공인</button>
+              <button type="button" data-v="법인/시설/단체" aria-pressed="false">기관·단체</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>해당하는 것</h2>
+        <div class="chips" id="chips" aria-describedby="chip-hint"></div>
+        <p class="hint" id="chip-hint">한 번 누르면 <b>해당</b>, 한 번 더 누르면 <b>해당 안 됨</b>, 또 누르면 지웁니다.</p>
+        <div class="search">
+          <label class="hint" for="concept-q" style="display:block;margin:0 0 4px">다른 범주 찾기</label>
+          <input id="concept-q" type="search" placeholder="예: 한부모, 북한이탈주민, 임산부" role="combobox"
+                 aria-expanded="false" aria-controls="concept-list" aria-autocomplete="list">
+          <ul class="suggest" id="concept-list" role="listbox" hidden></ul>
+        </div>
+        <p class="derived" id="derived"></p>
+      </section>
+
+      <section>
+        <h2>찾는 지원</h2>
+        <div class="field">
+          <label for="keywords">핵심 단어 (쉼표로 여러 개)</label>
+          <input id="keywords" type="text" placeholder="예: 월세, 장학금, 일자리">
+        </div>
+        <p class="hint">사업명이나 지원 내용에 이 단어가 있는 사업을 먼저 보여줍니다.</p>
+      </section>
+
+      <p class="privacy">입력한 정보는 이 브라우저 안에서만 판정에 쓰이고 어디에도 보내지 않습니다.</p>
+    </form>
+
+    <main class="results" id="results" aria-live="polite" tabindex="-1">
+      <div class="loading" id="loading">지식그래프를 불러오는 중…</div>
+    </main>
+  </div>
+
+  <footer>
+    <p><b>참고용입니다.</b> 판정은 공공서비스 지식그래프에 정리된 조건으로 자동 계산한 결과이며, 실제 자격은 담당 기관이 최종 확인합니다. 지식그래프의 조건 추출에는 오류가 있을 수 있어, 카드의 「원문 보기」와 정부24 안내를 함께 확인하세요.</p>
+    <p>자료: 공공데이터포털(data.go.kr) 공공서비스 정보 2026년 10월 스냅샷으로 만든 지식그래프(서울 25개 구 · 전국 사업 2,461건). 신청 기간은 오늘 날짜 기준으로 계산합니다.</p>
+  </footer>
+</div>
+<a class="jump" id="jump" href="#results">결과 보기</a>
+<script src="judge.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -310,6 +310,7 @@ class Judge:
             not j.service.targeted,                                 # 대상이 정해진 사업 먼저
             -len(self.kg.region_ancestors(j.service.region)),     # 가까운 지역 사업 먼저
             j.service.title,
+            j.service.id,                                           # 제목이 같은 사업끼리도 결정적으로
         ))
         return Result(out, pp, time.perf_counter() - t)
 

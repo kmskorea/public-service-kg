@@ -115,7 +115,7 @@ class KGIndex:
                 while prev[path[-1]] is not None:
                     path.append(prev[path[-1]])
                 return path[::-1]
-            for nxt in self.parents.get(cur, ()):
+            for nxt in sorted(self.parents.get(cur, ())):     # 정렬: 같은 길이 경로가 여럿일 때 결정적으로
                 if nxt not in prev:
                     prev[nxt] = cur
                     queue.append(nxt)

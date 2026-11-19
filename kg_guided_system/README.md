@@ -9,6 +9,29 @@
 `../public_service_kg_final_20261011/output/kg.ttl`(또는 `kg_base.ttl`)을 쓴다.
 LLM 은 해석(①②)과 문장 쓰기(⑥)만 하고, 자격은 판정기가 KG 로 결정한다.
 
+## 웹 서비스 MVP (`web/`)
+
+조건을 넣으면 **브라우저 안에서** 2,461건을 판정한다. 서버·GPU·LLM 이 필요 없고, 입력한 정보는 밖으로 나가지 않는다.
+
+```bash
+python -m http.server -d web 8000          # → http://localhost:8000
+python scripts/export_web.py               # KG·보정이 바뀌면 web/data/kg.json 다시 만들기
+python -m pytest -q tests/test_web_parity.py   # JS 판정기 = Python 판정기 (node 필요)
+```
+
+| 파일 | 하는 일 |
+|---|---|
+| `scripts/export_web.py` | `kg.ttl` + `data/kg_patches.ttl` → `web/data/kg.json` (2.9MB, gzip 0.65MB). 개념은 번호로 참조 |
+| `web/judge.js` | `judge/judge.py`·`pipeline.py` 의 규칙을 옮긴 판정기 (브라우저·node 공용). 규칙 범주(청년·노인·…거주자), 일반 범주 판단, 되묻기 포함 |
+| `web/index.html`, `web/app.js` | 화면: 나이·거주 구·성별·소득(→ 기준중위소득 %)·대상 유형, 범주 칩(해당 / 해당 안 됨), 범주 검색, 핵심 단어 → 적합·확인 필요 탭, 조건별 ✓ ? ✕ 와 근거 경로, 제외·우대, 신청 가능 여부, 원문, 정부24 링크, "이것만 알려주시면"(예/아니오로 바로 다시 판정) |
+| `tests/test_web_parity.py` + `web/test/parity.js` | Python 으로 프로필 36개·상담 8개를 판정해 정답을 만들고 node 로 JS 결과와 비교 (전체 순위, 조건 상태·근거 문자열, 제외·우대, 신청 가능, 되묻기, 상담 순위, 기준중위소득) |
+| `scripts/build_web_artifact.py` | 같은 페이지를 claude.ai Artifact 미리보기용으로 (문서 틀만 뺌) |
+
+- 판정 규칙을 바꾸면 Python 과 JS 를 함께 고치고 `test_web_parity.py` 를 돌린다. 일부러 근거 문자열이나 나이 경계를 바꿔 보면 이 테스트가 잡는다.
+- 처음 열면 예시 조건(22세·중구·대학생·기초생활수급자·장애인 아님·월세)으로 결과를 보여주고, 바꾼 조건은 그 브라우저에만 기억한다.
+- 범위: 서울 25개 구와 전국 사업. 서울 밖 거주자는 아직 판정하지 않는다.
+- 아직 없는 것: 자연어로 묻기(서버 + LLM), 답변 문장 생성, "판정이 틀렸어요" 신고, GitHub Pages 배포 설정.
+
 ## 비교 실험 (KG vs KG-base vs 텍스트 RAG)
 
 ```bash
