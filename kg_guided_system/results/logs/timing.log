@@ -1,0 +1,9 @@
+### START timing 13:12:29
+u01 done
+u02 done
+u03 done
+저장: results/timing/compare.jsonl, compare.md, pool_for_annotation.csv (71행, 이전 정답 0행 옮김, 새로 표시할 행 71)
+KG       질문 3 · 평균 LLM 2.3회 · 평균 12.6s · 근거 검사 경고 합계 1
+KG-base  질문 3 · 평균 LLM 2.0회 · 평균 11.6s · 근거 검사 경고 합계 0
+RAG      질문 3 · 평균 LLM 5.0회 · 평균 33.4s · 근거 검사 경고 합계 0
+### END timing rc=0 elapsed=173s 13:15:22
