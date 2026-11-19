@@ -21,7 +21,7 @@ sys.path.insert(0, str(ROOT))
 
 from judge.kg_index import load_kg  # noqa: E402
 from judge.llm import LLMClient  # noqa: E402
-from judge.pipeline import DEFAULT_KG, Consultant  # noqa: E402
+from judge.pipeline import DEFAULT_KG, DEFAULT_PATCHES, Consultant  # noqa: E402
 from judge.rag import TextRAG  # noqa: E402
 from judge.systems import run_kg, run_rag  # noqa: E402
 
@@ -40,12 +40,15 @@ def main():
     ap.add_argument("--systems", nargs="*", default=["KG", "KG-base", "RAG"])
     ap.add_argument("--pool-top", type=int, default=10)
     ap.add_argument("--out", default=str(ROOT / "results"))
+    ap.add_argument("--reuse-gold", default=None,
+                    help="이전 pool CSV. 같은 (질문, 서비스) 의 gold·note 를 새 풀에 옮겨 적는다 (정답 표시를 다시 하지 않도록)")
     a = ap.parse_args()
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
 
     llm = LLMClient()
-    kg_final = load_kg(DEFAULT_KG)
+    # KG 시스템은 보정(data/kg_patches.ttl)을 포함한 최종 KG, KG-base 는 수업 기본 KG 그대로
+    kg_final = load_kg(DEFAULT_KG, DEFAULT_PATCHES)
     runners = {}
     if "KG" in a.systems:
         c = Consultant(kg_final, llm)
@@ -88,6 +91,12 @@ def main():
 
     (out / "compare.md").write_text("\n".join(md), encoding="utf-8")
     names = list(runners)
+    old = {}
+    if a.reuse_gold and Path(a.reuse_gold).exists():
+        with open(a.reuse_gold, encoding="utf-8-sig") as f:
+            for r in csv.DictReader(f):
+                if r.get("gold", "").strip():
+                    old[(r["qid"], r["service_id"])] = (r["gold"].strip(), r.get("note", ""))
     with open(out / "pool_for_annotation.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)
         w.writerow(["qid", "question", "service_id", "title", "region", "target_text", "benefit_text"]
@@ -95,8 +104,11 @@ def main():
         for (qid, sid), v in sorted(pool.items()):
             s = kg_final.services["http://kg.example.org/resource/svc_" + sid]
             w.writerow([qid, v["question"], sid, s.title, kg_final.label(s.region), clip(s.target_text, 600),
-                        clip(s.benefit_text, 200)] + [v["by"].get(n, "") for n in names] + ["", ""])
-    print(f"저장: {out}/compare.jsonl, compare.md, pool_for_annotation.csv ({len(pool)}행)")
+                        clip(s.benefit_text, 200)] + [v["by"].get(n, "") for n in names]
+                       + list(old.get((qid, sid), ("", ""))))
+    reused = sum(1 for k in pool if k in old)
+    print(f"저장: {out}/compare.jsonl, compare.md, pool_for_annotation.csv ({len(pool)}행, 이전 정답 {reused}행 옮김, "
+          f"새로 표시할 행 {len(pool) - reused})")
     for n in names:
         rs = [r for r in rows if r["system"] == n]
         warn = sum(len(r["warnings"]) for r in rs)

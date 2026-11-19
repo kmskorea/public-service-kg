@@ -172,7 +172,12 @@ def _lit(term) -> object:
     return v
 
 
-def load_kg(path: str | Path) -> KGIndex:
+def load_kg(path: str | Path, patches: list[str | Path] | None = None) -> KGIndex:
+    """KG 를 읽는다. patches 를 주면 그 TTL 의 skos:broader / skos:exactMatch 를 개념 계층에 더한다.
+
+    patches 는 원본 KG 를 고치지 않고, 운영 중 발견한 누락 관계를 따로 관리하기 위한 것이다
+    (data/kg_patches.ttl). 원본만 읽은 결과는 SPARQL 과 같다 (tests/test_sparql_compat.py).
+    """
     services: dict[str, Service] = {}
     labels: dict[str, str] = {}
     label_to_concepts: dict[str, set[str]] = defaultdict(set)
@@ -280,6 +285,17 @@ def load_kg(path: str | Path) -> KGIndex:
 
     for s, gs in svc_groups.items():
         services[s].groups = {g: set(groups.get(g, ())) for g in gs}
+
+    for patch in patches or ():
+        for t in ox.parse(path=str(patch), format=ox.RdfFormat.TURTLE):
+            a, p, b = t.subject.value, t.predicate.value, t.object.value
+            if p == SKOS + "broader":
+                parents[a].add(b)
+                children[b].add(a)
+            elif p == SKOS + "exactMatch":       # 같은 대상: 양방향 상위 관계로 넣는다 (폐포가 순환을 처리)
+                for x, y in ((a, b), (b, a)):
+                    parents[x].add(y)
+                    children[y].add(x)
 
     return KGIndex(
         services=services,

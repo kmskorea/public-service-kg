@@ -46,21 +46,37 @@ def _clip(s: str, n: int) -> str:
 
 
 # ------------------------------------------------------------------ KG 근거
+ELIGIBLE_WITH_CAVEAT = "적합(제외 조건 확인)"
+
+
+def _dedupe(js: list[Judgment]) -> list[Judgment]:
+    seen, out = set(), []
+    for j in js:
+        if j.service.title not in seen:
+            seen.add(j.service.title)
+            out.append(j)
+    return out
+
+
 def kg_facts(kg, judgments: list[Judgment], relevant: set[str] | None = None,
-             n_relevant: int = 7, n_other: int = 3, n_eligible: int = 5, n_needs: int = 5) -> list[Fact]:
+             n_relevant: int = 7, n_other: int = 3, n_eligible: int = 5, n_needs: int = 5,
+             other_ok=None) -> list[Fact]:
     """판정 결과 → 근거 묶음. judgments 는 이미 순위가 매겨진 것.
 
     relevant(질문과 관련된 서비스 IRI)가 있으면 그 사업을 먼저 n_relevant 건, 그 밖의 '적합' 사업을 n_other 건.
-    없으면 적합 n_eligible 건 + 확인 필요 n_needs 건.
+    없으면 적합 n_eligible 건 + 확인 필요 n_needs 건. other_ok 를 주면 '그 밖의 적합' 은 그것을 통과한 것만
+    (예: 일반 범주만으로 충족된 사업은 넣지 않는다). 사업명이 같은 것은 하나만 넣는다.
     """
     ok = (Tier.ELIGIBLE, Tier.NEEDS_INFO)
+    other_ok = other_ok or (lambda j: True)
+    js = _dedupe([j for j in judgments if j.tier in ok])
     if relevant:
-        rel = [j for j in judgments if j.service.iri in relevant and j.tier in ok][:n_relevant]
-        other = [j for j in judgments if j.service.iri not in relevant and j.tier is Tier.ELIGIBLE][:n_other]
-        chosen = rel + other
+        rel = [j for j in js if j.service.iri in relevant][:n_relevant]
+        other = [j for j in js if j.service.iri not in relevant and j.tier is Tier.ELIGIBLE and other_ok(j)]
+        chosen = rel + other[:n_other]
     else:
-        chosen = [j for j in judgments if j.tier is Tier.ELIGIBLE][:n_eligible] + \
-                 [j for j in judgments if j.tier is Tier.NEEDS_INFO][:n_needs]
+        chosen = [j for j in js if j.tier is Tier.ELIGIBLE and other_ok(j)][:n_eligible] + \
+                 [j for j in js if j.tier is Tier.NEEDS_INFO][:n_needs]
     facts = []
     for i, j in enumerate(chosen, 1):
         s = j.service
@@ -81,7 +97,8 @@ def kg_facts(kg, judgments: list[Judgment], relevant: set[str] | None = None,
         if s.budget_limited:
             lines.append("예산 소진 시 마감")
         lines.append(f"기관: {kg.label(s.org)} / 지역: {kg.label(s.region)}")
-        facts.append(Fact(f"S{i}", s.id, s.title, j.tier.value, lines, s.detail_url))
+        tier = ELIGIBLE_WITH_CAVEAT if j.tier is Tier.ELIGIBLE and j.caveats else j.tier.value
+        facts.append(Fact(f"S{i}", s.id, s.title, tier, lines, s.detail_url))
     return facts
 
 
@@ -112,27 +129,33 @@ SYSTEM = """너는 한국 공공서비스 상담원이다. 아래 [근거]에 �
 규칙
 - 근거에 없는 사업·금액·날짜·조건은 절대 쓰지 않는다. 모르면 모른다고 쓴다.
 - 사업 이름은 「」 안에 근거에 적힌 그대로 쓰고, 문장 끝에 근거 번호를 [S1] 처럼 붙인다.
-- '적합'은 "받을 수 있어요", '확인 필요'는 무엇을 확인해야 하는지 함께 쓴다. '조건 모름' 항목이 확인할 것이다.
-- 순서: ① 한두 문장 요약 ② 받을 수 있는 사업 ③ 확인이 필요한 사업 ④ [되물을 질문]이 있으면 마지막에 그대로 묻기.
-- 신청기한과 '제외' 조건이 있으면 짧게 알려준다. 전체 10~15줄 이내, 존댓말."""
+- '적합'만 "받을 수 있어요"라고 쓴다.
+  '적합(제외 조건 확인)'은 "○○에 해당하지 않으면 받을 수 있어요"처럼 제외 조건을 붙여 쓴다.
+  '확인 필요'는 받을 수 있다고 쓰지 말고, '조건 모름' 항목을 확인해야 한다고 쓴다.
+- 신청기한에 '신청 기간 아님'이 있으면 "지금은 신청 기간이 아니에요"라고 알려준다.
+- 같은 사업은 한 번만 쓴다.
+- 순서: ① 한두 문장 요약 ② 받을 수 있는 사업 ③ 확인이 필요한 사업 ④ 되물을 질문이 있으면 마지막 문장으로 묻는다.
+- [질문], [근거], [되물을 질문] 같은 대괄호 제목은 답변에 쓰지 않는다. 전체 10~15줄 이내, 존댓말."""
 
 
 def answer_messages(question: str, facts: list[Fact], ask: str) -> list[dict]:
     body = "\n\n".join(f.block() for f in facts) or "(조건에 맞는 사업을 찾지 못함)"
     user = f"[질문]\n{question}\n\n[근거]\n{body}"
     if ask:
-        user += f"\n\n[되물을 질문]\n{ask}"
+        user += f"\n\n[되물을 질문] (답변 마지막 문장으로, 제목 없이)\n{ask}"
     return [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
 
 
 def template_answer(facts: list[Fact], ask: str) -> str:
-    el = [f for f in facts if f.tier == Tier.ELIGIBLE.value]
+    el = [f for f in facts if f.tier in (Tier.ELIGIBLE.value, ELIGIBLE_WITH_CAVEAT)]
     ni = [f for f in facts if f.tier == Tier.NEEDS_INFO.value]
     out = [f"조건에 맞는 사업 {len(el)}개, 확인이 더 필요한 사업 {len(ni)}개를 찾았어요."]
     if el:
         out.append("받을 수 있는 사업")
         for f in el:
-            out.append(f"- 「{f.title}」 [{f.key}]")
+            ex = [x.split(": ", 1)[1] for x in f.lines if x.startswith("다음에 해당하면 제외")]
+            cond = f" (단, {ex[0]}에 해당하면 제외)" if ex else ""
+            out.append(f"- 「{f.title}」{cond} [{f.key}]")
     if ni:
         out.append("확인이 필요한 사업")
         for f in ni:
@@ -176,6 +199,13 @@ def verify(text: str, facts: list[Fact], question: str = "") -> tuple[list[str],
             t = names[0]
             if not any(t == by_key[k].title or t in by_key[k].title or by_key[k].title in t for k in keys):
                 warnings.append(f"인용 불일치 「{t}」 [{', '.join(keys)}]")
+    # 확인이 필요한 사업을 조건 없이 '받을 수 있다'고 단정했는가
+    for sent in re.split(r"(?<=[.!?。])\s+|\n", text):
+        if "받을 수 있" not in sent or any(w in sent for w in ("확인", "않으면", "라면", "이면", "경우", "해당하시면")):
+            continue
+        for k in _CITE.findall(sent):
+            if k in by_key and by_key[k].tier != Tier.ELIGIBLE.value:
+                warnings.append(f"조건부 사업을 받을 수 있다고 단정 [{k}]")
     hay = _norm_num(" ".join([question] + [f.title for f in facts] + [x for f in facts for x in f.lines]))
     hay_ns = hay.replace(" ", "")
     for num, unit in _NUM.findall(text):
@@ -196,7 +226,10 @@ class AnswerGenerator:
             text, mode = template_answer(facts, ask), "template"
         else:
             text = self.llm.chat(answer_messages(question, facts, ask), max_tokens=self.max_tokens)
-            text, mode = re.sub(r"<think>.*?</think>", "", text, flags=re.S).strip(), "llm"
+            text = re.sub(r"<think>.*?</think>", "", text, flags=re.S)
+            text = re.sub(r"^\s*\[(?:질문|근거|되물을? 질문)\][^\n]*\n?", "", text, flags=re.M)    # 남은 제목 태그
+            text = re.sub(r"\[(?:되물을? 질문)\]\s*", "", text)
+            text, mode = text.strip(), "llm"
         cited, warnings = verify(text, facts, question)
         return Answer(text, facts, cited, warnings, mode)
 
@@ -205,10 +238,11 @@ def answer_consultation(c, consultation, llm: LLMClient | None, **kw) -> Answer:
     """pipeline.Consultation → 답변. 되물을 질문은 질문과 관련된 사업 기준."""
     u = consultation.understanding
     rel = [j for j in consultation.ranked if c.relevant(j, u.extraction)]
-    ask = follow_up(missing_info(consultation.result, 3, rel or None))
-    facts = kg_facts(c.kg, consultation.ranked, {j.service.iri for j in rel}, **kw)
+    ask = follow_up(missing_info(consultation.result, 3, rel or None, skip=c.skip_labels(u.extraction)))
+    facts = kg_facts(c.kg, consultation.ranked, {j.service.iri for j in rel},
+                     other_ok=lambda j: c.specific(j) > 0, **kw)
     return AnswerGenerator(llm).generate(u.text, facts, ask)
 
 
-__all__ = ["Answer", "AnswerGenerator", "Fact", "answer_consultation", "follow_up", "kg_facts",
+__all__ = ["ELIGIBLE_WITH_CAVEAT", "Answer", "AnswerGenerator", "Fact", "answer_consultation", "follow_up", "kg_facts",
            "template_answer", "verify"]

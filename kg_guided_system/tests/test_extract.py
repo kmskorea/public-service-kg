@@ -38,8 +38,17 @@ def test_income_pct_wins_and_strings_ok():
 
 def test_big_household():
     ex = normalize(raw(monthly_income=9_000_000, household_size=7), TODAY, FIELDS, STYPES)
-    base7 = MEDIAN_INCOME_2026[6] + (MEDIAN_INCOME_2026[6] - MEDIAN_INCOME_2026[5])
-    assert ex.income_pct == round(9_000_000 / base7 * 100, 1)
+    assert ex.income_pct == round(9_000_000 / 9_515_150 * 100, 1)            # 7인: 고시 값
+    ex8 = normalize(raw(monthly_income=9_000_000, household_size=8), TODAY, FIELDS, STYPES)
+    base8 = 9_515_150 + (9_515_150 - 8_555_952)                               # 8인 이상: 1인당 (7인-6인) 차이
+    assert ex8.income_pct == round(9_000_000 / base8 * 100, 1)
+
+
+def test_birth_year_overrides_model_age_and_pregnancy_gender():
+    ex = normalize(raw(age=66, birth_year=1958, groups=["임산부"]), TODAY, FIELDS, STYPES)
+    assert ex.age == 68 and any("출생연도로 계산" in n for n in ex.notes)
+    assert ex.gender == "여성"
+    assert normalize(raw(gender="남성", groups=["임산부"]), TODAY, FIELDS, STYPES).gender == "남성"   # 말한 것이 우선
 
 
 def test_birth_year_and_bad_values():

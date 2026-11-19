@@ -13,8 +13,22 @@ from dataclasses import dataclass, field
 from .kg_index import KGC, KGIndex
 from .llm import LLMClient
 
-# 2026년 기준 중위소득 (원/월, 가구원 수별). 보건복지부 고시(2025.8). 발표 전에 고시문과 한 번 대조할 것.
-MEDIAN_INCOME_2026 = {1: 2_564_238, 2: 4_199_292, 3: 5_359_036, 4: 6_494_738, 5: 7_556_719, 6: 8_555_952}
+# 2026년 기준 중위소득 (원/월, 가구원 수별). 보건복지부 고시(2025.8).
+# 1~7인: 보건복지부 페이지 값과 대조함 (2026-11-19, 연구실 실행 보고서).
+MEDIAN_INCOME_2026 = {1: 2_564_238, 2: 4_199_292, 3: 5_359_036, 4: 6_494_738, 5: 7_556_719, 6: 8_555_952,
+                      7: 9_515_150}
+
+
+def median_income(size: int) -> int:
+    """가구원 수별 기준중위소득. 8인 이상은 1인 늘 때마다 (7인 - 6인) 차이를 더한다.
+
+    8인 이상 산정 방식은 고시문에서 아직 확인하지 못했다 (확인되면 이 주석을 고칠 것).
+    """
+    size = max(size, 1)
+    if size in MEDIAN_INCOME_2026:
+        return MEDIAN_INCOME_2026[size]
+    step = MEDIAN_INCOME_2026[7] - MEDIAN_INCOME_2026[6]
+    return MEDIAN_INCOME_2026[7] + step * (size - 7)
 
 USER_TYPES = ["개인", "가구", "소상공인", "법인/시설/단체"]
 NON_TARGET_PREFIX = ("ut_", "st_", "f_", "ot_", "dim_")
@@ -92,12 +106,18 @@ GUIDE = """출력 형식 (JSON 객체 하나만, 설명 없이):
  "fields": [관심 분야], "support_types": [원하는 지원 유형], "keywords": [찾는 지원의 핵심 단어]}}
 
 규칙
-- age 는 말한 나이 그대로. 출생연도만 말했으면 birth_year 에 넣는다.
+- age 는 말한 나이 그대로. 출생연도를 말했으면 birth_year 에만 넣고 age 는 null (나이는 시스템이 계산한다).
 - region 은 "서울 중구" 처럼 시와 구. 동 이름만 말했으면 그 동이 속한 구를 쓴다. 모르면 null.
 - 소득: "중위소득 50%" 처럼 비율을 말했으면 income_pct. 금액을 말했으면 monthly_income 에 원 단위 정수(200만원 → 2000000), 연소득이면 12로 나눈다. household_size 는 본인 포함 가구원 수.
 - groups 는 하나의 범주씩 짧은 명사로 나눈다 ("기초수급 대학생" → ["기초생활수급자", "대학생"]). 아래 어휘에 있는 표현이면 그대로 쓰고, 없으면 짧은 명사구로 쓴다. 문장으로 쓰지 않는다.
 - 나이·성별·지역에서 바로 나오는 범주(청년, 노인, 여성, ○○구 거주자)는 groups 에 넣지 않는다. 시스템이 계산한다.
-- 기초생활수급자, 차상위계층 등 수급 자격은 groups 에, 이미 받고 있는 개별 사업(근로장려금, 국가장학금 등)은 receiving 에 넣는다.
+- 말에 암시된 본인의 범주도 넣는다:
+  "취업 준비 중"·"일자리 구하는 중" → 구직자/실업자 / "혼자 살아요" → 1인가구 / "보육원·시설에서 나왔어요" → 자립준비청년
+  "결혼한 지 1년" → 신혼부부 / "귀농했어요" → 귀농인 / "회사원"·"직장 다녀요" → 근로자/직장인 / "임신 중" → 임산부 (gender 는 "여성")
+- 가족의 상태를 본인 범주로 넣지 않는다. ("딸이 고등학생이에요" → 본인은 고등학생 아님. 넣는다면 "고등학생 자녀")
+- 수급 자격(기초생활수급자, 차상위계층 등)은 사용자가 그 이름을 말했을 때만 groups 에 넣는다.
+  이미 받고 있는 개별 사업(기초연금, 근로장려금, 국가장학금 등)은 receiving 에만 넣고, 그것으로 수급 자격을 추측하지 않는다.
+  (기초연금 ≠ 기초생활수급자, 실업급여 ≠ 기초생활수급자)
 - not_groups 는 사용자가 명시적으로 아니라고 한 것만 ("장애는 없어요" → ["장애인"], "집이 있어요" → not_groups ["무주택세대"], groups ["주택소유자"]).
 - user_type 은 보통 "개인". 가게·사업체로 묻는 경우만 "소상공인", 기관·법인이면 "법인/시설/단체".
 - fields 는 다음 중에서: {fields}
@@ -179,8 +199,11 @@ def normalize(raw: dict, today: dt.date, fields: list[str], support_types: list[
     ex = Extraction(raw=raw)
     ex.age = _int(raw.get("age"))
     by = _int(raw.get("birth_year"))
-    if ex.age is None and by and 1900 < by <= today.year:
-        ex.age = today.year - by
+    if by and 1900 < by <= today.year:          # 출생연도가 있으면 모델의 나이 계산을 믿지 않는다
+        age = today.year - by
+        if ex.age is not None and ex.age != age:
+            ex.notes.append(f"모델이 낸 나이 {ex.age} 대신 출생연도로 계산")
+        ex.age = age
         ex.notes.append(f"나이 = {today.year} - {by} = {ex.age} (생일 전이면 1살 적음)")
     if ex.age is not None and not 0 <= ex.age <= 120:
         ex.notes.append(f"나이 {ex.age} 무시")
@@ -201,8 +224,7 @@ def normalize(raw: dict, today: dt.date, fields: list[str], support_types: list[
             if size is None:
                 size = 1
                 ex.notes.append("가구원 수를 말하지 않아 1인 가구로 계산")
-            base = MEDIAN_INCOME_2026[min(max(size, 1), 6)] if size <= 6 else \
-                MEDIAN_INCOME_2026[6] + (MEDIAN_INCOME_2026[6] - MEDIAN_INCOME_2026[5]) * (size - 6)
+            base = median_income(size)
             ex.income_pct = round(inc / base * 100, 1)
             ex.notes.append(f"소득 {inc:,}원 / {size}인 가구 기준중위소득 {base:,}원 = {ex.income_pct}%")
     if ex.income_pct is not None and not 0 <= ex.income_pct <= 1000:
@@ -210,6 +232,9 @@ def normalize(raw: dict, today: dt.date, fields: list[str], support_types: list[
         ex.income_pct = None
 
     ex.groups = _strs(raw.get("groups"))
+    if ex.gender is None and any(g in ("임산부", "임신 중", "임신부") for g in ex.groups):
+        ex.gender = "여성"
+        ex.notes.append("임산부 → 성별 여성")
     ex.not_groups = [x for x in _strs(raw.get("not_groups")) if x not in ex.groups]
     ex.receiving = _strs(raw.get("receiving"))
     ut = raw.get("user_type")

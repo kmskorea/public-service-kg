@@ -11,12 +11,18 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from .extract import Extraction, ProfileExtractor
-from .judge import Judge, Judgment, Profile, Result, Tier
+from .judge import Judge, Judgment, Profile, Result, Status, Tier
 from .kg_index import KGC, KGIndex, load_kg
 from .linker import ConceptLinker, Link
 from .llm import LLMClient
 
 DEFAULT_KG = Path(__file__).resolve().parent.parent.parent / "public_service_kg_final_20261011" / "output" / "kg.ttl"
+DEFAULT_PATCHES = [Path(__file__).resolve().parent.parent / "data" / "kg_patches.ttl"]
+
+# 거의 모든 사람이 해당하는 범주. 이것만으로 충족된 사업은 '받을 수 있다'고 해도 질문과 관련이 적으므로 뒤로 보낸다.
+GENERIC_LABELS = ("대한민국 국민", "일반인", "지역주민")
+# 개인 사용자에게 되묻지 않을 범주의 뿌리 (이 아래 개념 전부)
+ORG_ROOT_LABELS = ("법인/시설/단체", "기관/단체", "기업", "중소기업", "중견기업", "대기업", "사업주")
 
 
 @dataclass
@@ -37,6 +43,8 @@ class Understanding:
             got = ", ".join(kg.label(c) for c in ln.concepts) or "—"
             extra = f"  ({ln.note})" if ln.note else ""
             lines.append(f"  {sign}{ln.phrase} → {got}  [{ln.method}]{extra}")
+            if ln.rejected:
+                lines.append("      (방향 규칙으로 뺌: " + ", ".join(f"{kg.label(c)}={why}" for c, why in ln.rejected) + ")")
         for n in self.extraction.notes:
             lines.append("  · " + n)
         return lines
@@ -56,10 +64,15 @@ class Consultant:
         self.judge = Judge(kg)
         self.extractor = ProfileExtractor(kg, llm) if llm else None
         self.linker = ConceptLinker(kg, llm if link_with_llm else None)
+        self.generic = {c for lab in GENERIC_LABELS for c in kg.concepts_for_label(lab)}
+        self.org_labels = {kg.label(d) for lab in ORG_ROOT_LABELS for c in kg.concepts_for_label(lab)
+                           for d in kg.descendants(c)}
 
     @classmethod
-    def from_paths(cls, kg_path: str | Path = DEFAULT_KG, llm: LLMClient | None = None, **kw) -> "Consultant":
-        return cls(load_kg(kg_path), llm or LLMClient(), **kw)
+    def from_paths(cls, kg_path: str | Path = DEFAULT_KG, llm: LLMClient | None = None,
+                   patches: list[str | Path] | None = None, **kw) -> "Consultant":
+        """patches 를 주지 않으면 DEFAULT_PATCHES (data/kg_patches.ttl) 를 쓴다. [] 이면 원본 KG 만."""
+        return cls(load_kg(kg_path, DEFAULT_PATCHES if patches is None else patches), llm or LLMClient(), **kw)
 
     # ------------------------------------------------------------ ①②
     def understand(self, text: str, today: dt.date | None = None) -> Understanding:
@@ -102,22 +115,34 @@ class Consultant:
         u = self.understand(text, today)
         return self.consult_understood(u, today, **run_kw)
 
+    def specific(self, j: Judgment) -> int:
+        """일반 범주(국민·일반인·지역주민) 말고 사람이 밝힌 구체적 범주로 충족한 범주 조건 수."""
+        return sum(1 for c in j.conditions
+                   if c.kind in ("requires", "anyOf") and c.status is Status.MET
+                   and any(r not in self.generic for r in c.via))
+
+    def skip_labels(self, ex: Extraction) -> set[str]:
+        """되묻지 않을 범주: 개인에게는 법인·기관 범주를 묻지 않는다."""
+        return self.org_labels if ex.user_type in ("개인", "가구") else set()
+
     def relevant(self, j: Judgment, ex: Extraction) -> bool:
-        """질문과 직접 관련된 사업인가: 키워드가 있으면 키워드가 맞아야, 없으면 분야·지원유형이 맞아야 한다."""
-        score = self.interest_score(j, ex)
+        """질문과 직접 관련된 사업인가: 키워드가 있으면 키워드가 사업명·지원내용에 있어야, 없으면 분야·지원유형이 맞아야 한다."""
         if ex.keywords:
-            return score >= 2
-        return bool(ex.fields or ex.support_types) and score > 0
+            hay = j.service.title + " " + j.service.benefit_text
+            return any(k and k in hay for k in ex.keywords)
+        return bool(ex.fields or ex.support_types) and self.interest_score(j, ex) > 0
 
     def consult_understood(self, u: Understanding, today: dt.date, **run_kw) -> Consultation:
-        """순위: 질문과 관련된 사업 묶음 먼저 → 그 안에서 판정 단계 → 관심사 점수 → 판정기 순서.
+        """순위: 질문과 관련된 사업 묶음 먼저 → 판정 단계 → 구체적 범주로 충족했는가 → 관심사 점수 → 판정기 순서.
 
         판정 단계를 먼저 쓰면 '월세' 를 물었는데 무관한 적합 사업(창업 지원 등)이 위로 올라온다.
+        '대한민국 국민'·'일반인' 만으로 충족된 사업(견학 프로그램 등)은 같은 단계 안에서 뒤로 보낸다.
         """
         ex = u.extraction
         res = self.judge.run(u.profile, today=today, **run_kw)
         order = {Tier.ELIGIBLE: 0, Tier.NEEDS_INFO: 1, Tier.INELIGIBLE: 2}
         pos = {id(j): i for i, j in enumerate(res.judgments)}
         ranked = sorted(res.judgments, key=lambda j: (
-            not self.relevant(j, ex), order[j.tier], -self.interest_score(j, ex), pos[id(j)]))
+            not self.relevant(j, ex), order[j.tier], self.specific(j) == 0,
+            -self.interest_score(j, ex), pos[id(j)]))
         return Consultation(u, res, ranked)

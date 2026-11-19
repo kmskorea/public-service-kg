@@ -65,6 +65,7 @@ class Condition:
     status: Status
     text: str            # 사람이 읽을 조건 설명
     evidence: str = ""   # 충족·불충족 근거 (개념 경로 등)
+    via: tuple[str, ...] = ()   # 범주 조건을 충족시킨, 사람이 밝힌 개념들 (순위에서 일반 범주를 가려내는 데 씀)
 
 
 @dataclass
@@ -250,7 +251,8 @@ class Judge:
         for c in sorted(s.requires):
             st = self._concept_status(c, pp, closed)
             ev = self._why(c, pp) if st is Status.MET else ("해당하지 않음" if c in pp.deny else "")
-            conds.append(Condition("requires", st, f"필수: {kg.label(c)}", ev))
+            via = tuple(sorted(pp.have_roots.get(c, ()))) if st is Status.MET else ()
+            conds.append(Condition("requires", st, f"필수: {kg.label(c)}", ev, via))
 
         # 규칙 2: 묶음마다 하나 이상
         for g in sorted(s.groups):
@@ -259,7 +261,8 @@ class Judge:
             text = "하나 이상: " + " | ".join(kg.label(c) for c in members)
             met = [c for c in members if sts[c] is Status.MET]
             if met:
-                conds.append(Condition("anyOf", Status.MET, text, self._why(met[0], pp)))
+                via = tuple(sorted({r for c in met for r in pp.have_roots.get(c, ())}))
+                conds.append(Condition("anyOf", Status.MET, text, self._why(met[0], pp), via))
             elif all(v is Status.UNMET for v in sts.values()):
                 conds.append(Condition("anyOf", Status.UNMET, text, "모두 해당하지 않음"))
             else:
@@ -331,12 +334,14 @@ def apply_status(s: Service, today: dt.date) -> Apply:
     return Apply.UNKNOWN
 
 
-def missing_info(result: Result, top: int = 10, judgments: list[Judgment] | None = None) -> list[tuple[str, int]]:
+def missing_info(result: Result, top: int = 10, judgments: list[Judgment] | None = None,
+                 skip: set[str] | None = None) -> list[tuple[str, int]]:
     """'확인 필요' 서비스들이 어떤 정보를 몰라서 판정을 못 했는지 센다.
 
     많이 나온 것부터 물어보면 후보가 가장 많이 정리된다 (되묻기 단계의 기초).
     범주 조건은 개념 라벨, 수치 조건은 '나이'·'소득'·'성별'·'거주 구'로 센다.
     judgments 를 주면 그 안에서만 센다 (예: 질문과 관련된 사업만).
+    skip 에 있는 범주 라벨은 묻지 않는다 (예: 개인에게 법인·기관 범주). OR 묶음은 모두 skip 일 때만 뺀다.
     """
     from collections import Counter
 
@@ -349,8 +354,12 @@ def missing_info(result: Result, top: int = 10, judgments: list[Judgment] | None
             if c.kind in names:
                 seen.add(names[c.kind])
             elif c.kind == "requires":
-                seen.add(c.text.removeprefix("필수: "))
+                name = c.text.removeprefix("필수: ")
+                if not skip or name not in skip:
+                    seen.add(name)
             elif c.kind == "anyOf":
-                seen.add(c.text.removeprefix("하나 이상: "))
+                name = c.text.removeprefix("하나 이상: ")
+                if not skip or not all(x in skip for x in name.split(" | ")):
+                    seen.add(name)
         cnt.update(seen)
     return cnt.most_common(top)

@@ -79,7 +79,10 @@ def test_answer_from_consultation(kg_final):
     rel_ids = {j.service.id for j in out.ranked if c.relevant(j, out.understanding.extraction)}
     flags = [f.service_id in rel_ids for f in ans.facts]
     assert flags == sorted(flags, reverse=True) and flags.count(True) == 7 and len(ans.facts) == 10
-    assert all(f.tier == "적합" for f in ans.facts[7:])
+    assert all(f.tier.startswith("적합") for f in ans.facts[7:])          # 적합 또는 적합(제외 조건 확인)
+    by_id = {j.service.id: j for j in out.ranked}
+    assert all(c.specific(by_id[f.service_id]) > 0 for f in ans.facts[7:])   # 일반 범주만으로 충족된 사업은 넣지 않는다
+    assert len({f.title for f in ans.facts}) == len(ans.facts)            # 같은 사업명은 한 번
     assert all("org_" not in x for f in ans.facts for x in f.lines)    # 기관은 이름으로
     no_llm = answer_consultation(c, out, None)
     assert no_llm.mode == "template" and no_llm.warnings == []

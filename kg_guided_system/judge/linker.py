@@ -29,7 +29,42 @@ class Link:
     method: str                         # rule | exact | llm | ngram | none
     candidates: list[tuple[str, float]] = field(default_factory=list)
     note: str = ""
+    rejected: list[tuple[str, str]] = field(default_factory=list)   # LLM 이 골랐지만 방향 규칙으로 뺀 (개념, 이유)
 
+
+# ---------------------------------------------------------------------- 방향 규칙 (코드로 강제)
+# 범주 이름 뒤에 붙어도 대상이 좁아지지 않는 말. (한부모 / 한부모가족, 무주택 / 무주택세대)
+NEUTRAL_SUFFIX = ("", "가족", "가정", "가구", "세대", "자", "인", "층", "계층", "대상자", "본인")
+
+
+def form_relation(base: str, cand: str) -> str | None:
+    """라벨 모양으로 본 두 범주의 관계.
+
+    'same'     같은 말의 다른 형태 (한부모 ↔ 한부모가족)
+    'narrower' cand 가 base 에 조건을 붙인 것 (소상공인 → 강서구 소상공인, 장애인 → 장애인기업)
+    'broader'  cand 가 base 를 포함한 'X/Y' 결합 범주 (대학생 → 대학생/대학원생)
+    None       모양으로는 알 수 없음
+    """
+    b, c = _nospace(base), _nospace(cand)
+    if not b or not c:
+        return None
+    if b == c:
+        return "same"
+    if "/" in c and any(form_relation(base, part) == "same" for part in c.split("/")):
+        return "broader"
+    if "/" in b and any(form_relation(part, cand) == "same" for part in b.split("/")):
+        return "narrower"
+    for short, long_, flip in ((b, c, False), (c, b, True)):
+        i = long_.find(short)
+        if i < 0:
+            continue
+        prefix, suffix = long_[:i], long_[i + len(short):]
+        if not prefix and suffix in NEUTRAL_SUFFIX:
+            return "same"
+        if not flip:
+            return "narrower"
+        return None          # cand 가 base 보다 짧다 → cand 가 더 넓을 수 있다 (LLM 판단에 맡김)
+    return None
 
 # ---------------------------------------------------------------------- n-gram 색인
 def _grams(text: str) -> dict[str, float]:
@@ -111,8 +146,11 @@ VERIFY_POS = """사용자에 대해 알려진 사실: "{phrase}" 에 해당한�
 
 이 사실만으로 이 사용자가 **확실히 속한다**고 할 수 있는 범주의 번호를 모두 고르라.
 - 같은 뜻이거나 더 넓은 범주는 고른다. (예: "생계급여 받음" → 기초생활수급자 O)
-- 더 좁거나 추가 조건이 붙은 범주는 고르지 않는다. (예: "장애인" → 중증장애인 X, 장애인 예비창업자 X)
-- 관련만 있고 같은 대상이 아니면 고르지 않는다. 해당하는 것이 없으면 빈 목록.
+- 더 좁거나 추가 조건(지역·나이·업종 등)이 붙은 범주는 고르지 않는다.
+  (예: "장애인" → 중증장애인 X, 장애인 예비창업자 X / "소상공인" → 강서구 소상공인 X / "1인가구" → 청년 1인가구 X)
+- 관련 있는 다른 제도의 대상은 고르지 않는다. (예: "기초생활수급자" → 의료급여 수급자 X, 기초연금 수급자 X)
+- '이미 연결됨'이 있으면, 그것과 이름만 다른 같은 대상(한부모 / 한부모가족)이나 그보다 넓은 범주만 더 고른다.
+해당하는 것이 없으면 빈 목록.
 JSON 으로만 답하라: {{"selected": [번호, ...]}}"""
 
 VERIFY_NEG = """사용자에 대해 알려진 사실: "{phrase}" 에 해당하지 **않는다**.
@@ -122,6 +160,7 @@ VERIFY_NEG = """사용자에 대해 알려진 사실: "{phrase}" 에 해당하�
 이 사실만으로 이 사용자가 **확실히 속하지 않는다**고 할 수 있는 범주의 번호를 모두 고르라.
 - 같은 뜻이거나 더 좁은 범주는 고른다. (예: "장애 없음" → 장애인 O, 중증장애인 O)
 - 더 넓은 범주는 고르지 않는다. (예: "중증장애 아님" → 장애인 X)
+- 이름이 비슷한 다른 제도는 고르지 않는다. (예: "기초생활수급자 아님" → 기초연금 수급자 X)
 해당하는 것이 없으면 빈 목록. JSON 으로만 답하라: {{"selected": [번호, ...]}}"""
 
 VERIFY_SCHEMA = {"type": "object", "properties": {"selected": {"type": "array", "items": {"type": "integer"}}},
@@ -220,9 +259,50 @@ class ConceptLinker:
             obj, _ = self.llm.chat_json([{"role": "user", "content": prompt}], VERIFY_SCHEMA,
                                         validate=_check_selected, max_tokens=128)
             chosen = [cands[i - 1][0] for i in obj["selected"] if 1 <= i <= len(cands)]
+        chosen, rejected = self.enforce_direction(phrase, positive, exact, chosen)
         concepts = sorted(set(exact) | set(chosen))
         method = ("exact+llm" if chosen else "exact") if exact else ("llm" if chosen else "none")
-        return Link(phrase, positive, concepts, method, pairs)
+        return Link(phrase, positive, concepts, method, pairs, rejected=rejected)
+
+    def enforce_direction(self, phrase: str, positive: bool, exact: list[str],
+                          chosen: list[str]) -> tuple[list[str], list[tuple[str, str]]]:
+        """LLM 이 고른 개념 중 연결 방향을 어긴 것을 뺀다.
+
+        해당한다(positive): 사람이 X 면 X 와 그 상위 개념만 확실하다.
+          - 표현(또는 정확 일치 라벨)에 조건을 붙인 더 좁은 범주는 뺀다.
+          - 정확 일치가 있으면 같은 말의 다른 형태이거나 KG 상위 개념만 남긴다.
+          - 고른 것끼리 한쪽이 다른 쪽보다 좁으면 좁은 쪽을 뺀다.
+        해당하지 않는다(negative): X 가 아니면 X 와 그 하위 개념만 확실하다.
+          - 표현을 포함하는(조건이 붙은) 범주, 같은 말의 다른 형태, KG 하위 개념만 남긴다.
+        """
+        kg = self.kg
+        bases = [phrase] + [kg.label(c) for c in exact]
+        keep, rej = [], []
+        for c in chosen:
+            lab = kg.label(c)
+            rels = {form_relation(b, lab) for b in bases}
+            if positive:
+                if "narrower" in rels and not rels & {"same", "broader"}:
+                    rej.append((c, "더 좁은 범주"))
+                elif any(c in kg.descendants(e) and c != e for e in exact):
+                    rej.append((c, "KG 하위 개념"))
+                elif exact and not rels & {"same", "broader"} and not any(c in kg.ancestors(e) for e in exact):
+                    rej.append((c, "정확 일치와 다른 대상"))
+                else:
+                    keep.append(c)
+            else:
+                if rels & {"same", "narrower"} or any(c in kg.descendants(e) for e in exact):
+                    keep.append(c)
+                else:
+                    rej.append((c, "더 넓거나 다른 대상"))
+        if positive:
+            for c in list(keep):
+                others = [o for o in keep if o != c]
+                if any(c in kg.descendants(o) or form_relation(kg.label(o), kg.label(c)) == "narrower"
+                       for o in others):
+                    keep.remove(c)
+                    rej.append((c, "함께 고른 범주보다 좁음"))
+        return keep, rej
 
     def link(self, groups: list[str], not_groups: list[str]) -> list[Link]:
         return [self.link_one(g, True) for g in groups] + [self.link_one(g, False) for g in not_groups]

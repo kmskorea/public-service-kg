@@ -38,7 +38,7 @@ def main():
     if u.unresolved:
         print("KG에서 찾지 못한 표현:", ", ".join(u.unresolved))
     rel = [j for j in out.ranked if c.relevant(j, u.extraction)]
-    other = [j for j in out.ranked if not c.relevant(j, u.extraction)]
+    other = [j for j in out.ranked if not c.relevant(j, u.extraction) and c.specific(j) > 0]   # 일반 범주만으로 충족된 것은 뺀다
     for name, js in (("질문과 관련된 사업", rel), ("그 밖에 받을 수 있는 사업", other)):
         if not js:
             continue
@@ -48,7 +48,7 @@ def main():
         for j in shown:
             print(f"  [{j.tier.value}]", end="")
             show(j, a.verbose)
-    mi = missing_info(out.result, 5, rel or None)     # 질문과 관련된 사업이 있으면 그 안에서 묻는다
+    mi = missing_info(out.result, 5, rel or None, skip=c.skip_labels(u.extraction))  # 관련 사업 안에서, 개인에게 법인 범주는 묻지 않음
     if mi:
         print("\n■ 더 알려주시면 판정이 정리됩니다:", ", ".join(f"{n} ({k}건)" for n, k in mi))
     if not a.no_answer:
