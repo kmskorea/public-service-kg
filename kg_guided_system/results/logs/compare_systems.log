@@ -1,0 +1,21 @@
+### START compare 20:29:03
+u01 done
+u02 done
+u03 done
+u04 done
+u05 done
+u06 done
+u07 done
+u08 done
+u09 done
+u10 done
+u11 done
+u12 done
+u13 done
+u14 done
+u15 done
+저장: /dataset/Data1/minseo/pskg_judge/kg_guided_system/results/compare.jsonl, compare.md, pool_for_annotation.csv (201행)
+KG       질문 15 · 평균 LLM 3.7회 · 평균 26.4s · 근거 검사 경고 합계 1
+KG-base  질문 15 · 평균 LLM 3.6회 · 평균 32.4s · 근거 검사 경고 합계 0
+RAG      질문 15 · 평균 LLM 5.0회 · 평균 84.7s · 근거 검사 경고 합계 3
+### END rc=0 elapsed=2154s 21:04:57
